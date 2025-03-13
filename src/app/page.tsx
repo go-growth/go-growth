@@ -5,21 +5,21 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import MenuItems from "@/components/MenuItems";
 import PromotionCards from "@/components/PromotionCards";
-import SocialMediaCards from "@/components/SocialMediaCard";
+// import SocialMediaCards from "@/components/SocialMediaCard";
 import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
-  return (
-    <div>
-      <Hero />
-      <CardCarousel />
-      <PromotionCards />
-      <HowItWorks />
-      <ContentApproach />
-      {/* <SocialMediaCards /> */}
-      <Testimonials />
-      <MenuItems />
-      <FAQ />
-    </div>
-  );
+	return (
+		<>
+			<Hero />
+			<CardCarousel />
+			<PromotionCards />
+			<HowItWorks />
+			<ContentApproach />
+			{/* <SocialMediaCards /> */}
+			<Testimonials />
+			<MenuItems />
+			<FAQ />
+		</>
+	);
 }
