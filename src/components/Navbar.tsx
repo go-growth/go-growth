@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
 	return (
-		<div className="sticky top-0 bg-black/40 max-w-full flex items-center justify-between px-5 py-8 h-24">
+		<div className="sticky top-0 bg-black/50 max-w-full flex items-center justify-between px-5 py-8 h-24">
 			<Link href="/">
 				<div className="text-4xl font-semibold">
 					Atomik{" "}

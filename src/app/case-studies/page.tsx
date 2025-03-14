@@ -1,7 +1,6 @@
-import React from 'react'
+import AtomikGrowthSection from "@/components/AtomicGrowth";
+import React from "react";
 
 export default function page() {
-  return (
-    <div>Case Studies</div>
-  )
+	return <AtomikGrowthSection />;
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 const Hero: React.FC = () => {
 	return (
@@ -65,6 +64,7 @@ const Hero: React.FC = () => {
 					{/* Main heading */}
 					<h1 className="flex flex-col text-5xl md:text-7xl font-light mb-4 space-y-8">
 						<span
+							className="py-3"
 							style={{
 								backgroundImage:
 									"linear-gradient(90deg, #8f98ff 1%, rgba(105, 114, 222, 0.4) 1% -2.96%, rgba(105, 114, 222, 0) 97.04%)",
@@ -73,6 +73,7 @@ const Hero: React.FC = () => {
 							Podcasting For VCs
 						</span>
 						<span
+							className="py-3"
 							style={{
 								backgroundImage:
 									"linear-gradient(90deg, #f0927e 1%, rgba(240, 146, 126, 0.4) 1% 2%, rgba(240, 146, 126, 0) 92.71%)",
@@ -88,14 +89,6 @@ const Hero: React.FC = () => {
 						strategies to attract quality deal flow and deepen relationships,
 						either by starting a new podcast or optimizing an existing one.
 					</p>
-
-					{/* CTA Button */}
-					<Link
-						href="/contact"
-						className="border-2 border-white hover:bg-white hover:text-black transition-colors duration-300 px-8 py-3 rounded-full font-medium"
-					>
-						BOOK A CALL
-					</Link>
 				</div>
 			</div>
 		</div>
