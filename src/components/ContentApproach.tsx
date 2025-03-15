@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ContentApproach() {
@@ -73,9 +74,11 @@ export default function ContentApproach() {
 
 				{/* Services button */}
 				<div className="mt-8">
-					<button className="px-6 py-3 bg-transparent border border-yellow-400 text-yellow-400 rounded-full text-lg font-medium hover:bg-yellow-400 hover:text-black transition-colors">
-						OUR SERVICES
-					</button>
+					<Link href="#services">
+						<button className="px-6 py-3 bg-transparent border border-yellow-400 text-yellow-400 rounded-full text-lg font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+							OUR SERVICES
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

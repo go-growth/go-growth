@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero: React.FC = () => {
@@ -54,37 +55,25 @@ const Hero: React.FC = () => {
 					{/* Tags */}
 					<div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
 						<span className="bg-yellow-200 text-black text-sm px-4 py-1 rounded-full">
-							Content Creators
+							SEO Specialists
 						</span>
 						<span className="bg-pink-200 text-black text-sm px-4 py-1 rounded-full">
-							Podcast Hosts
+							Website Development
 						</span>
 					</div>
 
 					{/* Main heading */}
-					<h1 className="flex flex-col text-5xl md:text-7xl font-light mb-4 space-y-8 text-center">
-						<span
-							className="py-3"
-							style={{
-								backgroundImage:
-									"linear-gradient(90deg, #8f98ff 1%, rgba(105, 114, 222, 0.4) 1% -2.96%, rgba(105, 114, 222, 0) 97.04%)",
-							}}
-						>
+					<h1 className="flex flex-col font-light mb-4 space-y-8 text-center">
+						<span className="py-3 text-5xl md:text-7xl">
 							Welcome to GoGrowth
 						</span>
-						<span
-							className="py-3"
-							style={{
-								backgroundImage:
-									"linear-gradient(90deg, #f0927e 1%, rgba(240, 146, 126, 0.4) 1% 2%, rgba(240, 146, 126, 0) 92.71%)",
-							}}
-						>
-							Your Trusted Marketing & Sales Agency in the USA
+						<span className="py-3 text-3xl md:text-5xl">
+							Your Trusted Marketing Agency in the US
 						</span>
 					</h1>
 
 					{/* Description */}
-					<p className="text-gray-300 text-lg max-w-2xl mb-10 mt-6">
+					<p className="text-gray-300 text-lg mb-10 mt-6 text-center">
 						At GoGrowth, we specialize in SEO, website development, and paid
 						advertising to help businesses in the United States maximize their
 						online presence and generate more revenue. Whether you need a
@@ -92,6 +81,13 @@ const Hero: React.FC = () => {
 						marketing solutions, we provide result-driven strategies tailored to
 						your needs.
 					</p>
+
+					<Link
+						href="/contact"
+						className="border-2 border-white/50 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors"
+					>
+						Contact Us
+					</Link>
 				</div>
 			</div>
 		</div>

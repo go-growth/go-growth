@@ -16,12 +16,12 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 	title,
 	description,
 	results,
-	duration,
+	// duration,
 	explorerLink,
 }) => {
 	return (
-		<div className="flex items-center justify-between w-full mb-16">
-			<div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+		<div className="flex items-center justify-center w-full mb-16">
+			<div className="w-full max-w-3xl flex flex-col md:flex-row items-center gap-8 border border-white/50 p-6 rounded-3xl">
 				<div className="relative w-40 h-40 flex-shrink-0">
 					<Image
 						src={logoSrc}
@@ -31,44 +31,28 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 					/>
 				</div>
 
-				<div className="flex flex-col">
+				<div className="flex flex-col w-full">
 					<div className="flex flex-col gap-1">
 						<div className="flex items-center gap-2">
 							<span className="text-white text-lg">How</span>
-							<span className="text-white text-lg font-bold">Go</span>
-							<span className="text-indigo-400 text-lg font-bold">Growth</span>
+							<span className="text-[#F5E5D0] text-lg font-bold">
+								Go Growth
+							</span>
 						</div>
 
 						<div className="text-white text-lg mb-1">{description}</div>
 
-						<div className="text-white text-lg mb-1">
-							{typeof results === "string" ? (
-								<>
-									<span className="font-normal">
-										{results?.startsWith("That gained")
-											? "That gained"
-											: "shorts that gained"}
-									</span>
-									<span className="font-bold ml-1">
-										{results.includes("M")
-											? results.split("M")[0] + "M"
-											: results}
-									</span>
-									<span className="font-bold">Views in {duration}</span>
-									<span className="font-normal ml-1">organically</span>
-								</>
-							) : (
-								results
-							)}
-						</div>
+						<div className="text-white text-lg mb-1">{results}</div>
 					</div>
 
-					<Link
-						href={explorerLink}
-						className="mt-4 bg-gray-200 bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-2 rounded-md w-max text-sm font-medium transition-all duration-200"
-					>
-						Explore
-					</Link>
+					<div className="w-full flex items-center justify-center lg:justify-start">
+						<Link
+							href={explorerLink}
+							className="mt-6 bg-gray-200 bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-2 rounded-md w-max text-sm font-medium transition-all duration-200"
+						>
+							Explore
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -81,96 +65,103 @@ const GoGrowthSection: React.FC = () => {
 			logoSrc: "/case-studies/logo_sthalam.avif",
 			title: "Sthalam",
 			description: (
-				<div className="flex items-center gap-1">
-					<span>Scaled a home décor brand from</span>
+				<div className="flex items-baseline gap-1">
+					<span>Scaled a home décor brand</span>
+					<span className="text-green-400 font-bold">Sthalam</span>
+					<span>from</span>
 					<span className="text-green-400 font-bold">zero to daily orders</span>
 				</div>
 			),
 			results: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>Achieved</span>
 					<span className="font-bold text-green-400">5.3+ ROAS</span>
 					<span>on paid ad campaigns</span>
 				</div>
 			),
 			duration: "3 Months",
-			explorerLink: "/case-studies/sthalam",
+			explorerLink: "thesthalam.com",
 		},
 		{
 			logoSrc: "/case-studies/limitless-boxing.jpg",
 			title: "Limitless Boxing",
 			description: (
-				<div className="flex flex-col gap-1">
-					<div className="flex items-center gap-1">
-						<span>Generated</span>
-						<span className="text-red-500 font-bold">60 registrations</span>
-						<span>for an offline challenge</span>
-					</div>
+				<div className="flex items-baseline gap-1">
+					<span>Generated</span>
+					<span className="text-red-500 font-bold">60 registrations</span>
+					<span>for an offline challenge for</span>
+					<span className="text-red-500 font-bold">Limitless Boxing</span>
 				</div>
 			),
 			results: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>With only</span>
 					<span className="font-bold text-yellow-400">₹8,000</span>
 					<span>ad spend</span>
 				</div>
 			),
 			duration: "1 Month",
-			explorerLink: "/case-studies/limitless-boxing",
+			explorerLink: "https://www.instagram.com/limitless__boxing/",
 		},
 		{
 			logoSrc: "/case-studies/10k-designers.png",
 			title: "10k Designers",
 			description: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>Generated</span>
 					<span className="font-bold text-blue-400">
 						150 high-value conversions
 					</span>
+					<span>for</span>
+					<span className="font-bold text-blue-400">10k Designers</span>
 				</div>
 			),
 			results: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>At</span>
 					<span className="text-blue-300 font-bold">₹1.12L</span>
 					<span>per customer</span>
 				</div>
 			),
 			duration: "6 Months",
-			explorerLink: "/case-studies/10k-designers",
+			explorerLink: "https://www.10kdesigners.com/",
 		},
 		{
 			logoSrc: "/case-studies/aevy-tv.webp",
 			title: "Aevy TV",
 			description: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>Designed a high-converting</span>
 					<span className="text-purple-400 font-bold">webinar funnel</span>
+					<span>for</span>
+					<span className="text-purple-400 font-bold">Aevy TV</span>
 				</div>
 			),
 			results: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>Generated</span>
 					<span className="underline font-bold">high-quality leads</span>
 					<span>with increased engagement</span>
 				</div>
 			),
 			duration: "3 Months",
-			explorerLink: "/case-studies/aevy-tv",
+			explorerLink: "https://www.aevytv.com/",
 		},
 		{
 			logoSrc: "/case-studies/breezyla-logo.webp",
 			title: "Breezy LA",
 			description: (
-				<div className="flex items-center gap-1">
-					<span>Complete digital revamp for a</span>
+				<div className="flex items-baseline gap-1">
+					<span>Complete digital revamp for</span>
+					<span className="text-green-300 font-bold">Breezy LA</span>
+					<span>a</span>
 					<span className="text-green-300 font-bold">
 						premium cannabis delivery service
 					</span>
 				</div>
 			),
 			results: (
-				<div className="flex items-center gap-1">
+				<div className="flex items-baseline gap-1">
 					<span>Boosted</span>
 					<span className="text-green-400 italic font-bold">
 						engagement & visibility
@@ -179,12 +170,12 @@ const GoGrowthSection: React.FC = () => {
 				</div>
 			),
 			duration: "4 Months",
-			explorerLink: "/case-studies/breezy-la",
+			explorerLink: "https://breezyla.com/?meadowQuery=menu%3Ddelivery",
 		},
 	];
 
 	return (
-		<div className="w-full min-h-screen relative overflow-hidden px-4 py-12">
+		<div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
 			{/* Decorative elements */}
 			<div className="absolute top-5 left-10 text-white text-2xl">*</div>
 			<div className="absolute top-5 right-10 text-white text-2xl">*</div>
@@ -221,8 +212,8 @@ const GoGrowthSection: React.FC = () => {
 				</svg>
 			</div>
 
-			<div className="max-w-5xl mx-auto">
-				<div className="text-center mb-12">
+			<div className="max-w-5xl mx-auto w-full">
+				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
 						Proven Growth, Real Results
 					</h2>
@@ -233,19 +224,21 @@ const GoGrowthSection: React.FC = () => {
 					</p>
 				</div>
 
-				{caseStudies.map((study, index) => (
-					<CaseStudy
-						key={index}
-						logoSrc={study.logoSrc}
-						title={study.title}
-						description={study.description}
-						results={study.results}
-						duration={study.duration}
-						explorerLink={study.explorerLink}
-					/>
-				))}
+				<div className="flex flex-col items-center w-full">
+					{caseStudies.map((study, index) => (
+						<CaseStudy
+							key={index}
+							logoSrc={study.logoSrc}
+							title={study.title}
+							description={study.description}
+							results={study.results}
+							duration={study.duration}
+							explorerLink={study.explorerLink}
+						/>
+					))}
+				</div>
 
-				<div className="text-center mt-12 pt-6 border-t border-gray-700">
+				<div className="text-center mt-16 pt-6 border-t border-gray-700">
 					<h3 className="text-2xl font-bold text-white mb-4">
 						Want to Achieve Similar Growth?
 					</h3>

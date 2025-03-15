@@ -16,8 +16,8 @@ const testimonials: TestimonialProps[] = [
 	{
 		name: "Sthalam",
 		role: "Home Décor Brand",
-		quote: "Scaled from zero to daily orders with a 5.3+ ROAS.",
-		stats: "5.3+ ROAS – Daily Orders Achieved",
+		quote: "Scaled from zero to daily orders with highest ROAS of 8+.",
+		stats: "8+ ROAS – Daily Orders Achieved",
 		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
 		videoThumbnail: "/placeholder.svg?height=400&width=600",
 	},
@@ -26,7 +26,8 @@ const testimonials: TestimonialProps[] = [
 		role: "Fitness Coaching",
 		quote: "Achieved 60 registrations with just ₹8,000 ad spend.",
 		stats: "60 Registrations – Cost-Effective Campaign",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoUrl:
+			"https://www.instagram.com/reel/DGK69gtvgh3/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
 		videoThumbnail: "/placeholder.svg?height=400&width=600",
 	},
 	{
@@ -53,6 +54,14 @@ const testimonials: TestimonialProps[] = [
 		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
 		videoThumbnail: "/placeholder.svg?height=400&width=600",
 	},
+	{
+		name: "AstroVetro",
+		role: "Gemstones, Tarot Cards & Astrology Reading",
+		quote: "Optimized websites, ads, and social media for better conversions.",
+		stats: "Improved UX & Local Visibility, Ran Paid Ads",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoThumbnail: "/placeholder.svg?height=400&width=600",
+	},
 ];
 
 export default function Testimonials() {
@@ -76,8 +85,8 @@ export default function Testimonials() {
 		<div className="min-h-screen flex items-center justify-center w-full p-4">
 			<div className="max-w-6xl w-full">
 				<div className="flex justify-between items-center mb-12">
-					<div className="inline-flex items-center px-4 py-2 bg-[#1a3a25] rounded-full">
-						<span className="text-xs font-medium uppercase tracking-wide">
+					<div className="inline-flex items-center justify-center p-4 h-10 bg-[#1a3a25] rounded-full">
+						<span className="text-base uppercase tracking-wide font-semibold">
 							{currentTestimonial.name} - {currentTestimonial.role}
 						</span>
 					</div>
@@ -101,7 +110,7 @@ export default function Testimonials() {
 				</div>
 
 				<div className="mb-12">
-					<h2 className="text-5xl md:text-6xl font-bold leading-tight">
+					<h2 className="text-4xl md:text-5xl font-bold leading-tight">
 						{currentTestimonial.quote}
 					</h2>
 				</div>
@@ -115,7 +124,7 @@ export default function Testimonials() {
 				</div>
 
 				<div className="flex justify-center mb-16">
-					<div className="relative w-full max-w-2xl aspect-video">
+					<div className="relative w-full max-w-7xl aspect-video border border-zinc-500 rounded-lg">
 						<div className="w-full h-full rounded-lg overflow-hidden">
 							<iframe
 								src={currentTestimonial.videoUrl}

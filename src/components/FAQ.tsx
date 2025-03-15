@@ -20,9 +20,16 @@ const faqData: FAQItem[] = [
 	},
 	{
 		id: 2,
-		question: "How long does it take to see results from SEO?",
+		question: "What are your pricing structures?",
 		answer:
-			"SEO is a long-term strategy that typically shows initial results within 3-6 months. However, significant improvement in rankings and traffic can take 6-12 months depending on your industry competition, website condition, and content quality.",
+			"Our pricing is flexible and varies based on the specific services you select, your sales and traffic objectives, target demographics (location), and industry requirements.",
+	},
+
+	{
+		id: 6,
+		question: "How long does it take to see results?",
+		answer:
+			"It is a long-term strategy that typically shows initial results within 3 months. However, significant improvement in rankings and traffic can take 6-12 months depending on your industry competition, website condition, and content quality.",
 	},
 	{
 		id: 3,
@@ -43,6 +50,12 @@ const faqData: FAQItem[] = [
 		answer:
 			"While we work with businesses across various sectors in the United States, we have particular expertise in e-commerce, local service businesses, B2B companies, and professional services. Our strategies are always customized to the specific needs and competitive landscape of your industry.",
 	},
+	{
+		id: 6,
+		question: "How long does it take to see results?",
+		answer:
+			"It is a long-term strategy that typically shows initial results within 3 months. However, significant improvement in rankings and traffic can take 6-12 months depending on your industry competition, website condition, and content quality.",
+	},
 ];
 
 export default function FAQ() {
@@ -57,15 +70,7 @@ export default function FAQ() {
 			{/* Header with gradient text */}
 			<div className="text-center mb-12 max-w-3xl w-full">
 				<h2 className="text-5xl font-bold mb-8">
-					Your questions,{" "}
-					<span
-						style={{
-							backgroundImage:
-								"linear-gradient(90deg, #a0ecb1 1%, rgba(160, 236, 177, 0.3) 1% 2%, rgba(160, 236, 177, 0) 92.71%)",
-						}}
-					>
-						answered
-					</span>
+					Your questions, <span>answered</span>
 				</h2>
 			</div>
 
