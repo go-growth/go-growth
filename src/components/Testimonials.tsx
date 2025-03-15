@@ -1,5 +1,6 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 interface TestimonialProps {
@@ -13,11 +14,43 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
 	{
-		name: "JACK RHYSIDER",
-		role: "DARKNET DIARIES HOST",
-		quote: "I'm constantly impressed by how good they are! Nice work.",
-		stats: "5.2M VIEWS IN 4 MONTHS - DOWNLOAD CASE STUDY",
-		videoUrl: "https://www.youtube.com/embed/KrhN8HrT1k0?si=UEhOf7K6-6u3ylAQ",
+		name: "Sthalam",
+		role: "Home Décor Brand",
+		quote: "Scaled from zero to daily orders with a 5.3+ ROAS.",
+		stats: "5.3+ ROAS – Daily Orders Achieved",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoThumbnail: "/placeholder.svg?height=400&width=600",
+	},
+	{
+		name: "Limitless Boxing",
+		role: "Fitness Coaching",
+		quote: "Achieved 60 registrations with just ₹8,000 ad spend.",
+		stats: "60 Registrations – Cost-Effective Campaign",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoThumbnail: "/placeholder.svg?height=400&width=600",
+	},
+	{
+		name: "10k Designers",
+		role: "Design Education Platform",
+		quote: "Delivered 150 high-value conversions at ₹1.12L per customer.",
+		stats: "150 Conversions – Premium Course Enrollments",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoThumbnail: "/placeholder.svg?height=400&width=600",
+	},
+	{
+		name: "Aevy TV",
+		role: "Webinar Series",
+		quote: "Boosted webinar registrations and audience engagement.",
+		stats: "High Registration & Attendance Rates",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
+		videoThumbnail: "/placeholder.svg?height=400&width=600",
+	},
+	{
+		name: "Breezy LA",
+		role: "Cannabis Delivery Service",
+		quote: "Complete digital revamp driving higher engagement and conversions.",
+		stats: "Improved UX & Local Visibility",
+		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
 		videoThumbnail: "/placeholder.svg?height=400&width=600",
 	},
 ];
@@ -74,9 +107,11 @@ export default function Testimonials() {
 				</div>
 
 				<div className="flex justify-center mb-16">
-					<button className="rounded-full border border-gray-600 px-8 py-3 text-xs font-medium tracking-widest uppercase hover:border-gray-400 transition-colors">
-						{currentTestimonial.stats}
-					</button>
+					<Link href="/case-studies">
+						<button className="rounded-full border border-gray-600 px-8 py-3 text-xs font-medium tracking-widest uppercase hover:border-gray-400 transition-colors">
+							{currentTestimonial.stats}
+						</button>
+					</Link>
 				</div>
 
 				<div className="flex justify-center mb-16">

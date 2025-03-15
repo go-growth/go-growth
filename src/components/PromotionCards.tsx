@@ -2,28 +2,28 @@
 import React, { useState, useRef } from "react";
 
 export default function PromotionCards() {
-	// Card data with title, image, and video link
+	// Updated card data for services
 	const cards = [
 		{
 			id: 1,
-			title: "Reid Hoffman",
-			image: "/path/to/reid-image.jpg",
-			video: "https://example.com/reid-video.mp4",
+			title: "SEO",
+			image: "https://placehold.co/240x320",
+			video: "https://example.com/seo-video.mp4",
 			color: "bg-red-200",
 		},
 		{
 			id: 2,
-			title: "POSSIBLE",
-			image: "/path/to/possible-image.jpg",
-			video: "https://example.com/possible-video.mp4",
+			title: "WEBSITES",
+			image: "https://placehold.co/240x320",
+			video: "https://example.com/website-video.mp4",
 			color: "bg-yellow-200",
-			subtitle: "With Reid Hoffman & Arin Finger",
+			subtitle: "Design & Development",
 		},
 		{
 			id: 3,
-			title: "Arin Finger",
-			image: "/path/to/arin-image.jpg",
-			video: "https://example.com/arin-video.mp4",
+			title: "PPC",
+			image: "https://placehold.co/240x320",
+			video: "https://example.com/ppc-video.mp4",
 			color: "bg-blue-200",
 		},
 	];
@@ -77,22 +77,20 @@ function VideoCard({ card }: { card: CardProps }) {
 		>
 			<div className="absolute inset-0 flex flex-col justify-between p-4">
 				{/* Content overlay that shows always */}
-				{card.id === 2 && (
-					<div className="w-full">
-						<h2 className="text-4xl font-bold text-yellow-400">{card.title}</h2>
-						{card.subtitle && (
-							<p className="text-sm text-yellow-400 mt-1">{card.subtitle}</p>
-						)}
-					</div>
-				)}
+				<div className="w-full">
+					<h2 className="text-4xl font-bold text-black">{card.title}</h2>
+					{card.subtitle && (
+						<p className="text-sm text-black mt-1">{card.subtitle}</p>
+					)}
+				</div>
 			</div>
 
-			{/* Image shown when not hovering */}
+			{/* Placeholder image shown when not hovering */}
 			{!isHovering && (
 				<img
 					src={card.image}
 					alt={card.title}
-					className="w-full h-full object-cover"
+					className="w-full h-full object-cover opacity-30"
 				/>
 			)}
 
@@ -100,7 +98,7 @@ function VideoCard({ card }: { card: CardProps }) {
 			<video
 				ref={videoRef}
 				src={card.video}
-				className={`w-full h-full object-cover ${
+				className={`w-full h-full object-cover opacity-30 ${
 					isHovering ? "block" : "hidden"
 				}`}
 				muted

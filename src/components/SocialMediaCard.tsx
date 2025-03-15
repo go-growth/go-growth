@@ -24,7 +24,7 @@ const SocialCard = ({
 	viewCount,
 	darkMode = true,
 	isVideo = false,
-	accentColor = null as string | null,
+	accentColor = null,
 }: SocialCardProps): React.JSX.Element => {
 	return (
 		<div
@@ -109,7 +109,7 @@ const SocialCard = ({
 						)}
 					</div>
 
-					{/* View count */}
+					{/* Extra info */}
 					<div className="flex items-center">
 						<p
 							className={`text-xs ${
@@ -118,20 +118,6 @@ const SocialCard = ({
 						>
 							{viewCount}
 						</p>
-						<svg
-							className={`w-3 h-3 ml-1 ${
-								darkMode ? "text-gray-400" : "text-gray-600"
-							}`}
-							fill="currentColor"
-							viewBox="0 0 20 20"
-						>
-							<path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-							<path
-								fillRule="evenodd"
-								d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-								clipRule="evenodd"
-							/>
-						</svg>
 					</div>
 				</div>
 			</div>
@@ -143,38 +129,39 @@ const SocialMediaCards = () => {
 	return (
 		<div className="min-h-screen flex items-center justify-center p-4">
 			<div className="flex flex-wrap gap-4 justify-center">
-				{/* Card 1 - Darknet Diaries */}
+				{/* Card 1 – SEO Services */}
 				<SocialCard
-					imageUrl="/illustrations/hand-phone.svg"
-					caption="and he was called"
-					profilePic="/avatars/darknet-diaries.jpg"
-					username="DARKNET DIARIES"
-					viewCount="2.4M+ Views"
-					darkMode={true}
-					subtitle={undefined}
-				/>
-
-				{/* Card 2 - Reid Hoffman */}
-				<SocialCard
-					imageUrl="/illustrations/cars.svg"
-					caption="that the shift in cars"
-					profilePic="/avatars/reid-hoffman.jpg"
-					username="REID HOFFMAN"
-					subtitle="Co-founder LinkedIn"
-					viewCount=""
+					imageUrl="/case-studies/logo_sthalam.avif"
+					caption="Rank Higher, Get More Traffic"
+					profilePic="/avatars/gogrowth-logo.png"
+					username="SEO SERVICES"
+					subtitle="Keyword Research, On-Page & Local SEO"
+					viewCount="Organic Growth"
 					darkMode={true}
 				/>
 
-				{/* Card 3 - Acquired FM */}
+				{/* Card 2 – Website Design */}
 				<SocialCard
-					imageUrl="/podcast-screenshot.jpg"
-					caption="So Costco"
-					profilePic="/avatars/acquired-fm.jpg"
-					username="ACQUIRED FM"
-					viewCount="4.9M+ Views"
+					imageUrl="/case-studies/breezyla-logo.webp"
+					caption="Built to Convert"
+					profilePic="/avatars/gogrowth-logo.png"
+					username="WEB DESIGN"
+					subtitle="Responsive, Custom & SEO-Friendly"
+					viewCount="Conversion-Focused"
+					darkMode={true}
+				/>
+
+				{/* Card 3 – Paid Advertising */}
+				<SocialCard
+					imageUrl="/case-studies/aevy-tv.webp"
+					caption="More Clicks, More Conversions"
+					profilePic="/avatars/gogrowth-logo.png"
+					username="PAID ADS"
+					subtitle="Google, Social & Retargeting"
+					viewCount="ROI-Driven"
 					darkMode={true}
 					accentColor="green"
-					isVideo={true}
+					isVideo={false}
 				/>
 			</div>
 		</div>
