@@ -6,7 +6,7 @@ export default function Navbar() {
 		<div className="sticky top-0 bg-black/50 max-w-full flex items-center justify-between px-5 py-8 h-24">
 			<Link href="/">
 				<div className="text-4xl font-semibold">
-					Atomik{" "}
+					Go{" "}
 					<span className="bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text">
 						Growth
 					</span>

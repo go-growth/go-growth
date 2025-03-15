@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-	title: "Atomik Growth",
+	title: "Go Growth",
 	description: "",
 };
 

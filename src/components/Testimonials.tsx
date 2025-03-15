@@ -40,7 +40,7 @@ export default function Testimonials() {
 	const currentTestimonial = testimonials[currentIndex];
 
 	return (
-		<div className="min-h-screen flex items-center justify-center w-full p-4 bg-black text-white">
+		<div className="min-h-screen flex items-center justify-center w-full p-4">
 			<div className="max-w-6xl w-full">
 				<div className="flex justify-between items-center mb-12">
 					<div className="inline-flex items-center px-4 py-2 bg-[#1a3a25] rounded-full">

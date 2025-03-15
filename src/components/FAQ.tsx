@@ -46,7 +46,7 @@ export default function FAQ() {
       {/* Header with gradient text */}
       <div className="text-center mb-12 max-w-3xl w-full">
         <h2 className="text-5xl font-bold mb-8">
-          Your questions, <span className="bg-gradient-to-r from-green-400 to-green-600 px-2 py-1">answered</span>
+          Your questions, <span style={{ backgroundImage: 'linear-gradient(90deg, #a0ecb1 1%, rgba(160, 236, 177, 0.3) 1% 2%, rgba(160, 236, 177, 0) 92.71%)' }}>answered</span>
         </h2>
       </div>
       

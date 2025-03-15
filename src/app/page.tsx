@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import MenuItems from "@/components/MenuItems";
 import PromotionCards from "@/components/PromotionCards";
-// import SocialMediaCards from "@/components/SocialMediaCard";
+import SocialMediaCards from "@/components/SocialMediaCard";
 import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
 			<PromotionCards />
 			<HowItWorks />
 			<ContentApproach />
-			{/* <SocialMediaCards /> */}
+			<SocialMediaCards />
 			<Testimonials />
 			<MenuItems />
 			<FAQ />

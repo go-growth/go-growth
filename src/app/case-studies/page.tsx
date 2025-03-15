@@ -1,6 +1,6 @@
-import AtomikGrowthSection from "@/components/AtomicGrowth";
+import GoGrowthSection from "@/components/GoGrowth";
 import React from "react";
 
 export default function page() {
-	return <AtomikGrowthSection />;
+	return <GoGrowthSection />;
 }

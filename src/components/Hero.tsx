@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
 					</div>
 
 					{/* Main heading */}
-					<h1 className="flex flex-col text-5xl md:text-7xl font-light mb-4 space-y-8">
+					<h1 className="flex flex-col text-5xl md:text-7xl font-light mb-4 space-y-8 text-center">
 						<span
 							className="py-3"
 							style={{
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
 									"linear-gradient(90deg, #8f98ff 1%, rgba(105, 114, 222, 0.4) 1% -2.96%, rgba(105, 114, 222, 0) 97.04%)",
 							}}
 						>
-							Podcasting For VCs
+							Welcome to GoGrowth
 						</span>
 						<span
 							className="py-3"
@@ -79,15 +79,18 @@ const Hero: React.FC = () => {
 									"linear-gradient(90deg, #f0927e 1%, rgba(240, 146, 126, 0.4) 1% 2%, rgba(240, 146, 126, 0) 92.71%)",
 							}}
 						>
-							& Tech Companies
+							Your Trusted Marketing & Sales Agency in the USA
 						</span>
 					</h1>
 
 					{/* Description */}
 					<p className="text-gray-300 text-lg max-w-2xl mb-10 mt-6">
-						We help venture capital funds and tech companies scale content
-						strategies to attract quality deal flow and deepen relationships,
-						either by starting a new podcast or optimizing an existing one.
+						At GoGrowth, we specialize in SEO, website development, and paid
+						advertising to help businesses in the United States maximize their
+						online presence and generate more revenue. Whether you need a
+						one-time SEO setup, a website built from scratch, or ongoing digital
+						marketing solutions, we provide result-driven strategies tailored to
+						your needs.
 					</p>
 				</div>
 			</div>

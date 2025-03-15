@@ -9,11 +9,11 @@ export default function Footer() {
         <div className="overflow-hidden py-24">
           <div className="relative flex whitespace-nowrap py-3">
             <div className="animate-marquee flex items-center">
-              <span className="mx-4 text-5xl">become the go-to person in your industry |</span>
-              <span className="mx-4 text-5xl">become the go-to person in your industry |</span>
-              <span className="mx-4 text-5xl">become the go-to person in your industry |</span>
-              <span className="mx-4 text-5xl">become the go-to person in your industry |</span>
-              <span className="mx-4 text-5xl">become the go-to person in your industry |</span>
+              <span className="mx-4 text-5xl">become the go-to person in <span style={{ backgroundImage: 'linear-gradient(90deg, #fadf7c 1%, rgba(250, 223, 124, 0.3) 1% 2%, rgba(250, 223, 124, 0) 92.71%)' }}>your industry </span> |</span>
+              <span className="mx-4 text-5xl">become the go-to person in <span style={{ backgroundImage: 'linear-gradient(90deg, #fadf7c 1%, rgba(250, 223, 124, 0.3) 1% 2%, rgba(250, 223, 124, 0) 92.71%)' }}>your industry </span> |</span>
+              <span className="mx-4 text-5xl">become the go-to person in <span style={{ backgroundImage: 'linear-gradient(90deg, #fadf7c 1%, rgba(250, 223, 124, 0.3) 1% 2%, rgba(250, 223, 124, 0) 92.71%)' }}>your industry </span> |</span>
+              <span className="mx-4 text-5xl">become the go-to person in <span style={{ backgroundImage: 'linear-gradient(90deg, #fadf7c 1%, rgba(250, 223, 124, 0.3) 1% 2%, rgba(250, 223, 124, 0) 92.71%)' }}>your industry </span> |</span>
+              <span className="mx-4 text-5xl">become the go-to person in <span style={{ backgroundImage: 'linear-gradient(90deg, #fadf7c 1%, rgba(250, 223, 124, 0.3) 1% 2%, rgba(250, 223, 124, 0) 92.71%)' }}>your industry </span> |</span>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function Footer() {
             {/* Logo Section */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-bold">Atomik</span>
+                <span className="text-2xl font-bold">Go</span>
                 <span className="text-2xl font-bold text-blue-500 ml-2">Growth</span>
               </Link>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
       <div className="bg-[#1e1e1e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-gray-400 text-sm">
-            All rights reserved by Atomik Growth
+            All rights reserved by Go Growth
           </p>
         </div>
       </div>
