@@ -43,7 +43,7 @@ export default function Footer() {
 						{/* Navigation Links */}
 						<div className="flex flex-col md:flex-row gap-6 md:gap-12">
 							<Link
-								href="/hiring"
+								href="/contact"
 								className="hover:text-gray-300 transition duration-300"
 							>
 								Hiring
@@ -60,7 +60,7 @@ export default function Footer() {
 						<div className="flex items-center gap-2">
 							<span className="text-gray-300">Follow us on</span>
 							<Link
-								href="https://instagram.com"
+								href="https://www.instagram.com/gurmeet__oberoi/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="bg-purple-500 rounded-full p-2 hover:bg-purple-600 transition duration-300"

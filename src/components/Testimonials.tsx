@@ -9,7 +9,6 @@ interface TestimonialProps {
 	quote: string;
 	stats: string;
 	videoUrl: string;
-	videoThumbnail: string;
 }
 
 const testimonials: TestimonialProps[] = [
@@ -18,49 +17,42 @@ const testimonials: TestimonialProps[] = [
 		role: "Home Décor Brand",
 		quote: "Scaled from zero to daily orders with highest ROAS of 8+.",
 		stats: "8+ ROAS – Daily Orders Achieved",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/sthalam.mp4",
 	},
 	{
 		name: "Limitless Boxing",
 		role: "Fitness Coaching",
 		quote: "Achieved 60 registrations with just ₹8,000 ad spend.",
 		stats: "60 Registrations – Cost-Effective Campaign",
-		videoUrl:
-			"https://www.instagram.com/reel/DGK69gtvgh3/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/limitless_boxing.mp4",
 	},
 	{
 		name: "10k Designers",
 		role: "Design Education Platform",
 		quote: "Delivered 150 high-value conversions at ₹1.12L per customer.",
 		stats: "150 Conversions – Premium Course Enrollments",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/10kdes.mp4",
 	},
 	{
 		name: "Aevy TV",
 		role: "Webinar Series",
 		quote: "Boosted webinar registrations and audience engagement.",
 		stats: "High Registration & Attendance Rates",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/aevytv.mp4",
 	},
 	{
 		name: "Breezy LA",
 		role: "Cannabis Delivery Service",
 		quote: "Complete digital revamp driving higher engagement and conversions.",
 		stats: "Improved UX & Local Visibility",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/breezyla.mp4",
 	},
 	{
 		name: "AstroVetro",
 		role: "Gemstones, Tarot Cards & Astrology Reading",
 		quote: "Optimized websites, ads, and social media for better conversions.",
 		stats: "Improved UX & Local Visibility, Ran Paid Ads",
-		videoUrl: "https://www.youtube.com/embed/VpUh2-s0Ths?si=rur3EqbwPAhI_9nd",
-		videoThumbnail: "/placeholder.svg?height=400&width=600",
+		videoUrl: "/video/astrovetro.mp4",
 	},
 ];
 
