@@ -48,6 +48,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 					<div className="w-full flex items-center justify-center lg:justify-start">
 						<Link
 							href={explorerLink}
+							target="_blank"
 							className="mt-6 bg-gray-200 bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-2 rounded-md w-max text-sm font-medium transition-all duration-200"
 						>
 							Explore
@@ -75,12 +76,13 @@ const GoGrowthSection: React.FC = () => {
 			results: (
 				<div className="flex items-baseline gap-1">
 					<span>Achieved</span>
-					<span className="font-bold text-green-400">5.3+ ROAS</span>
+					<span className="font-bold text-green-400">8x ROAS</span>
 					<span>on paid ad campaigns</span>
 				</div>
 			),
 			duration: "3 Months",
-			explorerLink: "thesthalam.com",
+			explorerLink:
+				"https://docs.google.com/document/d/1OGI43juqmJI5jWIOsPk1YSSqh-virXPHrTfRcaEbHAo/edit?usp=drive_link",
 		},
 		{
 			logoSrc: "/case-studies/limitless-boxing.jpg",
@@ -96,12 +98,13 @@ const GoGrowthSection: React.FC = () => {
 			results: (
 				<div className="flex items-baseline gap-1">
 					<span>With only</span>
-					<span className="font-bold text-yellow-400">₹8,000</span>
+					<span className="font-bold text-yellow-400">$90</span>
 					<span>ad spend</span>
 				</div>
 			),
 			duration: "1 Month",
-			explorerLink: "https://www.instagram.com/limitless__boxing/",
+			explorerLink:
+				"https://docs.google.com/document/d/15WeyWwk7u0So3PgLlqTn4_H8IYDvMN4Lm9ws-2mcbQQ/edit?usp=drive_link",
 		},
 		{
 			logoSrc: "/case-studies/10k-designers.png",
@@ -119,12 +122,13 @@ const GoGrowthSection: React.FC = () => {
 			results: (
 				<div className="flex items-baseline gap-1">
 					<span>At</span>
-					<span className="text-blue-300 font-bold">₹1.12L</span>
+					<span className="text-blue-300 font-bold">$1300</span>
 					<span>per customer</span>
 				</div>
 			),
 			duration: "6 Months",
-			explorerLink: "https://www.10kdesigners.com/",
+			explorerLink:
+				"https://docs.google.com/document/d/1VczJlJ5AR5E6yvVYiqg0M2ex4eIpFvzerRoUjyx2U-o/edit?usp=drive_link",
 		},
 		{
 			logoSrc: "/case-studies/aevy-tv.webp",

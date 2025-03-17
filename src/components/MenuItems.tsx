@@ -78,17 +78,17 @@ export default function MenuItems() {
 					OUR SERVICES
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-32 w-full">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
 					{services.map((service) => (
 						<div
 							key={service.id}
-							className="w-full lg:min-w-[400px] border border-zinc-800 rounded-3xl p-8"
+							className="w-full border border-zinc-800 rounded-3xl p-6"
 						>
 							<div className="flex flex-col items-center">
-								<h1 className="text-4xl font-medium text-white mb-3">
+								<h1 className="text-3xl font-medium text-white mb-3">
 									{service.title}
 								</h1>
-								<p className="text-zinc-500 text-center mb-10 text-sm">
+								<p className="text-zinc-500 text-center mb-10 text-xs">
 									{service.description}
 								</p>
 

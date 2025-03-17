@@ -38,50 +38,57 @@ export default function CardCarousel() {
 	const displayCards = [...cards, ...cards, ...cards];
 
 	return (
-		<div className="flex items-center justify-center w-full p-8">
-			<div className="w-full overflow-hidden relative">
-				<div
-					className={`flex gap-8 ${isPaused ? "" : "animate-marquee"}`}
-					onMouseEnter={() => setIsPaused(true)}
-					onMouseLeave={() => setIsPaused(false)}
-				>
-					{displayCards.map((card, index) => (
-						<div
-							key={index}
-							className="flex flex-col items-center flex-shrink-0 w-32"
-						>
-							<div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-700 mb-4 flex items-center justify-center bg-center bg-cover">
-								<Image
-									src={card.logo}
-									alt={`${card.title} logo`}
-									width={128}
-									height={128}
-									className="object-cover"
-								/>
+		<>
+			<h1 className="max-w-7xl mx-auto text-center text-4xl font-semibold">
+				Our Clientele
+			</h1>
+			<div className="flex items-center justify-center w-full p-8">
+				<div className="w-full overflow-hidden relative">
+					<div
+						className={`flex gap-8 ${isPaused ? "" : "animate-marquee"}`}
+						onMouseEnter={() => setIsPaused(true)}
+						onMouseLeave={() => setIsPaused(false)}
+					>
+						{displayCards.map((card, index) => (
+							<div
+								key={index}
+								className="flex flex-col items-center flex-shrink-0 w-32"
+							>
+								<div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-700 mb-4 flex items-center justify-center bg-center bg-cover">
+									<Image
+										src={card.logo}
+										alt={`${card.title} logo`}
+										width={128}
+										height={128}
+										className="object-cover"
+									/>
+								</div>
+								<h3 className="text-white font-bold text-center">
+									{card.title}
+								</h3>
+								<p className="text-gray-400 text-sm text-center">
+									{card.subtitle}
+								</p>
 							</div>
-							<h3 className="text-white font-bold text-center">{card.title}</h3>
-							<p className="text-gray-400 text-sm text-center">
-								{card.subtitle}
-							</p>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
-			</div>
 
-			{/* Add the required CSS for the marquee animation */}
-			<style jsx>{`
-				@keyframes marquee {
-					0% {
-						transform: translateX(0);
+				{/* Add the required CSS for the marquee animation */}
+				<style jsx>{`
+					@keyframes marquee {
+						0% {
+							transform: translateX(0);
+						}
+						100% {
+							transform: translateX(calc(-160px * ${cards.length}));
+						}
 					}
-					100% {
-						transform: translateX(calc(-160px * ${cards.length}));
+					.animate-marquee {
+						animation: marquee 30s linear infinite;
 					}
-				}
-				.animate-marquee {
-					animation: marquee 30s linear infinite;
-				}
-			`}</style>
-		</div>
+				`}</style>
+			</div>
+		</>
 	);
 }

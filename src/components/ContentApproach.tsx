@@ -39,7 +39,7 @@ export default function ContentApproach() {
 				</h1>
 
 				{/* Subheading */}
-				<p className="text-xl md:text-2xl mb-16 text-gray-300 max-w-3xl mx-auto">
+				<p className="text-xl mb-16 text-gray-300 max-w-3xl mx-auto">
 					Our approach is rooted in data, built on dynamic strategies, and
 					focused on real business growth. We analyze, optimize, and execute
 					tailored solutions that drive leads, conversions, and revenue.
@@ -50,15 +50,15 @@ export default function ContentApproach() {
 					{/* Websites stat */}
 					<div className="flex flex-col items-center">
 						<h2 className="text-5xl md:text-6xl font-bold text-yellow-400">
-							250+
+							$30,000+
 						</h2>
-						<p className="text-xl mt-2">Websites Optimized</p>
+						<p className="text-xl mt-2">Revenue Generated</p>
 					</div>
 
 					{/* ROI stat */}
 					<div className="flex flex-col items-center">
 						<h2 className="text-5xl md:text-6xl font-bold text-yellow-400">
-							300%
+							5.5
 						</h2>
 						<p className="text-xl mt-2">Average ROI</p>
 					</div>
@@ -66,7 +66,7 @@ export default function ContentApproach() {
 					{/* Clients stat */}
 					<div className="flex flex-col items-center">
 						<h2 className="text-5xl md:text-6xl font-bold text-yellow-400">
-							120+
+							4+
 						</h2>
 						<p className="text-xl mt-2">Happy Clients</p>
 					</div>

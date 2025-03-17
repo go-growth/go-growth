@@ -40,22 +40,6 @@ export default function Footer() {
 							</Link>
 						</div>
 
-						{/* Navigation Links */}
-						<div className="flex flex-col md:flex-row gap-6 md:gap-12">
-							<Link
-								href="/contact"
-								className="hover:text-gray-300 transition duration-300"
-							>
-								Hiring
-							</Link>
-							<Link
-								href="/case-studies"
-								className="hover:text-gray-300 transition duration-300"
-							>
-								Case studies
-							</Link>
-						</div>
-
 						{/* Social Media */}
 						<div className="flex items-center gap-2">
 							<span className="text-gray-300">Follow us on</span>

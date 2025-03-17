@@ -15,28 +15,30 @@ const testimonials: TestimonialProps[] = [
 	{
 		name: "Sthalam",
 		role: "Home Décor Brand",
-		quote: "Scaled from zero to daily orders with highest ROAS of 8+.",
+		quote: "Scaled from zero to daily orders with highest ROAS of 8x.",
 		stats: "8+ ROAS – Daily Orders Achieved",
 		videoUrl: "/video/sthalam.mp4",
 	},
 	{
 		name: "Limitless Boxing",
 		role: "Fitness Coaching",
-		quote: "Achieved 60 registrations with just ₹8,000 ad spend.",
+		quote:
+			"Achieved 60 registrations with just $90 ad spend which resulted in recurring $500 a month revenue ",
 		stats: "60 Registrations – Cost-Effective Campaign",
 		videoUrl: "/video/limitless_boxing.mp4",
 	},
 	{
 		name: "10k Designers",
 		role: "Design Education Platform",
-		quote: "Delivered 150 high-value conversions at ₹1.12L per customer.",
-		stats: "150 Conversions – Premium Course Enrollments",
+		quote: "Delivered 180 high-value conversions at $1300 per customer.",
+		stats: "180 Conversions – Premium Course Enrollments",
 		videoUrl: "/video/10kdes.mp4",
 	},
 	{
 		name: "Aevy TV",
 		role: "Webinar Series",
-		quote: "Boosted webinar registrations and audience engagement.",
+		quote:
+			"Boosted webinar registrations and audience engagement and helped close over 1000+ sales",
 		stats: "High Registration & Attendance Rates",
 		videoUrl: "/video/aevytv.mp4",
 	},
@@ -102,7 +104,7 @@ export default function Testimonials() {
 				</div>
 
 				<div className="mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold leading-tight">
+					<h2 className="text-xl md:text-4xl font-bold leading-tight">
 						{currentTestimonial.quote}
 					</h2>
 				</div>
