@@ -102,8 +102,7 @@ const GoGrowthSection: React.FC = () => {
 				</div>
 			),
 			duration: "1 Month",
-			explorerLink:
-				"https://docs.google.com/document/d/15WeyWwk7u0So3PgLlqTn4_H8IYDvMN4Lm9ws-2mcbQQ/edit?usp=drive_link",
+			explorerLink: "/case-studies/limitless-boxing",
 		},
 		{
 			logoSrc: "/case-studies/10k-designers.png",
