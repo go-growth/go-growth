@@ -50,7 +50,7 @@ export default function ContentApproach() {
 					{/* Websites stat */}
 					<div className="flex flex-col items-center">
 						<h2 className="text-5xl md:text-6xl font-bold text-yellow-400">
-							$30,000+
+							$369,000+
 						</h2>
 						<p className="text-xl mt-2">Revenue Generated</p>
 					</div>
@@ -66,9 +66,9 @@ export default function ContentApproach() {
 					{/* Clients stat */}
 					<div className="flex flex-col items-center">
 						<h2 className="text-5xl md:text-6xl font-bold text-yellow-400">
-							4+
+							40+
 						</h2>
-						<p className="text-xl mt-2">Happy Clients</p>
+						<p className="text-xl mt-2">Successful Campaigns</p>
 					</div>
 				</div>
 

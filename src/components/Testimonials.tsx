@@ -15,7 +15,7 @@ const testimonials: TestimonialProps[] = [
 	{
 		name: "Sthalam",
 		role: "Home Décor Brand",
-		quote: "Scaled from zero to daily orders with highest ROAS of 8x.",
+		quote: "Scaled from $0 to $5000 per month with highest ROAS of 8x.",
 		stats: "8+ ROAS – Daily Orders Achieved",
 		videoUrl: "/video/sthalam.mp4",
 	},
@@ -23,14 +23,15 @@ const testimonials: TestimonialProps[] = [
 		name: "Limitless Boxing",
 		role: "Fitness Coaching",
 		quote:
-			"Achieved 60 registrations with just $90 ad spend which resulted in recurring $500 a month revenue ",
+			"Achieved 60 registrations with just $90 ad spend which resulted in recurring $500 a month revenue.",
 		stats: "60 Registrations – Cost-Effective Campaign",
 		videoUrl: "/video/limitless_boxing.mp4",
 	},
 	{
 		name: "10k Designers",
 		role: "Design Education Platform",
-		quote: "Delivered 180 high-value conversions at $1300 per customer.",
+		quote:
+			"Delivered 180 high-value conversions at $1300 per customer which resulted in $200,000+ revenue.",
 		stats: "180 Conversions – Premium Course Enrollments",
 		videoUrl: "/video/10kdes.mp4",
 	},
@@ -38,7 +39,7 @@ const testimonials: TestimonialProps[] = [
 		name: "Aevy TV",
 		role: "Webinar Series",
 		quote:
-			"Boosted webinar registrations and audience engagement and helped close over 1000+ sales",
+			"Boosted webinar registrations and audience engagement and helped close over 1000+ sales which resulted in $170,000+ revenue in sales.",
 		stats: "High Registration & Attendance Rates",
 		videoUrl: "/video/aevytv.mp4",
 	},

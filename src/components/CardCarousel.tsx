@@ -9,28 +9,33 @@ export default function CardCarousel() {
 	const cards = [
 		{
 			logo: "/case-studies/breezyla-logo.webp",
-			title: "E-commerce",
-			subtitle: "Online Retailers",
+			title: "Breezy LA",
+			subtitle: "E-commerce",
 		},
 		{
 			logo: "/case-studies/10k-designers.png",
-			title: "Service Providers",
-			subtitle: "Local Businesses",
+			title: "10K Designers",
+			subtitle: "Ed-Tech",
+		},
+		{
+			logo: "/case-studies/limitless-boxing.jpg",
+			title: "Limitless Boxing",
+			subtitle: "Local Gym",
 		},
 		{
 			logo: "/case-studies/aevy-tv.webp",
-			title: "B2B Companies",
-			subtitle: "Lead Generation",
+			title: "Aevy TV",
+			subtitle: "Ed-Tech",
 		},
 		{
 			logo: "/case-studies/logo_sthalam.avif",
-			title: "Startups",
-			subtitle: "Growth Strategy",
+			title: "Sthalam",
+			subtitle: "E-commerce",
 		},
 		{
 			logo: "/case-studies/logo_astro.avif",
-			title: "Startups",
-			subtitle: "Growth Strategy",
+			title: "AstroVetro",
+			subtitle: "E-commerce",
 		},
 	];
 
