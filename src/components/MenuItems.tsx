@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+import { useEffect, useRef, useState } from "react";
+import ContactPage from "./ContactForm";
 
 export default function MenuItems() {
 	// Services data array
@@ -68,9 +70,40 @@ export default function MenuItems() {
 		</div>
 	);
 
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const modalRef = useRef<HTMLDivElement>(null);
+
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
+
+	// Close modal when clicking outside of it
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				modalRef.current &&
+				!modalRef.current.contains(event.target as Node)
+			) {
+				closeModal();
+			}
+		};
+
+		if (isModalOpen) {
+			document.addEventListener("mousedown", handleClickOutside);
+		}
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [isModalOpen]);
+
 	return (
 		<div
-			className="min-h-screen flex items-center justify-center w-full"
+			className="flex items-center justify-center w-full lg:py-20 py-10"
 			id="services"
 		>
 			<div className="flex flex-col items-center max-w-6xl w-full px-4">
@@ -100,17 +133,44 @@ export default function MenuItems() {
 										</div>
 									))}
 								</div>
-								<Link
-									href="/contact"
+								<button
+									onClick={openModal}
 									className="w-full border border-zinc-800 text-white uppercase text-sm font-medium py-4 rounded-full hover:bg-zinc-900 transition-colors text-center"
 								>
 									Get a Quote
-								</Link>
+								</button>
 							</div>
 						</div>
 					))}
 				</div>
 			</div>
+
+			{isModalOpen && (
+				<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+					<div
+						ref={modalRef}
+						className="bg-[#1f1a19] p-4 rounded-lg max-w-4xl w-full relative max-h-[90vh] overflow-y-auto"
+					>
+						<button
+							onClick={closeModal}
+							className="absolute top-4 right-4 text-white hover:text-gray-300"
+							aria-label="Close modal"
+						>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2"
+							>
+								<path d="M18 6L6 18M6 6l12 12" />
+							</svg>
+						</button>
+						<ContactPage />
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }

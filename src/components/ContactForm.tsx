@@ -102,9 +102,7 @@ export default function ContactPage() {
 	];
 
 	const companyTypeOptions = [
-		"B2B (Business to Business)",
 		"B2C (Business to Consumer)",
-		"D2B (Direct to Business)",
 		"D2C (Direct to Consumer)",
 		"Other",
 	];

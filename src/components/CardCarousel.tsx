@@ -38,9 +38,9 @@ export default function CardCarousel() {
 	const displayCards = [...cards, ...cards, ...cards];
 
 	return (
-		<>
+		<section className="lg:py-20 py-10">
 			<h1 className="max-w-7xl mx-auto text-center text-4xl font-semibold">
-				Our Clientele
+				Our Clients
 			</h1>
 			<div className="flex items-center justify-center w-full p-8">
 				<div className="w-full overflow-hidden relative">
@@ -89,6 +89,6 @@ export default function CardCarousel() {
 					}
 				`}</style>
 			</div>
-		</>
+		</section>
 	);
 }

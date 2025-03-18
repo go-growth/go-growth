@@ -76,7 +76,7 @@ export default function Testimonials() {
 	const currentTestimonial = testimonials[currentIndex];
 
 	return (
-		<div className="min-h-screen flex items-center justify-center w-full p-4">
+		<div className="min-h-screen flex items-center justify-center w-full p-4 lg:py-20 py-10">
 			<div className="max-w-6xl w-full">
 				<div className="flex justify-between items-center mb-12">
 					<div className="inline-flex items-center justify-center p-4 h-10 bg-[#1a3a25] rounded-full">
@@ -124,7 +124,7 @@ export default function Testimonials() {
 								src={currentTestimonial.videoUrl}
 								title={`${currentTestimonial.name} video`}
 								className="w-full h-full"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted"
 								allowFullScreen
 							></iframe>
 						</div>

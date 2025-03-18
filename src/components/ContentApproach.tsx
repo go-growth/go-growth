@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ContentApproach() {
 	return (
-		<div className="min-h-screen flex items-center justify-center w-fulL relative overflow-hidden">
+		<div className="flex items-center justify-center w-fulL relative overflow-hidden lg:py-20 py-10">
 			{/* Background decorations */}
 			<div className="absolute top-8 right-8 text-white text-4xl">*</div>
 			<div className="absolute bottom-32 left-8 text-white text-4xl">*</div>

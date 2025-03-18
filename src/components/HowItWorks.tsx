@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HowItWorks() {
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center w-full py-16">
+		<div className="flex flex-col items-center justify-center w-full lg:py-20 py-10">
 			<h1 className="text-5xl font-bold mb-16">How We Grow Your Business</h1>
 
 			<div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-6xl px-4">

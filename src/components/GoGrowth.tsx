@@ -81,8 +81,7 @@ const GoGrowthSection: React.FC = () => {
 				</div>
 			),
 			duration: "3 Months",
-			explorerLink:
-				"https://docs.google.com/document/d/1OGI43juqmJI5jWIOsPk1YSSqh-virXPHrTfRcaEbHAo/edit?usp=drive_link",
+			explorerLink: "/case-studies/sthalam",
 		},
 		{
 			logoSrc: "/case-studies/limitless-boxing.jpg",

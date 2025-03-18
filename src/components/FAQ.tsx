@@ -66,7 +66,7 @@ export default function FAQ() {
 	};
 
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center w-full py-16 px-4">
+		<div className="flex flex-col items-center justify-center w-full px-4 lg:py-20 py-10">
 			{/* Header with gradient text */}
 			<div className="text-center mb-12 max-w-3xl w-full">
 				<h2 className="text-5xl font-bold mb-8">
