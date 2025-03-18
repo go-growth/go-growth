@@ -125,8 +125,7 @@ const GoGrowthSection: React.FC = () => {
 				</div>
 			),
 			duration: "6 Months",
-			explorerLink:
-				"https://docs.google.com/document/d/1VczJlJ5AR5E6yvVYiqg0M2ex4eIpFvzerRoUjyx2U-o/edit?usp=drive_link",
+			explorerLink: "/case-studies/10k-designers",
 		},
 		{
 			logoSrc: "/case-studies/aevy-tv.webp",
