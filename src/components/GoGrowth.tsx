@@ -83,27 +83,27 @@ const GoGrowthSection: React.FC = () => {
 			duration: "3 Months",
 			explorerLink: "/case-studies/sthalam",
 		},
-		{
-			logoSrc: "/case-studies/limitless-boxing.jpg",
-			title: "Limitless Boxing",
-			description: (
-				<div className="flex items-baseline gap-1">
-					<span>Generated</span>
-					<span className="text-red-500 font-bold">60 registrations</span>
-					<span>for an offline challenge for</span>
-					<span className="text-red-500 font-bold">Limitless Boxing</span>
-				</div>
-			),
-			results: (
-				<div className="flex items-baseline gap-1">
-					<span>With only</span>
-					<span className="font-bold text-yellow-400">$90</span>
-					<span>ad spend</span>
-				</div>
-			),
-			duration: "1 Month",
-			explorerLink: "/case-studies/limitless-boxing",
-		},
+		// {
+		// 	logoSrc: "/case-studies/limitless-boxing.jpg",
+		// 	title: "Limitless Boxing",
+		// 	description: (
+		// 		<div className="flex items-baseline gap-1">
+		// 			<span>Generated</span>
+		// 			<span className="text-red-500 font-bold">60 registrations</span>
+		// 			<span>for an offline challenge for</span>
+		// 			<span className="text-red-500 font-bold">Limitless Boxing</span>
+		// 		</div>
+		// 	),
+		// 	results: (
+		// 		<div className="flex items-baseline gap-1">
+		// 			<span>With only</span>
+		// 			<span className="font-bold text-yellow-400">$90</span>
+		// 			<span>ad spend</span>
+		// 		</div>
+		// 	),
+		// 	duration: "1 Month",
+		// 	explorerLink: "/case-studies/limitless-boxing",
+		// },
 		{
 			logoSrc: "/case-studies/10k-designers.png",
 			title: "10k Designers",
@@ -127,27 +127,27 @@ const GoGrowthSection: React.FC = () => {
 			duration: "6 Months",
 			explorerLink: "/case-studies/10k-designers",
 		},
-		{
-			logoSrc: "/case-studies/aevy-tv.webp",
-			title: "Aevy TV",
-			description: (
-				<div className="flex items-baseline gap-1">
-					<span>Designed a high-converting</span>
-					<span className="text-purple-400 font-bold">webinar funnel</span>
-					<span>for</span>
-					<span className="text-purple-400 font-bold">Aevy TV</span>
-				</div>
-			),
-			results: (
-				<div className="flex items-baseline gap-1">
-					<span>Generated</span>
-					<span className="underline font-bold">high-quality leads</span>
-					<span>with increased engagement</span>
-				</div>
-			),
-			duration: "3 Months",
-			explorerLink: "https://www.aevytv.com/",
-		},
+		// {
+		// 	logoSrc: "/case-studies/aevy-tv.webp",
+		// 	title: "Aevy TV",
+		// 	description: (
+		// 		<div className="flex items-baseline gap-1">
+		// 			<span>Designed a high-converting</span>
+		// 			<span className="text-purple-400 font-bold">webinar funnel</span>
+		// 			<span>for</span>
+		// 			<span className="text-purple-400 font-bold">Aevy TV</span>
+		// 		</div>
+		// 	),
+		// 	results: (
+		// 		<div className="flex items-baseline gap-1">
+		// 			<span>Generated</span>
+		// 			<span className="underline font-bold">high-quality leads</span>
+		// 			<span>with increased engagement</span>
+		// 		</div>
+		// 	),
+		// 	duration: "3 Months",
+		// 	explorerLink: "https://www.aevytv.com/",
+		// },
 		{
 			logoSrc: "/case-studies/breezyla-logo.webp",
 			title: "Breezy LA",
