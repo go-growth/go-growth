@@ -126,6 +126,7 @@ export default function Testimonials() {
 								className="w-full h-full"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted"
 								allowFullScreen
+								muted
 							></iframe>
 						</div>
 					</div>
