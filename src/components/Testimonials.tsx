@@ -80,12 +80,11 @@ export default function Testimonials() {
 		<div className="min-h-screen flex items-center justify-center w-full p-4 lg:py-20 py-10">
 			<div className="max-w-6xl w-full">
 				<div className="flex justify-between items-center mb-12">
-					<div className="inline-flex items-center justify-center p-4 h-10 bg-[#1a3a25] rounded-full">
-						<span className="text-base uppercase tracking-wide font-semibold">
-							{currentTestimonial.name} - {currentTestimonial.role}
-						</span>
-					</div>
-
+					<div className="inline-flex items-center justify-center p-2 md:p-4 min-h-10 bg-[#1a3a25] rounded-full w-full md:w-auto">
+  <span className="text-sm md:text-base uppercase tracking-wide font-semibold px-1 text-center">
+    {currentTestimonial.name} - {currentTestimonial.role}
+  </span>
+</div>
 					<div className="flex space-x-2">
 						<button
 							onClick={handlePrev}
