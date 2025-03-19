@@ -25,7 +25,7 @@ export default function ContentApproach() {
 				</svg>
 			</div>
 
-			<div className="absolute right-[15%] top-1/3">
+			<div className="hidden lg:block absolute right-[15%] top-1/3">
 				<div className="bg-yellow-400 rounded-full px-4 py-1 text-black text-sm">
 					US Businesses
 				</div>
