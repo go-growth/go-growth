@@ -171,7 +171,7 @@ const GoGrowthSection: React.FC = () => {
 				</div>
 			),
 			duration: "4 Months",
-			explorerLink: "https://breezyla.com/?meadowQuery=menu%3Ddelivery",
+			explorerLink: "/case-studies/breezy-la",
 		},
 	];
 
