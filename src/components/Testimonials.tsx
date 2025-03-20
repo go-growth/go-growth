@@ -120,13 +120,16 @@ export default function Testimonials() {
 				<div className="flex justify-center mb-16">
 					<div className="relative w-full max-w-7xl aspect-video border border-zinc-500 rounded-lg">
 						<div className="w-full h-full rounded-lg overflow-hidden">
-							<iframe
+							<video
 								src={currentTestimonial.videoUrl}
 								title={`${currentTestimonial.name} video`}
 								className="w-full h-full"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted"
-								allowFullScreen
-							></iframe>
+								controls
+								muted
+								playsInline
+								autoPlay
+								loop
+							/>
 						</div>
 					</div>
 				</div>
