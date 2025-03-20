@@ -147,7 +147,7 @@ const GoGrowthSection: React.FC = () => {
 			<div className="absolute top-5 right-10 text-white text-2xl">*</div>
 			<div className="absolute bottom-20 left-60 text-white text-2xl">*</div>
 			<div className="absolute top-1/2 right-32 text-white text-2xl">*</div>
-			<div className="absolute top-1/4 left-1/4 text-gray-700 transform rotate-45">
+			<div className="hidden lg:block absolute top-1/4 left-1/4 text-gray-700 transform rotate-45">
 				<svg
 					width="40"
 					height="40"
@@ -162,7 +162,7 @@ const GoGrowthSection: React.FC = () => {
 					/>
 				</svg>
 			</div>
-			<div className="absolute bottom-1/4 right-1/4 text-gray-700">
+			<div className="hidden lg:block absolute bottom-1/4 right-1/4 text-gray-700">
 				<svg
 					width="40"
 					height="40"
