@@ -13,6 +13,7 @@ export default function ContactPage() {
 		companySize: "",
 		companyType: "",
 		country: "",
+		domain: "", // New optional field
 		message: "",
 	});
 
@@ -40,6 +41,8 @@ export default function ContactPage() {
 				? "companySize"
 				: name === "company_type"
 				? "companyType"
+				: name === "domain" // Add mapping for domain
+				? "domain"
 				: name;
 
 		setFormData((prev) => ({
@@ -79,6 +82,7 @@ export default function ContactPage() {
 					companySize: "",
 					companyType: "",
 					country: "",
+					domain: "",
 					message: "",
 				});
 			} else {
@@ -383,6 +387,24 @@ export default function ContactPage() {
 									</svg>
 								</div>
 							</div>
+						</div>
+
+						<div className="mb-4">
+							<label
+								className="block text-gray-200 text-sm font-medium mb-2"
+								htmlFor="domain"
+							>
+								Domain
+							</label>
+							<input
+								id="domain"
+								name="domain"
+								type="text"
+								value={formData.domain}
+								onChange={handleChange}
+								className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
+								placeholder="www.yourcompany.com"
+							/>
 						</div>
 					</div>
 
