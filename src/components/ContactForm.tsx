@@ -51,6 +51,40 @@ export default function ContactPage() {
 		}));
 	};
 
+	interface FormData {
+		fullName: string;
+		email: string;
+		contactNumber: string;
+		companyName: string;
+		companySize: string;
+		companyType: string;
+		country: string;
+		domain: string;
+		message: string;
+	}
+
+	const saveToGoogleSheets = async (formData: FormData) => {
+		try {
+			// Replace with your actual Web App URL from Google Apps Script deployment
+			const appsScriptWebAppUrl =
+				process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL!;
+
+			await fetch(appsScriptWebAppUrl, {
+				method: "POST",
+				mode: "no-cors", // Important for Apps Script web apps
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			// Note: With no-cors, you won't get a response body
+			console.log("Submitted to Google Sheets");
+		} catch (error) {
+			console.error("Google Sheets save error:", error);
+		}
+	};
+
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setIsSubmitting(true);
@@ -71,6 +105,8 @@ export default function ContactPage() {
 				form.current,
 				publicKey,
 			);
+
+			await saveToGoogleSheets(formData);
 
 			if (result.text === "OK") {
 				setSubmitSuccess(true);
