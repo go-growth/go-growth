@@ -14,7 +14,8 @@ export default function ContactPage() {
 		companyType: "",
 		country: "",
 		domain: "",
-		instagram: "", // Added Instagram field
+		instagram: "",
+		designation: "", // Added designation field
 		message: "",
 	});
 
@@ -44,8 +45,10 @@ export default function ContactPage() {
 				? "companyType"
 				: name === "domain"
 				? "domain"
-				: name === "instagram" // Add mapping for Instagram
+				: name === "instagram"
 				? "instagram"
+				: name === "designation" // Add mapping for designation
+				? "designation"
 				: name;
 
 		setFormData((prev) => ({
@@ -63,7 +66,8 @@ export default function ContactPage() {
 		companyType: string;
 		country: string;
 		domain: string;
-		instagram: string; // Added Instagram to the interface
+		instagram: string;
+		designation: string; // Added designation to the interface
 		message: string;
 	}
 
@@ -123,7 +127,8 @@ export default function ContactPage() {
 					companyType: "",
 					country: "",
 					domain: "",
-					instagram: "", // Reset Instagram field
+					instagram: "",
+					designation: "", // Reset designation field
 					message: "",
 				});
 			} else {
@@ -266,6 +271,25 @@ export default function ContactPage() {
 								onChange={handleChange}
 								className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
 								placeholder="+1 (123) 456-7890"
+							/>
+						</div>
+
+						{/* Designation - Optional */}
+						<div className="mb-4">
+							<label
+								className="block text-gray-200 text-sm font-medium mb-2"
+								htmlFor="designation"
+							>
+								Designation
+							</label>
+							<input
+								id="designation"
+								name="designation"
+								type="text"
+								value={formData.designation}
+								onChange={handleChange}
+								className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
+								placeholder="CEO, Marketing Manager, etc."
 							/>
 						</div>
 
