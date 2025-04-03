@@ -13,7 +13,8 @@ export default function ContactPage() {
 		companySize: "",
 		companyType: "",
 		country: "",
-		domain: "", // New optional field
+		domain: "",
+		instagram: "", // Added Instagram field
 		message: "",
 	});
 
@@ -41,8 +42,10 @@ export default function ContactPage() {
 				? "companySize"
 				: name === "company_type"
 				? "companyType"
-				: name === "domain" // Add mapping for domain
+				: name === "domain"
 				? "domain"
+				: name === "instagram" // Add mapping for Instagram
+				? "instagram"
 				: name;
 
 		setFormData((prev) => ({
@@ -60,6 +63,7 @@ export default function ContactPage() {
 		companyType: string;
 		country: string;
 		domain: string;
+		instagram: string; // Added Instagram to the interface
 		message: string;
 	}
 
@@ -119,6 +123,7 @@ export default function ContactPage() {
 					companyType: "",
 					country: "",
 					domain: "",
+					instagram: "", // Reset Instagram field
 					message: "",
 				});
 			} else {
@@ -425,6 +430,7 @@ export default function ContactPage() {
 							</div>
 						</div>
 
+						{/* Domain - Optional */}
 						<div className="mb-4">
 							<label
 								className="block text-gray-200 text-sm font-medium mb-2"
@@ -440,6 +446,25 @@ export default function ContactPage() {
 								onChange={handleChange}
 								className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
 								placeholder="www.yourcompany.com"
+							/>
+						</div>
+
+						{/* Instagram - Optional */}
+						<div className="mb-4">
+							<label
+								className="block text-gray-200 text-sm font-medium mb-2"
+								htmlFor="instagram"
+							>
+								Instagram
+							</label>
+							<input
+								id="instagram"
+								name="instagram"
+								type="text"
+								value={formData.instagram}
+								onChange={handleChange}
+								className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
+								placeholder="@yourusername"
 							/>
 						</div>
 					</div>
