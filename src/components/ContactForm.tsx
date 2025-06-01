@@ -6,18 +6,21 @@ import emailjs from "@emailjs/browser";
 export default function ContactPage() {
 	const form = useRef<HTMLFormElement>(null);
 	const [formData, setFormData] = useState({
-		fullName: "",
-		email: "",
-		contactNumber: "",
-		companyName: "",
-		companySize: "",
-		companyType: "",
-		country: "",
-		domain: "",
-		instagram: "",
-		designation: "", // Added designation field
-		message: "",
-	});
+	fullName: "",
+	email: "",
+	contactNumber: "",
+	companyName: "",
+	companySize: "",
+	companyType: "",
+	country: "",
+	domain: "",
+	instagram: "",
+	designation: "",
+	message: "",
+	problem: "",
+	budget: "",
+});
+
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -31,25 +34,30 @@ export default function ContactPage() {
 		const { name, value } = e.target;
 		// Map the EmailJS field names back to our state property names
 		const stateField =
-			name === "from_name"
-				? "fullName"
-				: name === "reply_to"
-				? "email"
-				: name === "contact_number"
-				? "contactNumber"
-				: name === "company_name"
-				? "companyName"
-				: name === "company_size"
-				? "companySize"
-				: name === "company_type"
-				? "companyType"
-				: name === "domain"
-				? "domain"
-				: name === "instagram"
-				? "instagram"
-				: name === "designation" // Add mapping for designation
-				? "designation"
-				: name;
+	name === "from_name"
+		? "fullName"
+		: name === "reply_to"
+		? "email"
+		: name === "contact_number"
+		? "contactNumber"
+		: name === "company_name"
+		? "companyName"
+		: name === "company_size"
+		? "companySize"
+		: name === "company_type"
+		? "companyType"
+		: name === "domain"
+		? "domain"
+		: name === "instagram"
+		? "instagram"
+		: name === "designation"
+		? "designation"
+		: name === "problem"
+		? "problem"
+		: name === "budget"
+		? "budget"
+		: name;
+
 
 		setFormData((prev) => ({
 			...prev,
@@ -58,18 +66,21 @@ export default function ContactPage() {
 	};
 
 	interface FormData {
-		fullName: string;
-		email: string;
-		contactNumber: string;
-		companyName: string;
-		companySize: string;
-		companyType: string;
-		country: string;
-		domain: string;
-		instagram: string;
-		designation: string; // Added designation to the interface
-		message: string;
-	}
+	fullName: string;
+	email: string;
+	contactNumber: string;
+	companyName: string;
+	companySize: string;
+	companyType: string;
+	country: string;
+	domain: string;
+	instagram: string;
+	designation: string;
+	message: string;
+	problem: string;
+	budget: string;
+}
+
 
 	const saveToGoogleSheets = async (formData: FormData) => {
 		try {
@@ -119,18 +130,20 @@ export default function ContactPage() {
 			if (result.text === "OK") {
 				setSubmitSuccess(true);
 				setFormData({
-					fullName: "",
-					email: "",
-					contactNumber: "",
-					companyName: "",
-					companySize: "",
-					companyType: "",
-					country: "",
-					domain: "",
-					instagram: "",
-					designation: "", // Reset designation field
-					message: "",
-				});
+	fullName: "",
+	email: "",
+	contactNumber: "",
+	companyName: "",
+	companySize: "",
+	companyType: "",
+	country: "",
+	domain: "",
+	instagram: "",
+	designation: "",
+	message: "",
+	problem: "",
+	budget: "",
+});
 			} else {
 				throw new Error("Failed to send email");
 			}
@@ -492,6 +505,43 @@ export default function ContactPage() {
 							/>
 						</div>
 					</div>
+{/* Problem - Required */}
+<div className="mb-4 md:col-span-2">
+	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="problem">
+		What's the main problem you're facing? <span className="text-red-400">*</span>
+	</label>
+	<input
+		id="problem"
+		name="problem"
+		required
+		value={formData.problem}
+		onChange={handleChange}
+		className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white bg-[#1a1a1a] placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition duration-200"
+		placeholder="e.g. Low lead quality, inconsistent brand messaging..."
+	/>
+</div>
+
+{/* Budget - Required */}
+<div className="mb-4 md:col-span-2">
+	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="budget">
+		What’s your approximate monthly marketing budget? <span className="text-red-400">*</span>
+	</label>
+	<select
+		id="budget"
+		name="budget"
+		required
+		value={formData.budget}
+		onChange={handleChange}
+		className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white bg-[#1a1a1a] placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition duration-200"
+	>
+		<option value="" className="bg-[#1a1a1a]">Select your budget</option>
+		<option value="25k to 50k">₹25k to ₹50k</option>
+		<option value="50k to 1L">₹50k to ₹1L</option>
+		<option value="1L to 5L">₹1L to ₹5L</option>
+		<option value="5L to 10L">₹5L to ₹10L</option>
+		<option value="10L+">₹10L+</option>
+	</select>
+</div>
 
 					{/* Message Field - Full Width */}
 					<div className="mb-6 mt-2">
