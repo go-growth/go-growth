@@ -11,7 +11,6 @@ export default function ContactPage() {
 	contactNumber: "",
 	companyName: "",
 	companySize: "",
-	companyType: "",
 	country: "",
 	domain: "",
 	instagram: "",
@@ -44,8 +43,6 @@ export default function ContactPage() {
 		? "companyName"
 		: name === "company_size"
 		? "companySize"
-		: name === "company_type"
-		? "companyType"
 		: name === "domain"
 		? "domain"
 		: name === "instagram"
@@ -71,7 +68,6 @@ export default function ContactPage() {
 	contactNumber: string;
 	companyName: string;
 	companySize: string;
-	companyType: string;
 	country: string;
 	domain: string;
 	instagram: string;
@@ -135,7 +131,7 @@ export default function ContactPage() {
 	contactNumber: "",
 	companyName: "",
 	companySize: "",
-	companyType: "",
+	
 	country: "",
 	domain: "",
 	instagram: "",
@@ -372,52 +368,7 @@ export default function ContactPage() {
 							</div>
 						</div>
 
-						{/* Company Type - Optional */}
-						<div className="mb-4">
-							<label
-								className="block text-gray-200 text-sm font-medium mb-2"
-								htmlFor="companyType"
-							>
-								Company Type
-							</label>
-							<div className="relative">
-								<select
-									id="companyType"
-									name="company_type"
-									value={formData.companyType}
-									onChange={handleChange}
-									className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent bg-[#1a1a1a] transition duration-200 placeholder:text-white/50"
-								>
-									<option value="" className="bg-[#1a1a1a]">
-										Select company type
-									</option>
-									{companyTypeOptions.map((option) => (
-										<option
-											key={option}
-											value={option}
-											className="bg-[#1a1a1a]"
-										>
-											{option}
-										</option>
-									))}
-								</select>
-								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
-									<svg
-										className="h-4 w-4"
-										fill="none"
-										viewBox="0 0 20 20"
-										stroke="currentColor"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth="2"
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</div>
-							</div>
-						</div>
+						
 
 						{/* Country - Required */}
 						<div className="mb-4">
