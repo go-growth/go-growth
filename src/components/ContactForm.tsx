@@ -508,7 +508,7 @@ export default function ContactPage() {
 {/* Problem - Required */}
 <div className="mb-4 md:col-span-2">
 	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="problem">
-		What's the main problem you're facing? <span className="text-red-400">*</span>
+		 What&apos;s the main problem you&apos;re facing? <span className="text-red-400">*</span>
 	</label>
 	<input
 		id="problem"
@@ -524,7 +524,7 @@ export default function ContactPage() {
 {/* Budget - Required */}
 <div className="mb-4 md:col-span-2">
 	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="budget">
-		What’s your approximate monthly marketing budget? <span className="text-red-400">*</span>
+		What&rsquo;s your approximate monthly marketing budget? <span className="text-red-400">*</span>
 	</label>
 	<select
 		id="budget"
