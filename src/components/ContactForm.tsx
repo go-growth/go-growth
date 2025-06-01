@@ -160,11 +160,7 @@ export default function ContactPage() {
 		"1001+ employees",
 	];
 
-	const companyTypeOptions = [
-		"B2C (Business to Consumer)",
-		"D2C (Direct to Consumer)",
-		"Other",
-	];
+	
 
 	const countryOptions = [
 		"United States",
