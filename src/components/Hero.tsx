@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
 					{/* Description */}
 					<p className="text-gray-300 text-lg mb-10 mt-6 text-center">
 						We specialize in SEO, website development, and paid advertising to
-						help e-commerce businesses to maximize their online presence and generate more
+						help <span className="text-[#e0a695] font-bold">e-commerce </span> businesses to maximize their online presence and generate more
 						revenue. Whether you need a one-time SEO setup, a website built from
 						scratch, or ongoing digital marketing solutions, we provide
 						result-driven strategies tailored to your needs.
