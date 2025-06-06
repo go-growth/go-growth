@@ -37,6 +37,31 @@ export default function CardCarousel() {
 			title: "AstroVetro",
 			subtitle: "E-commerce",
 		},
+		{
+			logo: "/case-studies/craft.png",
+			title: "Craft Deligths",
+			subtitle: "E-commerce",
+		},
+		{
+			logo: "/case-studies/blckline.png",
+			title: "Blckline Automotive",
+			subtitle: "E-commerce",
+		},
+		{
+			logo: "/case-studies/unaavu.png",
+			title: "Unaavu",
+			subtitle: "E-commerce",
+		},
+		{
+			logo: "/case-studies/maese.png",
+			title: "Maese",
+			subtitle: "E-commerce",
+		},
+		{
+			logo: "/case-studies/olio.png",
+			title: "Oliostories",
+			subtitle: "E-commerce",
+		},
 	];
 
 	// Create duplicated array for infinite scroll effect
@@ -90,7 +115,7 @@ export default function CardCarousel() {
 						}
 					}
 					.animate-marquee {
-						animation: marquee 30s linear infinite;
+						animation: marquee 15s linear infinite;
 					}
 				`}</style>
 			</div>
