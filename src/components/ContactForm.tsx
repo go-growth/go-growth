@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
 	const form = useRef<HTMLFormElement>(null);
-	const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
 	fullName: "",
 	email: "",
 	contactNumber: "",
@@ -18,7 +18,10 @@ export default function ContactPage() {
 	message: "",
 	problem: "",
 	budget: "",
+	avgOrderValue: "", // <-- new
+	currentROAS: "",   // <-- new
 });
+
 
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,7 +35,7 @@ export default function ContactPage() {
 	) => {
 		const { name, value } = e.target;
 		// Map the EmailJS field names back to our state property names
-		const stateField =
+	const stateField =
 	name === "from_name"
 		? "fullName"
 		: name === "reply_to"
@@ -53,7 +56,12 @@ export default function ContactPage() {
 		? "problem"
 		: name === "budget"
 		? "budget"
+		: name === "avg_order_value"
+		? "avgOrderValue"
+		: name === "current_roas"
+		? "currentROAS"
 		: name;
+
 
 
 		setFormData((prev) => ({
@@ -62,7 +70,7 @@ export default function ContactPage() {
 		}));
 	};
 
-	interface FormData {
+interface FormData {
 	fullName: string;
 	email: string;
 	contactNumber: string;
@@ -75,7 +83,10 @@ export default function ContactPage() {
 	message: string;
 	problem: string;
 	budget: string;
+	avgOrderValue: string; // <-- new
+	currentROAS: string;   // <-- new
 }
+
 
 
 	const saveToGoogleSheets = async (formData: FormData) => {
@@ -125,13 +136,12 @@ export default function ContactPage() {
 
 			if (result.text === "OK") {
 				setSubmitSuccess(true);
-				setFormData({
+			setFormData({
 	fullName: "",
 	email: "",
 	contactNumber: "",
 	companyName: "",
 	companySize: "",
-	
 	country: "",
 	domain: "",
 	instagram: "",
@@ -139,7 +149,10 @@ export default function ContactPage() {
 	message: "",
 	problem: "",
 	budget: "",
+	avgOrderValue: "", // clear
+	currentROAS: "",   // clear
 });
+
 			} else {
 				throw new Error("Failed to send email");
 			}
@@ -452,6 +465,42 @@ export default function ContactPage() {
 							/>
 						</div>
 					</div>
+
+
+					{/* AVG Order Value - Required */}
+<div className="mb-4 md:col-span-2">
+	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="avgOrderValue">
+		What is your current Average Order Value (₹)? <span className="text-red-400">*</span>
+	</label>
+	<input
+		id="avgOrderValue"
+		name="avg_order_value"
+		type="text"
+		required
+		value={formData.avgOrderValue}
+		onChange={handleChange}
+		className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white bg-[#1a1a1a] placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition duration-200"
+		placeholder="e.g. ₹1,500"
+	/>
+</div>
+
+{/* ROAS - Required */}
+<div className="mb-4 md:col-span-2">
+	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="currentROAS">
+		What is your current Return On Ad Spend (ROAS)? <span className="text-red-400">*</span>
+	</label>
+	<input
+		id="currentROAS"
+		name="current_roas"
+		type="text"
+		required
+		value={formData.currentROAS}
+		onChange={handleChange}
+		className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white bg-[#1a1a1a] placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition duration-200"
+		placeholder="e.g. 3.5x"
+	/>
+</div>
+
 {/* Problem - Required */}
 <div className="mb-4 md:col-span-2">
 	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="problem">
