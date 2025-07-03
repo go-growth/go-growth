@@ -563,9 +563,9 @@ interface FormData {
 						<button
 							type="submit"
 							disabled={isSubmitting}
-							className={border-2 border-white/50 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors ${
+							className={`border-2 border-white/50 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors ${
 								isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-							}}
+							}`}
 						>
 							{isSubmitting ? "Submitting..." : "Submit"}
 						</button>
