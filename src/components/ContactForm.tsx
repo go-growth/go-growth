@@ -112,57 +112,64 @@ interface FormData {
 	};
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		setIsSubmitting(true);
-		setSubmitError("");
+	e.preventDefault();
+	setIsSubmitting(true);
+	setSubmitError("");
+	setSubmitSuccess(false);
 
-		try {
-			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+	const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+	const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+	const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+	const appsScriptWebAppUrl = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL!;
 
-			if (!form.current) {
-				throw new Error("Form not available");
-			}
+	if (!form.current) {
+		setSubmitError("Form reference is missing.");
+		return;
+	}
 
-			const result = await emailjs.sendForm(
-				serviceId,
-				templateId,
-				form.current,
-				publicKey,
-			);
+	try {
+		// Send to EmailJS
+		const result = await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
+		console.log("EmailJS result:", result);
 
-			await saveToGoogleSheets(formData);
-
-			if (result.text === "OK") {
-				setSubmitSuccess(true);
-			setFormData({
-	fullName: "",
-	email: "",
-	contactNumber: "",
-	companyName: "",
-	companySize: "",
-	country: "",
-	domain: "",
-	instagram: "",
-	designation: "",
-	message: "",
-	problem: "",
-	budget: "",
-	avgOrderValue: "", // clear
-	currentROAS: "",   // clear
-});
-
-			} else {
-				throw new Error("Failed to send email");
-			}
-		} catch (error) {
-			setSubmitError("Failed to submit the form. Please try again later.");
-			console.error("Form submission error:", error);
-		} finally {
-			setIsSubmitting(false);
+		if (result.text !== "OK") {
+			throw new Error(`EmailJS failed. Response: ${result.text}`);
 		}
-	};
+
+		// Optionally log to Google Sheets (no-cors, no response)
+		await fetch(appsScriptWebAppUrl, {
+			method: "POST",
+			mode: "no-cors",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(formData),
+		});
+
+		// Success
+		setSubmitSuccess(true);
+		setFormData({
+			fullName: "",
+			email: "",
+			contactNumber: "",
+			companyName: "",
+			companySize: "",
+			country: "",
+			domain: "",
+			instagram: "",
+			designation: "",
+			message: "",
+			problem: "",
+			budget: "",
+			avgOrderValue: "",
+			currentROAS: "",
+		});
+	} catch (error: any) {
+		console.error("Form submission error:", error);
+		setSubmitError(`Submission failed: ${error.message || "Unknown error"}`);
+	} finally {
+		setIsSubmitting(false);
+	}
+};
+
 
 	const companySizeOptions = [
 		"1-10 employees",
