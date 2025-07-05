@@ -2,8 +2,18 @@
 import { useEffect, useRef, useState } from "react";
 import ContactPage from "./ContactForm";
 
-// ✅ Export defaultServices so you can import them elsewhere
-export const defaultServices = [
+// Service type
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+  features: string[];
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+// Default services
+export const defaultServices: Service[] = [
   {
     id: 1,
     title: "SEO Specialist",
@@ -18,7 +28,6 @@ export const defaultServices = [
       "24x7 Support",
     ],
     buttonText: "Get a Quote",
-    // No buttonLink = opens modal
   },
   {
     id: 2,
@@ -52,8 +61,12 @@ export const defaultServices = [
   },
 ];
 
-export default function MenuItems({ services = defaultServices }: { services?: any }) {
-
+// Function
+export default function MenuItems({
+  services = defaultServices,
+}: {
+  services?: Service[];
+}) {
   // Reusable check icon
   const CheckIcon = () => (
     <div className="text-[#4d61f5] mr-3 mt-0.5">
