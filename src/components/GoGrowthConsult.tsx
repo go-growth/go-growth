@@ -87,7 +87,7 @@ const GoGrowthConsult = () => {
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
-                                src="/consult/untitleddesign(4).png"
+                                src="/consult/Untitleddesign(4).png"
                                 alt="Sthalam Logo"
                             // className="w-48 h-auto"
                             />
@@ -115,7 +115,7 @@ const GoGrowthConsult = () => {
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start ">
                             <img
-                                src="/consult/untitleddesign(2).png"
+                                src="/consult/Untitleddesign(2).png"
                                 alt="Sthalam Logo"
                             // className="w-48 h-auto"
                             />
@@ -143,7 +143,7 @@ const GoGrowthConsult = () => {
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
-                                src="/consult/untitleddesign(1).png"
+                                src="/consult/Untitleddesign(1).png"
                                 alt="Sthalam Logo"
                             // className="w-48 h-auto"
                             />
