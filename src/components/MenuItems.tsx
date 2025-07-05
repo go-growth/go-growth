@@ -188,4 +188,3 @@ export default function MenuItems({ services = defaultServices }: { services?: a
     </div>
   );
 }
-.
