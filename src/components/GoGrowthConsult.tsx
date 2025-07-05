@@ -1,7 +1,6 @@
 "use client";
 import React from 'react'
 import CardCarousel from './CardCarousel';
-import { i } from 'framer-motion/client';
 import ContentApproach from './ContentApproach';
 import HowItWorks from './HowItWorks';
 import MenuItems, {defaultServices} from './MenuItems';
