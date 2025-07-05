@@ -1,4 +1,11 @@
 import React from 'react'
+import CardCarousel from './CardCarousel';
+import { i } from 'framer-motion/client';
+import ContentApproach from './ContentApproach';
+import HowItWorks from './HowItWorks';
+import MenuItems from './MenuItems';
+import Testimonials from './Testimonials';
+import FAQ from './FAQ';
 
 const GoGrowthConsult = () => {
     return (
@@ -40,12 +47,31 @@ const GoGrowthConsult = () => {
             </div>
 
             <div className="max-w-7xl mx-auto w-full">
-                <div className="text-center mb-16">
+                <div className="text-center mb-2">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                         Not Ready to Hire Us Yet? Book a 1:1 Strategy Session
                     </h2>
-                    <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                        If your brand is below ₹30L/month but you want expert guidance on what to fix, where to spend, and how to scale – this is for you.
+                    <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-2 mb-2">
+                        If your brand is below ₹15L/month but you want expert guidance on what to fix, where to spend, and how to scale – this is for you.
+                    </p>
+                </div>
+
+                <div className="text-center pt-6 border-b border-gray-700 mb-16">
+                    {/* <h3 className="text-2xl font-bold text-white mb-4">
+                        Want to Achieve Similar Growth?
+                    </h3> */}
+                    {/* <p className="text-gray-300 mb-6">
+                        Whether you need more leads, higher sales, or brand growth, we know
+                        what works.
+                    </p> */}
+                    <a
+                        href="https://calendly.com/admin-gogrowth/60min" target="_blank" rel="noopener noreferrer"
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-200 mb-6"
+                    >
+                        Book Your Strategy Session
+                    </a>
+                    <p className="text-gray-300 mb-6 mt-6">
+                        Price: 20K per Session (non-refundable)
                     </p>
                 </div>
 
@@ -58,24 +84,24 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/untitleddesign(4).png"
                                 alt="Sthalam Logo"
-                                // className="w-48 h-auto"
+                            // className="w-48 h-auto"
                             />
                         </div>
 
                         {/* Text container with flex-1 */}
                         {/* <div className="flex-[1]">
-                            <h4 className="text-white text-xl font-semibold mb-2">
-                                How <span className="font-bold">Go Growth</span>
-                            </h4>
-                            <p className="text-gray-300 mb-1">
-                                Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
-                                <span className="text-green-500">zero to daily orders</span>
-                            </p>
-                            <p className="text-gray-300 mb-4">
-                                Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
-                            </p>
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
 
-                        </div> */}
+                            </div> */}
                     </div>
 
 
@@ -86,24 +112,24 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/untitleddesign(2).png"
                                 alt="Sthalam Logo"
-                                // className="w-48 h-auto"
+                            // className="w-48 h-auto"
                             />
                         </div>
 
                         {/* Text container with flex-1 */}
                         {/* <div className="flex-[1]">
-                            <h4 className="text-white text-xl font-semibold mb-2">
-                                How <span className="font-bold">Go Growth</span>
-                            </h4>
-                            <p className="text-gray-300 mb-1">
-                                Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
-                                <span className="text-green-500">zero to daily orders</span>
-                            </p>
-                            <p className="text-gray-300 mb-4">
-                                Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
-                            </p>
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
 
-                        </div> */}
+                            </div> */}
                     </div>
 
 
@@ -114,24 +140,24 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/untitleddesign(1).png"
                                 alt="Sthalam Logo"
-                                // className="w-48 h-auto"
+                            // className="w-48 h-auto"
                             />
                         </div>
 
                         {/* Text container with flex-1 */}
                         {/* <div className="flex-[1]">
-                            <h4 className="text-white text-xl font-semibold mb-2">
-                                How <span className="font-bold">Go Growth</span>
-                            </h4>
-                            <p className="text-gray-300 mb-1">
-                                Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
-                                <span className="text-green-500">zero to daily orders</span>
-                            </p>
-                            <p className="text-gray-300 mb-4">
-                                Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
-                            </p>
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
 
-                        </div> */}
+                            </div> */}
                     </div>
 
 
@@ -142,29 +168,81 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/Untitleddesign.png"
                                 alt="Sthalam Logo"
-                                // className="w-48 h-auto"
+                            // className="w-48 h-auto"
                             />
                         </div>
                         {/* Text container with flex-1 */}
                         {/* <div className="flex-[1]">
-                            <h4 className="text-white text-xl font-semibold mb-2">
-                                How <span className="font-bold">Go Growth</span>
-                            </h4>
-                            <p className="text-gray-300 mb-1">
-                                Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
-                                <span className="text-green-500">zero to daily orders</span>
-                            </p>
-                            <p className="text-gray-300 mb-4">
-                                Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
-                            </p>
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
 
-                        </div> */}
+                            </div> */}
+                    </div>
+
+                    {/* Card 5 */}
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                        {/* Image container with flex-2 */}
+                        <div className=" flex justify-center md:justify-start">
+                            <img
+                                src="/consult/Untitleddesign(5).png"
+                                alt="Sthalam Logo"
+                            // className="w-48 h-auto"
+                            />
+                        </div>
+                        {/* Text container with flex-1 */}
+                        {/* <div className="flex-[1]">
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
+
+                            </div> */}
+                    </div>
+
+                    {/* Card 6 */}
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                        {/* Image container with flex-2 */}
+                        <div className=" flex justify-center md:justify-start">
+                            <img
+                                src="/consult/Untitleddesign(6).png"
+                                alt="Sthalam Logo"
+                            // className="w-48 h-auto"
+                            />
+                        </div>
+                        {/* Text container with flex-1 */}
+                        {/* <div className="flex-[1]">
+                                <h4 className="text-white text-xl font-semibold mb-2">
+                                    How <span className="font-bold">Go Growth</span>
+                                </h4>
+                                <p className="text-gray-300 mb-1">
+                                    Scaled a home décor brand <span className="text-white font-medium">Sthalam</span> from{" "}
+                                    <span className="text-green-500">zero to daily orders</span>
+                                </p>
+                                <p className="text-gray-300 mb-4">
+                                    Achieved <span className="text-green-500">8x ROAS</span> on paid ad campaigns
+                                </p>
+
+                            </div> */}
                     </div>
 
                 </div>
 
 
-                <div className="text-center mt-16 pt-6 border-t border-gray-700">
+                {/* <div className="text-center mt-16 pt-6 border-t border-gray-700">
                     <h3 className="text-2xl font-bold text-white mb-4">
                         Want to Achieve Similar Growth?
                     </h3>
@@ -178,8 +256,15 @@ const GoGrowthConsult = () => {
                     >
                         Book Your Strategy Session
                     </a>
-                </div>
+                </div> */}
             </div>
+
+            <CardCarousel />
+            <MenuItems />
+            <HowItWorks />
+            <ContentApproach />
+            <Testimonials />
+            <FAQ />
         </div>
     )
 }
