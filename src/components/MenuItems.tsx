@@ -52,8 +52,7 @@ export const defaultServices = [
   },
 ];
 
-export default function MenuItems({ services: customServices }) {
-  const services = customServices || defaultServices;
+export default function MenuItems({ services = defaultServices }: { services?: any }) {
 
   // Reusable check icon
   const CheckIcon = () => (
@@ -189,3 +188,4 @@ export default function MenuItems({ services: customServices }) {
     </div>
   );
 }
+.
