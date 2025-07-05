@@ -1,13 +1,19 @@
+"use client";
 import React from 'react'
 import CardCarousel from './CardCarousel';
 import { i } from 'framer-motion/client';
 import ContentApproach from './ContentApproach';
 import HowItWorks from './HowItWorks';
-import MenuItems from './MenuItems';
+import MenuItems, {defaultServices} from './MenuItems';
 import Testimonials from './Testimonials';
 import FAQ from './FAQ';
 
 const GoGrowthConsult = () => {
+      const consultationServices = defaultServices.map((service) => ({
+    ...service,
+    buttonText: "Consutation",
+    buttonLink: "https://calendly.com/admin-gogrowth/60min",
+  }));
     return (
         <div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
             {/* Decorative elements */}
@@ -260,7 +266,7 @@ const GoGrowthConsult = () => {
             </div>
 
             <CardCarousel />
-            <MenuItems />
+            <MenuItems services={consultationServices}/>
             <HowItWorks />
             <ContentApproach />
             <Testimonials />
