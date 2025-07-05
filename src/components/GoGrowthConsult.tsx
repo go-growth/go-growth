@@ -10,7 +10,7 @@ import FAQ from './FAQ';
 const GoGrowthConsult = () => {
       const consultationServices = defaultServices.map((service) => ({
     ...service,
-    buttonText: "Consutation",
+    buttonText: "Consultation",
     buttonLink: "https://calendly.com/admin-gogrowth/60min",
   }));
     return (
