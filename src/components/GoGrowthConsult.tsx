@@ -11,7 +11,7 @@ const GoGrowthConsult = () => {
       const consultationServices = defaultServices.map((service) => ({
     ...service,
     buttonText: "Consultation",
-    buttonLink: "https://calendly.com/admin-gogrowth/60min",
+    buttonLink: "https://orufybookings.com/gogrowth/60-min",
   }));
     return (
         <div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
@@ -70,7 +70,7 @@ const GoGrowthConsult = () => {
                         what works.
                     </p> */}
                     <a
-                        href="https://calendly.com/admin-gogrowth/60min" target="_blank" rel="noopener noreferrer"
+                        href="https://orufybookings.com/gogrowth/60-min" target="_blank" rel="noopener noreferrer"
                         className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md font-medium transition-all duration-200 mb-6"
                     >
                         Book Your Strategy Session
