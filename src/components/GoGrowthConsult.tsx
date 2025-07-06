@@ -83,13 +83,14 @@ const GoGrowthConsult = () => {
                 {/* add cards here */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Card 1 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
                                 src="/consult/Untitleddesign(4).png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                                className="rounded-xl"
+                            
                             />
                         </div>
 
@@ -111,13 +112,14 @@ const GoGrowthConsult = () => {
 
 
                     {/* Card 2 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start ">
                             <img
                                 src="/consult/Untitleddesign(2).png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                                className="rounded-xl"
+                            
                             />
                         </div>
 
@@ -139,13 +141,14 @@ const GoGrowthConsult = () => {
 
 
                     {/* Card 3 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
                                 src="/consult/Untitleddesign(1).png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                                className="rounded-xl"
+
                             />
                         </div>
 
@@ -167,13 +170,14 @@ const GoGrowthConsult = () => {
 
 
                     {/* Card 4 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
                                 src="/consult/Untitleddesign.png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                                className="rounded-xl"
+
                             />
                         </div>
                         {/* Text container with flex-1 */}
@@ -193,13 +197,14 @@ const GoGrowthConsult = () => {
                     </div>
 
                     {/* Card 5 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
                                 src="/consult/Untitleddesign(5).png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                                                        className="rounded-xl"
+
                             />
                         </div>
                         {/* Text container with flex-1 */}
@@ -219,13 +224,13 @@ const GoGrowthConsult = () => {
                     </div>
 
                     {/* Card 6 */}
-                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-6">
+                    <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
                         <div className=" flex justify-center md:justify-start">
                             <img
                                 src="/consult/Untitleddesign(6).png"
                                 alt="Sthalam Logo"
-                            // className="w-48 h-auto"
+                            className="rounded-xl"
                             />
                         </div>
                         {/* Text container with flex-1 */}
