@@ -3,18 +3,20 @@ import React from 'react'
 import CardCarousel from './CardCarousel';
 import ContentApproach from './ContentApproach';
 import HowItWorks from './HowItWorks';
-import MenuItems, {defaultServices} from './MenuItems';
+import MenuItems, { defaultServices } from './MenuItems';
 import Testimonials from './Testimonials';
 import FAQ from './FAQ';
+import Flipcard from './Flipcard';
+import Idealfor from './Idealfor';
 
 const GoGrowthConsult = () => {
-      const consultationServices = defaultServices.map((service) => ({
-    ...service,
-    buttonText: "Consultation",
-    buttonLink: "https://orufybookings.com/gogrowth/60-min",
-  }));
+    const consultationServices = defaultServices.map((service) => ({
+        ...service,
+        buttonText: "Consultation",
+        buttonLink: "https://orufybookings.com/gogrowth/60-min",
+    }));
     return (
-        <div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
+        <div className="w-full min-h-screen relative overflow-hidden px-0 md:px-4 py-12 flex flex-col items-center justify-center bg-black">
             {/* Decorative elements */}
             <div className="absolute top-5 left-10 text-white text-2xl">*</div>
             <div className="absolute top-5 right-10 text-white text-2xl">*</div>
@@ -51,17 +53,17 @@ const GoGrowthConsult = () => {
                 </svg>
             </div>
 
-            <div className="max-w-7xl mx-auto w-full">
-                <div className="text-center mb-2">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-                        Not Ready to Hire Us Yet? Book a 1:1 Strategy Session
+            <div className="max-w-7xl mx-auto w-full pb-16">
+                <div className="text-center mb-2 px-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Not ready to hire us yet? <br /> Book a 1:1 Strategy Session
                     </h2>
-                    <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-2 mb-2">
+                    <p className="text-lg max-w-2xl mx-auto mt-2 mb-2 text-zinc-400 -">
                         If your brand is below ₹15L/month but you want expert guidance on what to fix, where to spend, and how to scale – this is for you.
                     </p>
                 </div>
 
-                <div className="text-center pt-6 border-b border-gray-700 mb-16">
+                <div className="text-center px-6  pt-6 border-b border-gray-700 mb-16">
                     {/* <h3 className="text-2xl font-bold text-white mb-4">
                         Want to Achieve Similar Growth?
                     </h3> */}
@@ -75,13 +77,13 @@ const GoGrowthConsult = () => {
                     >
                         Book Your Strategy Session
                     </a>
-                    <p className="text-gray-300 mb-6 mt-6">
-                        Price: 20K per Session (non-refundable)
+                    <p className="text-zinc-400 mb-6 mt-6">
+                        Session Fee: 20,000 INR (non-refundable)
                     </p>
                 </div>
 
                 {/* add cards here */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
                     {/* Card 1 */}
                     <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}
@@ -90,7 +92,7 @@ const GoGrowthConsult = () => {
                                 src="/consult/Untitleddesign(4).png"
                                 alt="Sthalam Logo"
                                 className="rounded-xl"
-                            
+
                             />
                         </div>
 
@@ -119,7 +121,7 @@ const GoGrowthConsult = () => {
                                 src="/consult/Untitleddesign(2).png"
                                 alt="Sthalam Logo"
                                 className="rounded-xl"
-                            
+
                             />
                         </div>
 
@@ -203,7 +205,7 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/Untitleddesign(5).png"
                                 alt="Sthalam Logo"
-                                                        className="rounded-xl"
+                                className="rounded-xl"
 
                             />
                         </div>
@@ -230,7 +232,7 @@ const GoGrowthConsult = () => {
                             <img
                                 src="/consult/Untitleddesign(6).png"
                                 alt="Sthalam Logo"
-                            className="rounded-xl"
+                                className="rounded-xl"
                             />
                         </div>
                         {/* Text container with flex-1 */}
@@ -269,8 +271,11 @@ const GoGrowthConsult = () => {
                 </div> */}
             </div>
 
+
+            <Flipcard />
+            <Idealfor />
             <CardCarousel />
-            <MenuItems services={consultationServices}/>
+            <MenuItems services={consultationServices} />
             <HowItWorks />
             <ContentApproach />
             <Testimonials />
