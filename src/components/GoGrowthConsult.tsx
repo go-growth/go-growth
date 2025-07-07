@@ -83,7 +83,7 @@ const GoGrowthConsult = () => {
                 </div>
 
                 {/* add cards here */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-0">
                     {/* Card 1 */}
                     <div className="flex flex-col md:flex-row items-center md:items-start bg-[#111] border border-gray-700 rounded-xl p-2 md:p-6">
                         {/* Image container with flex-2 */}

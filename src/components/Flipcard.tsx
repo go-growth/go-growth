@@ -13,18 +13,19 @@ type FlipCardProps = {
  */
 const FlipCard: React.FC<FlipCardProps> = ({ highlight, description }) => {
   return (
-    <div className="h-[288px] md:h-[200px]">
-      <div className="relative w-full h-full">
-        <div className="absolute inset-0 w-full border border-zinc-800 rounded-3xl p-6 md:px-10 md:py-0 flex flex-col justify-center items-center">
-          <h4 className="text-center text-white text-3xl font-medium py-2 px-5 rounded-full tracking-wide mb-4">
-            {highlight}
-          </h4>
-          <p className="text-base leading-relaxed text-zinc-400">
-            {description}
-          </p>
-        </div>
-      </div>
+<div className="h-[288px] md:h-[200px] px-4 md:px-0">
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 w-full border border-zinc-800 rounded-3xl p-6 md:px-10 md:py-0 flex flex-col justify-center items-center">
+      <h4 className="text-center text-white text-3xl font-medium py-2 px-5 rounded-full tracking-wide mb-4">
+        {highlight}
+      </h4>
+      <p className="text-base leading-relaxed text-zinc-400">
+        {description}
+      </p>
     </div>
+  </div>
+</div>
+
   );
 };
 
@@ -40,14 +41,14 @@ const Flipcard: React.FC = () => {
           <h2 className="text-4xl md:text-4xl font-bold text-white mb-3">
             What&apos;s included in this power packed session:
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg px-4 md:px-0">
             Transform your brand with our comprehensive audit and strategic
             roadmap
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
           <FlipCard
             highlight="Full-Scale Brand Audit"
             description="We&apos;ll look under the hood — from your website, messaging, social presence, funnel, ads, SEO, packaging, customer journey and more. You&apos;ll get honest, expert insights into what&apos;s working, what&apos;s broken, and what&apos;s missing."
