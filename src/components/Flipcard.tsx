@@ -15,9 +15,9 @@ type FlipCardProps = {
  * FlipCard Component - Simple Card
  */
 const FlipCard: React.FC<FlipCardProps> = ({
-  number,
-  title,
-  icon,
+  // number,
+  // title,
+  // icon,
   highlight,
   description,
 }) => {
