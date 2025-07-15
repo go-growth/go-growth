@@ -143,7 +143,7 @@ interface FormData {
 
 			if (result.text === "OK") {
 				setSubmitSuccess(true);
-			setFormData({
+		setFormData({
 	fullName: "",
 	email: "",
 	contactNumber: "",
@@ -156,9 +156,11 @@ interface FormData {
 	message: "",
 	problem: "",
 	budget: "",
-	avgOrderValue: "", // clear
-	currentROAS: "",   // clear
+	avgOrderValue: "",
+	currentROAS: "",
+	currentRevenue: "", // ✅ this was missing
 });
+
 
 			} else {
 				throw new Error("Failed to send email");
