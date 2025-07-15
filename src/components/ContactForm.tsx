@@ -18,9 +18,11 @@ const [formData, setFormData] = useState({
 	message: "",
 	problem: "",
 	budget: "",
-	avgOrderValue: "", // <-- new
-	currentROAS: "",   // <-- new
+	avgOrderValue: "",
+	currentROAS: "",
+	currentRevenue: "", // <-- NEW FIELD
 });
+
 
 
 
@@ -60,6 +62,9 @@ const [formData, setFormData] = useState({
 		? "avgOrderValue"
 		: name === "current_roas"
 		? "currentROAS"
+		: name === "current_revenue"
+? "currentRevenue"
+
 		: name;
 
 
@@ -83,9 +88,11 @@ interface FormData {
 	message: string;
 	problem: string;
 	budget: string;
-	avgOrderValue: string; // <-- new
-	currentROAS: string;   // <-- new
+	avgOrderValue: string;
+	currentROAS: string;
+	currentRevenue: string; // <-- NEW FIELD
 }
+
 
 
 
@@ -500,6 +507,23 @@ interface FormData {
 		placeholder="e.g. 3.5x"
 	/>
 </div>
+					{/* Current Revenue - Required */}
+<div className="mb-4 md:col-span-2">
+	<label className="block text-gray-200 text-sm font-medium mb-2" htmlFor="currentRevenue">
+		What is your current monthly revenue? <span className="text-red-400">*</span>
+	</label>
+	<input
+		id="currentRevenue"
+		name="current_revenue"
+		type="text"
+		required
+		value={formData.currentRevenue}
+		onChange={handleChange}
+		className="shadow-sm appearance-none border border-white/50 rounded-md w-full py-3 px-4 text-white bg-[#1a1a1a] placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition duration-200"
+		placeholder="e.g. ₹5,00,000"
+	/>
+</div>
+
 
 {/* Problem - Required */}
 <div className="mb-4 md:col-span-2">
