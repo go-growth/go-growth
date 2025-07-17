@@ -164,12 +164,39 @@ export default function BlacklineAutomotiveCaseStudy() {
                             </div>
                         </div>
                     </div>
+                    
+					<div className="mb-12">
+						<h2 className="text-2xl font-bold text-white mb-6">Results</h2>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
+								<div className="text-5xl font-bold text-green-400 mb-2">6.6x</div>
+								<p className="text-white">Revenue Generated</p>
+								<p className="text-gray-300 text-sm">
+                                    Generated 4162 AUD revenue in just 45 Days.
+								</p>
+							</div>
 
-                    <div className="mb-12">
-                        <p><strong>Ad Spend:</strong> 631 AUD</p>
-                        <p><strong>Revenue Generated:</strong> 4162 AUD</p>
-                        <p><strong>ROAS: 8.1x</strong></p>
-                    </div>
+							<div className="bg-gradient-to-br from-blue-900/40 to-blue-700/20 p-6 rounded-xl border border-blue-800">
+								<div className="text-5xl font-bold text-blue-400 mb-2">
+									631
+								</div>
+								<p className="text-white">Ad Spend</p>
+								<p className="text-gray-300 text-sm">
+									Ad Spend: 631 AUD
+								</p>
+							</div>
+							
+							<div className="bg-gradient-to-br from-yellow-900/40 to-yellow-700/20 p-6 rounded-xl border border-yellow-800">
+								<div className="text-5xl font-bold text-yellow-400 mb-2">
+									8x
+								</div>
+								<p className="text-white">Return on Ad Spend (ROAS)</p>
+								<p className="text-gray-300 text-sm">
+									Through optimized ad campaigns
+								</p>
+							</div>
+						</div>
+					</div>
 
                     {/* Advertisement Showcase */}
                     <div className="mb-12">
@@ -266,7 +293,7 @@ export default function BlacklineAutomotiveCaseStudy() {
 
                     <div className="mb-12">
                         <h2 className="text-2xl font-bold text-white mb-6">SERP</h2>
-                        
+
                         <p className="mb-12">From invisible to ranked: Blckline&#39;s branded search visibility now active and growing.</p>
                         <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
                             <Image
