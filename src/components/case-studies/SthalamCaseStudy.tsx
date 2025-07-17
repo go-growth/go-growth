@@ -220,28 +220,28 @@ export default function SthalamCaseStudy() {
 							Ad Campaign Showcase
 						</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-							<div className="relative w-full h-64 rounded-xl overflow-hidden">
+							<div className="relative w-full h-96 rounded-xl overflow-hidden">
 								<Image
 									src="/case-studies/sthalam/sthalam-ad.png"
 									alt="Sthalam ad creative 1"
 									fill
-									className="object-cover"
+									className="object-contain"
 								/>
 							</div>
-							<div className="relative w-full h-64 rounded-xl overflow-hidden">
+							<div className="relative w-full h-96 rounded-xl overflow-hidden">
 								<Image
 									src="/case-studies/sthalam/sthalam-analytics.png"
 									alt="Sthalam ad creative 1"
 									fill
-									className="object-cover"
+									className="object-contain"
 								/>
 							</div>
-							<div className="relative w-full h-64 rounded-xl overflow-hidden">
+							<div className="relative w-full h-96 rounded-xl overflow-hidden">
 								<Image
 									src="/case-studies/sthalam/sthalam-product.png"
 									alt="Sthalam ad creative 1"
 									fill
-									className="object-cover"
+									className="object-contain"
 								/>
 							</div>
 						</div>

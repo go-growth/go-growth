@@ -70,7 +70,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 const GoGrowthSection: React.FC = () => {
 	const caseStudies = [
 		{
-			logoSrc: "/case-studies/logo_sthalam.avif",
+			logoSrc: "/case-studies/blckline.png",
 			title: "Blackline Automotive",
 			description: (
 				<div className="flex flex-wrap items-baseline gap-1">
@@ -84,14 +84,14 @@ const GoGrowthSection: React.FC = () => {
 				<div className="flex flex-wrap items-baseline gap-1">
 					<span>Achieved</span>
 					<span className="font-bold text-green-400">8x ROAS</span>
-					<span>in just 30 days</span>
+					<span>in just 45 days</span>
 				</div>
 			),
 			duration: "3 Months",
 			explorerLink: "/case-studies/Blackline-Automotive",
 		},
 		{
-			logoSrc: "/case-studies/logo_sthalam.avif",
+			logoSrc: "/case-studies/craft.png",
 			title: "CraftsDlight",
 			description: (
 				<div className="flex flex-wrap items-baseline gap-1">

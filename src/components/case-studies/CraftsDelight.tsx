@@ -13,7 +13,7 @@ export default function CraftDelightsCaseStudy() {
             <div className="max-w-5xl mx-auto w-full">
                 <div className="flex items-center mb-10">
                     <Link href="/case-studies" className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         <span>Back to Case Studies</span>
                     </Link>
                 </div>
@@ -26,6 +26,16 @@ export default function CraftDelightsCaseStudy() {
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Craft Delights Case Study</h1>
                         <p className="text-gray-300 text-lg md:text-xl">From Instagram-Only to 40 Purchases in 7 Days</p>
                     </div>
+                </div>
+
+                {/* Hero Image Section */}
+                <div className="mb-12 relative w-full h-64 md:h-96 overflow-hidden rounded-2xl">
+                    <Image
+                        src="/case-studies/craft/hero-craft.png"
+                        alt="Sthalam products showcase"
+                        fill
+                        className="object-contain"
+                    />
                 </div>
 
                 <div className="bg-gray-900 bg-opacity-40 rounded-3xl p-8 mb-16 space-y-12">
@@ -115,6 +125,16 @@ export default function CraftDelightsCaseStudy() {
                             </tbody>
                         </table>
 
+                                            {/* Analytics Image */}
+                                            <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
+                                                <Image
+                                                    src="/case-studies/craft/chart.png"
+                                                    alt="Sthalam analytics screenshot"
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+
                         <h3 className="text-xl font-bold text-white mb-2">Early Purchase Impact</h3>
                         <ul className="text-gray-300 list-disc pl-6 space-y-2">
                             <li>40 orders fulfilled within one week of website + ad launch</li>
@@ -131,6 +151,39 @@ export default function CraftDelightsCaseStudy() {
                             <li>Traffic now coming from a combination of Meta Ads, organic search, and marketplace exposure</li>
                         </ul>
                     </section>
+
+                                        {/* Advertisement Showcase */}
+                                        <div className="mb-12">
+                                            <h2 className="text-2xl font-bold text-white mb-6">
+                                                Ad Campaign Showcase
+                                            </h2>
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                {/* <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                                                    <Image
+                                                        src="/case-studies/sthalam/sthalam-ad.png"
+                                                        alt="Sthalam ad creative 1"
+                                                        fill
+                                                        className="object-cover"
+                                                    />
+                                                </div> */}
+                                                <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                                                    <Image
+                                                        src="/case-studies/craft/product.png"
+                                                        alt="Sthalam ad creative 1"
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
+                                                <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                                                    <Image
+                                                        src="/case-studies/craft/diy.png"
+                                                        alt="Sthalam ad creative 1"
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-6">Summary</h2>

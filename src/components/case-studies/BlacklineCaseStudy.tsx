@@ -57,7 +57,7 @@ export default function BlacklineAutomotiveCaseStudy() {
                 <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
                     <div className="relative w-40 h-40 flex-shrink-0">
                         <Image
-                            src="/case-studies/logo_sthalam.avif"
+                            src="/case-studies/blckline.png"
                             alt="Sthalam logo"
                             fill
                             className="object-contain rounded-full"
@@ -68,7 +68,7 @@ export default function BlacklineAutomotiveCaseStudy() {
                             Blackline Automotive Case Study
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl">
-                            From Zero Sales to ROAS 8+ in Just 30 Days
+                            From Zero Sales to ROAS 8+ in Just 45 Days
                         </p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ export default function BlacklineAutomotiveCaseStudy() {
                 {/* Hero Image Section */}
                 <div className="mb-12 relative w-full h-64 md:h-96 overflow-hidden rounded-2xl">
                     <Image
-                        src="/case-studies/sthalam/sthalam-hero.png"
+                        src="/case-studies/blakline/hero-blakline.png"
                         alt="Sthalam products showcase"
                         fill
                         className="object-contain"
@@ -99,15 +99,10 @@ export default function BlacklineAutomotiveCaseStudy() {
                         </ul>
                     </div>
 
-                    {/* 
-                    Ad Spend: 631 AUD
-                    Revenue Generated: 4162 AUD
-                    ROAS: 8.1x */}
-
                     {/* Analytics Image */}
                     <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
                         <Image
-                            src="/case-studies/sthalam/sthalam-low.png"
+                            src="/case-studies/blakline/chart.png"
                             alt="Sthalam analytics screenshot"
                             fill
                             className="object-contain"
@@ -182,28 +177,28 @@ export default function BlacklineAutomotiveCaseStudy() {
                             Ad Campaign Showcase
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                            {/* <div className="relative w-full h-64 rounded-xl overflow-hidden">
                                 <Image
                                     src="/case-studies/sthalam/sthalam-ad.png"
                                     alt="Sthalam ad creative 1"
                                     fill
                                     className="object-cover"
                                 />
-                            </div>
-                            <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                            </div> */}
+                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
                                 <Image
-                                    src="/case-studies/sthalam/sthalam-analytics.png"
+                                    src="/case-studies/blakline/product.png"
                                     alt="Sthalam ad creative 1"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                 />
                             </div>
-                            <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
                                 <Image
-                                    src="/case-studies/sthalam/sthalam-product.png"
+                                    src="/case-studies/blakline/product-insta.png"
                                     alt="Sthalam ad creative 1"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                 />
                             </div>
                         </div>
@@ -270,10 +265,11 @@ export default function BlacklineAutomotiveCaseStudy() {
                     </div>
 
                     <div className="mb-12">
-                        <h2 className="text-2xl font-bold text-white mb-6">Ad Spents</h2>
+                        <h2 className="text-2xl font-bold text-white mb-6">SERP</h2>
+                        <p className="mb-12">From invisible to ranked: Blckline's branded search visibility now active and growing.</p>
                         <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
                             <Image
-                                src="/case-studies/sthalam/sthalam-ad-spent.png"
+                                src="/case-studies/blakline/SERP.png"
                                 alt="Sthalam geographic performance"
                                 fill
                                 className="object-contain"
