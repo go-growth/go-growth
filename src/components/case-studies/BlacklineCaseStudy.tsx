@@ -169,7 +169,7 @@ export default function BlacklineAutomotiveCaseStudy() {
 						<h2 className="text-2xl font-bold text-white mb-6">Results</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
-								<div className="text-5xl font-bold text-green-400 mb-2">6.6x</div>
+								<div className="text-5xl font-bold text-green-400 mb-2">4162</div>
 								<p className="text-white">Revenue Generated</p>
 								<p className="text-gray-300 text-sm">
                                     Generated 4162 AUD revenue in just 45 Days.
