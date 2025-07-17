@@ -71,6 +71,48 @@ const GoGrowthSection: React.FC = () => {
 	const caseStudies = [
 		{
 			logoSrc: "/case-studies/logo_sthalam.avif",
+			title: "Blackline Automotive",
+			description: (
+				<div className="flex flex-wrap items-baseline gap-1">
+					{/* <span>Scaled a home décor brand</span> */}
+					<span className="text-green-400 font-bold">Blackline Automotive</span>
+					<span>from</span>
+					<span className="text-green-400 font-bold">zero to daily orders</span>
+				</div>
+			),
+			results: (
+				<div className="flex flex-wrap items-baseline gap-1">
+					<span>Achieved</span>
+					<span className="font-bold text-green-400">8x ROAS</span>
+					<span>in just 30 days</span>
+				</div>
+			),
+			duration: "3 Months",
+			explorerLink: "/case-studies/Blackline-Automotive",
+		},
+		{
+			logoSrc: "/case-studies/logo_sthalam.avif",
+			title: "CraftsDlight",
+			description: (
+				<div className="flex flex-wrap items-baseline gap-1">
+					{/* <span>Scaled a home décor brand</span> */}
+					<span className="text-green-400 font-bold">CraftsDlight</span>
+					<span>from</span>
+					<span className="text-green-400 font-bold">Instagram-Only to 40 Purchases in 7 Days</span>
+				</div>
+			),
+			results: (
+				<div className="flex flex-wrap items-baseline gap-1">
+					<span>Achieved</span>
+					<span className="font-bold text-green-400">40 Purchases</span>
+					<span>in 7 Days</span>
+				</div>
+			),
+			duration: "3 Months",
+			explorerLink: "/case-studies/CraftsDelight",
+		},
+		{
+			logoSrc: "/case-studies/logo_sthalam.avif",
 			title: "Sthalam",
 			description: (
 				<div className="flex flex-wrap items-baseline gap-1">
