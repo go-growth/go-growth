@@ -266,7 +266,8 @@ export default function BlacklineAutomotiveCaseStudy() {
 
                     <div className="mb-12">
                         <h2 className="text-2xl font-bold text-white mb-6">SERP</h2>
-                        <p className="mb-12">From invisible to ranked: Blckline's branded search visibility now active and growing.</p>
+                        
+                        <p className="mb-12">From invisible to ranked: Blckline&#39;s branded search visibility now active and growing.</p>
                         <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
                             <Image
                                 src="/case-studies/blakline/SERP.png"
