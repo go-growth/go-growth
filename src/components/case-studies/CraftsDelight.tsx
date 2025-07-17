@@ -20,7 +20,7 @@ export default function CraftDelightsCaseStudy() {
 
                 <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
                     <div className="relative w-40 h-40 flex-shrink-0">
-                        <Image src="/case-studies/logo_craftdelights.png" alt="Craft Delights logo" fill className="object-contain rounded-full" />
+                        <Image src="/case-studies/craft.png" alt="Craft Delights logo" fill className="object-contain rounded-full" />
                     </div>
                     <div>
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Craft Delights Case Study</h1>
