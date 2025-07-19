@@ -91,6 +91,39 @@ export default function CraftDelightsCaseStudy() {
                         </ol>
                     </section>
 
+                    <div className="mb-12">
+						<h2 className="text-2xl font-bold text-white mb-6">Results</h2>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
+								<div className="text-5xl font-bold text-green-400 mb-2">58,102</div>
+								<p className="text-white">Revenue Generated</p>
+								<p className="text-gray-300 text-sm">
+                                    Generated 58,102 AUD revenue.
+								</p>
+							</div>
+
+							<div className="bg-gradient-to-br from-blue-900/40 to-blue-700/20 p-6 rounded-xl border border-blue-800">
+								<div className="text-5xl font-bold text-blue-400 mb-2">
+									40
+								</div>
+								<p className="text-white">40 purchases</p>
+								<p className="text-gray-300 text-sm">
+								    from ₹14,196 in ad spend
+								</p>
+							</div>
+							
+							<div className="bg-gradient-to-br from-yellow-900/40 to-yellow-700/20 p-6 rounded-xl border border-yellow-800">
+								<div className="text-5xl font-bold text-yellow-400 mb-2">
+									980
+								</div>
+								<p className="text-white">From No website to </p>
+								<p className="text-gray-300 text-sm">
+									980 users and 124 add-to-carts in 7 days
+								</p>
+							</div>
+						</div>
+					</div>
+
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-6">What Was the Outcome</h2>
                         <table className="min-w-full text-left text-sm text-gray-300 border border-gray-700 mb-6">
@@ -125,15 +158,15 @@ export default function CraftDelightsCaseStudy() {
                             </tbody>
                         </table>
 
-                                            {/* Analytics Image */}
-                                            <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
-                                                <Image
-                                                    src="/case-studies/craft/chart.png"
-                                                    alt="Sthalam analytics screenshot"
-                                                    fill
-                                                    className="object-contain"
-                                                />
-                                            </div>
+                        {/* Analytics Image */}
+                        <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
+                            <Image
+                                src="/case-studies/craft/chart.png"
+                                alt="Sthalam analytics screenshot"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
 
                         <h3 className="text-xl font-bold text-white mb-2">Early Purchase Impact</h3>
                         <ul className="text-gray-300 list-disc pl-6 space-y-2">
@@ -152,13 +185,13 @@ export default function CraftDelightsCaseStudy() {
                         </ul>
                     </section>
 
-                                        {/* Advertisement Showcase */}
-                                        <div className="mb-12">
-                                            <h2 className="text-2xl font-bold text-white mb-6">
-                                                Ad Campaign Showcase
-                                            </h2>
-                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                                {/* <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                    {/* Advertisement Showcase */}
+                    <div className="mb-12">
+                        <h2 className="text-2xl font-bold text-white mb-6">
+                            Ad Campaign Showcase
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {/* <div className="relative w-full h-64 rounded-xl overflow-hidden">
                                                     <Image
                                                         src="/case-studies/sthalam/sthalam-ad.png"
                                                         alt="Sthalam ad creative 1"
@@ -166,24 +199,24 @@ export default function CraftDelightsCaseStudy() {
                                                         className="object-cover"
                                                     />
                                                 </div> */}
-                                                <div className="relative w-full h-96 rounded-xl overflow-hidden">
-                                                    <Image
-                                                        src="/case-studies/craft/product.png"
-                                                        alt="Sthalam ad creative 1"
-                                                        fill
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                                <div className="relative w-full h-96 rounded-xl overflow-hidden">
-                                                    <Image
-                                                        src="/case-studies/craft/diy.png"
-                                                        alt="Sthalam ad creative 1"
-                                                        fill
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                                <Image
+                                    src="/case-studies/craft/product.png"
+                                    alt="Sthalam ad creative 1"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                                <Image
+                                    src="/case-studies/craft/diy.png"
+                                    alt="Sthalam ad creative 1"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-6">Summary</h2>
