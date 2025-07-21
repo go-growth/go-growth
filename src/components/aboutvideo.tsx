@@ -1,7 +1,4 @@
 "use client";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
 
 interface AboutProps {
     name: string;
@@ -22,8 +19,7 @@ const about: AboutProps[] = [
 ];
 
 export default function Aboutvideo() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const currentTestimonial = about[currentIndex];
+    const currentTestimonial = about[0];
 
     return (
         <div className="min-h-screen flex items-center justify-center w-full p-4 lg:py-20 py-10">
