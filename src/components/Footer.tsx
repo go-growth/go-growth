@@ -10,19 +10,19 @@ export default function Footer() {
 					<div className="relative flex whitespace-nowrap py-3">
 						<div className="animate-marquee flex items-center">
 							<span className="mx-4 text-5xl">
-								become the go-to person in your industry |
+								become the go-to brand in your industry |
 							</span>
 							<span className="mx-4 text-5xl">
-								become the go-to person in your industry |
+								become the go-to brand in your industry |
 							</span>
 							<span className="mx-4 text-5xl">
-								become the go-to person in your industry |
+								become the go-to brand in your industry |
 							</span>
 							<span className="mx-4 text-5xl">
-								become the go-to person in your industry |
+								become the go-to brand in your industry |
 							</span>
 							<span className="mx-4 text-5xl">
-								become the go-to person in your industry |
+								become the go-to brand in your industry |
 							</span>
 						</div>
 					</div>
