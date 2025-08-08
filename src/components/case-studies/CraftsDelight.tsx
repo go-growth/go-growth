@@ -98,7 +98,7 @@ export default function CraftDelightsCaseStudy() {
 								<div className="text-5xl font-bold text-green-400 mb-2">58,102</div>
 								<p className="text-white">Revenue Generated</p>
 								<p className="text-gray-300 text-sm">
-                                    Generated 58,102 AUD revenue.
+                                    Generated 58,102 Rs. revenue.
 								</p>
 							</div>
 
