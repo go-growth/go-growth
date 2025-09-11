@@ -45,7 +45,7 @@ export default function CraftDelightsCaseStudy() {
               Craft Delights Case Study
             </h1>
             <p className="text-gray-300 text-lg md:text-xl">
-              From Instagram-Only to 40 Purchases in 7 Days
+              Consistent 4–5X ROAS on Meta over the last 2 months
             </p>
           </div>
         </div>
@@ -268,9 +268,8 @@ export default function CraftDelightsCaseStudy() {
                   <li>19K users in 2 months</li>
                   <li>2.2K add-to-carts</li>
                   <li>550 purchases from ₹2,30,633 ad spend</li>
-                  <li>₹6.47L+in revenue</li>
+                  <li>₹6.47L+ in revenue</li>
                   <li>Amazon organic optimization + paid campaign generated ₹1,07,338</li>
-                  <li>A complete e-commerce growth engine, live</li>
                 </ul>
               </div>
             </div>
