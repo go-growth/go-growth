@@ -189,7 +189,7 @@ export default function CraftDelightsCaseStudy() {
             {/* analytics image */}
             <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
               <Image
-                src="/case-studies/craft/ad insight ss.png"
+                src="/case-studies/craft/GA SS.png"
                 alt="Analytics screenshot"
                 fill
                 className="object-contain"
