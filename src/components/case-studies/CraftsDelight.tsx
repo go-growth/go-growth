@@ -70,7 +70,7 @@ export default function CraftDelightsCaseStudy() {
                                     <li>Launched Top-of-Funnel prospecting campaigns and Mid-Funnel retargeting flows</li>
                                     <li>Optimized audience targeting based on product categories and lookalikes</li>
                                 </ul>
-                                <p className="mt-2">Ad Spend: ₹14,196 | Revenue: ₹58,102 | ROAS: 4.09</p>
+                                <p className="mt-2">Ad Spend: ₹230,633. | Revenue: ₹6,47,450 | ROAS: 3.88</p>
                             </li>
                             <li>
                                 <h3 className="text-xl font-bold text-white">3. Platform & SEO Expansion</h3>
@@ -95,30 +95,40 @@ export default function CraftDelightsCaseStudy() {
 						<h2 className="text-2xl font-bold text-white mb-6">Results</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
-								<div className="text-5xl font-bold text-green-400 mb-2">58,102</div>
+								<div className="text-5xl font-bold text-green-400 mb-2">6,47,450</div>
 								<p className="text-white">Revenue Generated</p>
 								<p className="text-gray-300 text-sm">
-                                    Generated 58,102 Rs. revenue.
+                                    Generated 6,47,450 Rs. revenue.
 								</p>
 							</div>
 
 							<div className="bg-gradient-to-br from-blue-900/40 to-blue-700/20 p-6 rounded-xl border border-blue-800">
 								<div className="text-5xl font-bold text-blue-400 mb-2">
-									40
+									550 
 								</div>
-								<p className="text-white">40 purchases</p>
+								<p className="text-white">550 purchases</p>
 								<p className="text-gray-300 text-sm">
-								    from ₹14,196 in ad spend
+								    from ₹230,633 ad spend
 								</p>
 							</div>
 							
 							<div className="bg-gradient-to-br from-yellow-900/40 to-yellow-700/20 p-6 rounded-xl border border-yellow-800">
 								<div className="text-5xl font-bold text-yellow-400 mb-2">
-									980
+									12.86%
 								</div>
-								<p className="text-white">From No website to </p>
+								<p className="text-white">Returning customers </p>
 								<p className="text-gray-300 text-sm">
-									980 users and 124 add-to-carts in 7 days
+									
+								</p>
+							</div>
+						</div>
+						<div className="bg-gradient-to-br from-purple-900/40 to-purple-700/20 p-6 rounded-xl border border-purple-800">
+								<div className="text-5xl font-bold text-yellow-400 mb-2">
+									3.4%
+								</div>
+								<p className="text-white"> Conversion rate jumped in last 2 month</p>
+								<p className="text-gray-300 text-sm">
+									
 								</p>
 							</div>
 						</div>
@@ -137,23 +147,23 @@ export default function CraftDelightsCaseStudy() {
                             <tbody>
                                 <tr className="bg-gray-900">
                                     <td className="px-6 py-4 border-b border-gray-700">Total Users</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">980</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+114.4%</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">19,000</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">+98,963.2%</td>
                                 </tr>
                                 <tr className="bg-gray-800">
                                     <td className="px-6 py-4 border-b border-gray-700">New Users</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">928</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+104.9%</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">19,000</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">+98,778.9%</td>
                                 </tr>
                                 <tr className="bg-gray-900">
                                     <td className="px-6 py-4 border-b border-gray-700">Add to Carts</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">124</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+342.9%</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">2,200</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">+224,700.0%</td>
                                 </tr>
                                 <tr className="bg-gray-800">
                                     <td className="px-6 py-4 border-b border-gray-700">Purchases</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">40</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+1,900%</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">513</td>
+                                    <td className="px-6 py-4 border-b border-gray-700">+16333.3%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -168,12 +178,8 @@ export default function CraftDelightsCaseStudy() {
                             />
                         </div>
 
-                        <h3 className="text-xl font-bold text-white mb-2">Early Purchase Impact</h3>
-                        <ul className="text-gray-300 list-disc pl-6 space-y-2">
-                            <li>40 orders fulfilled within one week of website + ad launch</li>
-                            <li>Strong response to Clay Magnets, DIY birdhouse kits, embossed pot collection, and planters</li>
-                            <li>Customers now buying directly from site without manual intervention</li>
-                        </ul>
+                       
+                        
                     </section>
 
                     <section>
@@ -202,7 +208,7 @@ export default function CraftDelightsCaseStudy() {
                             <div className="relative w-full h-96 rounded-xl overflow-hidden">
                                 <Image
                                     src="/case-studies/craft/product.png"
-                                    alt="Sthalam ad creative 1"
+                                    alt="Craft ad creative 1"
                                     fill
                                     className="object-contain"
                                 />
@@ -210,7 +216,7 @@ export default function CraftDelightsCaseStudy() {
                             <div className="relative w-full h-96 rounded-xl overflow-hidden">
                                 <Image
                                     src="/case-studies/craft/diy.png"
-                                    alt="Sthalam ad creative 1"
+                                    alt="Craft ad creative 1"
                                     fill
                                     className="object-contain"
                                 />
@@ -233,11 +239,11 @@ export default function CraftDelightsCaseStudy() {
                             <div className="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-800">
                                 <h3 className="text-xl font-bold text-white mb-2">After</h3>
                                 <ul className="text-gray-300 list-disc pl-6">
-                                    <li>980 users in 7 days</li>
-                                    <li>124 add-to-carts</li>
-                                    <li>40 purchases from ₹14,196 in ad spend</li>
-                                    <li>₹58,102 in revenue</li>
-                                    <li>Active listings on Amazon and across search</li>
+                                    <li>19K users in 2 months</li>
+                                    <li>2.2K add-to-carts</li>
+                                    <li>550 purchases from ₹2,30,633 ad spend </li>
+                                    <li>₹6,47,450 in revenue</li>
+                                    <li>Amazon organic optimization and paid campaign, generated ₹1,07,338 revenue</li>
                                     <li>A complete e-commerce growth engine, live</li>
                                 </ul>
                             </div>
