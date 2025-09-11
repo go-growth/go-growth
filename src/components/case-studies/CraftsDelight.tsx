@@ -189,7 +189,7 @@ export default function CraftDelightsCaseStudy() {
             {/* analytics image */}
             <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
               <Image
-                src="/case-studies/craft/chart.png"
+                src="/case-studies/craft/ad insight ss.png"
                 alt="Analytics screenshot"
                 fill
                 className="object-contain"
@@ -216,7 +216,7 @@ export default function CraftDelightsCaseStudy() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative w-full h-96 rounded-xl overflow-hidden">
                 <Image
-                  src="/case-studies/craft/product.png"
+                  src="/case-studies/craft/AD ss.png"
                   alt="Craft ad creative 1"
                   fill
                   className="object-contain"
@@ -224,7 +224,15 @@ export default function CraftDelightsCaseStudy() {
               </div>
               <div className="relative w-full h-96 rounded-xl overflow-hidden">
                 <Image
-                  src="/case-studies/craft/diy.png"
+                  src="/case-studies/craft/AD SS1.png"
+                  alt="Craft ad creative 2"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                <Image
+                  src="/case-studies/craft/Ad ss 2.png"
                   alt="Craft ad creative 2"
                   fill
                   className="object-contain"
