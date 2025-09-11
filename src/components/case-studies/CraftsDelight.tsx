@@ -1,256 +1,266 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function CraftDelightsCaseStudy() {
-    return (
-        <div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
-            <div className="absolute top-5 left-10 text-white text-2xl">*</div>
-            <div className="absolute top-5 right-10 text-white text-2xl">*</div>
-            <div className="absolute bottom-20 left-60 text-white text-2xl">*</div>
-            <div className="absolute top-1/2 right-32 text-white text-2xl">*</div>
+  return (
+    <div className="w-full min-h-screen relative overflow-hidden px-4 py-12 flex flex-col items-center justify-center bg-black">
+      {/* floating stars */}
+      <div className="absolute top-5 left-10 text-white text-2xl">*</div>
+      <div className="absolute top-5 right-10 text-white text-2xl">*</div>
+      <div className="absolute bottom-20 left-60 text-white text-2xl">*</div>
+      <div className="absolute top-1/2 right-32 text-white text-2xl">*</div>
 
-            <div className="max-w-5xl mx-auto w-full">
-                <div className="flex items-center mb-10">
-                    <Link href="/case-studies" className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                        <span>Back to Case Studies</span>
-                    </Link>
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
-                    <div className="relative w-40 h-40 flex-shrink-0">
-                        <Image src="/case-studies/craft.png" alt="Craft Delights logo" fill className="object-contain rounded-full" />
-                    </div>
-                    <div>
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Craft Delights Case Study</h1>
-                        <p className="text-gray-300 text-lg md:text-xl">From Instagram-Only to 40 Purchases in 7 Days</p>
-                    </div>
-                </div>
-
-                {/* Hero Image Section */}
-                <div className="mb-12 relative w-full h-64 md:h-96 overflow-hidden rounded-2xl">
-                    <Image
-                        src="/case-studies/craft/hero-craft.png"
-                        alt="Sthalam products showcase"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-
-                <div className="bg-gray-900 bg-opacity-40 rounded-3xl p-8 mb-16 space-y-12">
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-6">What We Had</h2>
-                        <ul className="text-gray-300 list-disc pl-6 space-y-2">
-                            <li>A home decor and garden brand operating only via Instagram DMs</li>
-                            <li>No website, no checkout system, no analytics or purchase tracking</li>
-                            <li>No listings on marketplaces like Amazon or search visibility on Google</li>
-                            <li>Entirely dependent on organic engagement and manual fulfillment</li>
-                            <li>No advertising history or customer retargeting setup</li>
-                        </ul>
-                        <p className="text-gray-300 mt-4">Craft Delights had a beautifully curated product range but lacked the systems and structure to scale. We stepped in to build a complete digital growth engine from the ground up.</p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-6">What We Did</h2>
-                        <ol className="text-gray-300 space-y-6">
-                            <li>
-                                <h3 className="text-xl font-bold text-white">1. Built the Digital Foundation</h3>
-                                <ul className="list-disc pl-6">
-                                    <li>Designed and launched a conversion-focused Shopify website</li>
-                                    <li>Structured collections for indoor pots, birdhouses, vases, and seasonal decor</li>
-                                    <li>Enabled full event tracking using Google Analytics 4 and Meta Pixel</li>
-                                    <li>Implemented backend automation and conversion APIs for accurate attribution</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3 className="text-xl font-bold text-white">2. Full-Funnel Meta Ads Strategy</h3>
-                                <ul className="list-disc pl-6">
-                                    <li>Created engaging Meta ads using lifestyle visuals and first-time offer hooks</li>
-                                    <li>Launched Top-of-Funnel prospecting campaigns and Mid-Funnel retargeting flows</li>
-                                    <li>Optimized audience targeting based on product categories and lookalikes</li>
-                                </ul>
-                                <p className="mt-2">Ad Spend: ₹230,633. | Revenue: ₹6,47,450 | ROAS: 3.88</p>
-                            </li>
-                            <li>
-                                <h3 className="text-xl font-bold text-white">3. Platform & SEO Expansion</h3>
-                                <ul className="list-disc pl-6">
-                                    <li>Listed products on Amazon and ran Sponsored Ads for relevant decor categories</li>
-                                    <li>Optimized product titles, descriptions, and metadata for organic visibility</li>
-                                    <li>Secured category-specific placements on Indian decor directories and discovery platforms</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3 className="text-xl font-bold text-white">4. Search Optimization</h3>
-                                <ul className="list-disc pl-6">
-                                    <li>Developed SEO-focused collection and product page content</li>
-                                    <li>Structured schema, alt tags, and internal linking for indexation</li>
-                                    <li>Submitted site to Google Search Console and business listings</li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </section>
-
-                    <div className="mb-12">
-						<h2 className="text-2xl font-bold text-white mb-6">Results</h2>
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-							<div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
-								<div className="text-5xl font-bold text-green-400 mb-2">6,47,450</div>
-								<p className="text-white">Revenue Generated</p>
-								<p className="text-gray-300 text-sm">
-                                    Generated 6,47,450 Rs. revenue.
-								</p>
-							</div>
-
-							<div className="bg-gradient-to-br from-blue-900/40 to-blue-700/20 p-6 rounded-xl border border-blue-800">
-								<div className="text-5xl font-bold text-blue-400 mb-2">
-									550 
-								</div>
-								<p className="text-white">550 purchases</p>
-								<p className="text-gray-300 text-sm">
-								    from ₹230,633 ad spend
-								</p>
-							</div>
-							
-							<div className="bg-gradient-to-br from-yellow-900/40 to-yellow-700/20 p-6 rounded-xl border border-yellow-800">
-								<div className="text-5xl font-bold text-yellow-400 mb-2">
-									12.86%
-								</div>
-								<p className="text-white">Returning customers </p>
-								<p className="text-gray-300 text-sm">
-									
-								</p>
-							</div>
-						</div>
-						<div className="bg-gradient-to-br from-purple-900/40 to-purple-700/20 p-6 rounded-xl border border-purple-800">
-								<div className="text-5xl font-bold text-yellow-400 mb-2">
-									3.4%
-								</div>
-								<p className="text-white"> Conversion rate jumped in last 2 month</p>
-								<p className="text-gray-300 text-sm">
-									
-								</p>
-							</div>
-						</div>
-					</div>
-
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-6">What Was the Outcome</h2>
-                        <table className="min-w-full text-left text-sm text-gray-300 border border-gray-700 mb-6">
-                            <thead className="bg-gray-800 text-white uppercase text-xs">
-                                <tr>
-                                    <th className="px-6 py-3 border-b border-gray-700">Metric</th>
-                                    <th className="px-6 py-3 border-b border-gray-700">Result</th>
-                                    <th className="px-6 py-3 border-b border-gray-700">Growth</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr className="bg-gray-900">
-                                    <td className="px-6 py-4 border-b border-gray-700">Total Users</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">19,000</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+98,963.2%</td>
-                                </tr>
-                                <tr className="bg-gray-800">
-                                    <td className="px-6 py-4 border-b border-gray-700">New Users</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">19,000</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+98,778.9%</td>
-                                </tr>
-                                <tr className="bg-gray-900">
-                                    <td className="px-6 py-4 border-b border-gray-700">Add to Carts</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">2,200</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+224,700.0%</td>
-                                </tr>
-                                <tr className="bg-gray-800">
-                                    <td className="px-6 py-4 border-b border-gray-700">Purchases</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">513</td>
-                                    <td className="px-6 py-4 border-b border-gray-700">+16333.3%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        {/* Analytics Image */}
-                        <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
-                            <Image
-                                src="/case-studies/craft/chart.png"
-                                alt="Sthalam analytics screenshot"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
-                       
-                        
-                    </section>
-
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-6">Digital Visibility Transformation</h2>
-                        <ul className="text-gray-300 list-disc pl-6 space-y-2">
-                            <li>Indexed on Google for relevant keywords and brand queries</li>
-                            <li>Active Amazon product listings with visibility through paid placements</li>
-                            <li>Traffic now coming from a combination of Meta Ads, organic search, and marketplace exposure</li>
-                        </ul>
-                    </section>
-
-                    {/* Advertisement Showcase */}
-                    <div className="mb-12">
-                        <h2 className="text-2xl font-bold text-white mb-6">
-                            Ad Campaign Showcase
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {/* <div className="relative w-full h-64 rounded-xl overflow-hidden">
-                                                    <Image
-                                                        src="/case-studies/sthalam/sthalam-ad.png"
-                                                        alt="Sthalam ad creative 1"
-                                                        fill
-                                                        className="object-cover"
-                                                    />
-                                                </div> */}
-                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
-                                <Image
-                                    src="/case-studies/craft/product.png"
-                                    alt="Craft ad creative 1"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            <div className="relative w-full h-96 rounded-xl overflow-hidden">
-                                <Image
-                                    src="/case-studies/craft/diy.png"
-                                    alt="Craft ad creative 1"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-6">Summary</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-800">
-                                <h3 className="text-xl font-bold text-white mb-2">Before</h3>
-                                <ul className="text-gray-300 list-disc pl-6">
-                                    <li>No website</li>
-                                    <li>No data, automation, or digital infrastructure</li>
-                                    <li>Manual sales via Instagram DMs</li>
-                                    <li>No discoverability outside social media</li>
-                                </ul>
-                            </div>
-                            <div className="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-800">
-                                <h3 className="text-xl font-bold text-white mb-2">After</h3>
-                                <ul className="text-gray-300 list-disc pl-6">
-                                    <li>19K users in 2 months</li>
-                                    <li>2.2K add-to-carts</li>
-                                    <li>550 purchases from ₹2,30,633 ad spend </li>
-                                    <li>₹6,47,450 in revenue</li>
-                                    <li>Amazon organic optimization and paid campaign, generated ₹1,07,338 revenue</li>
-                                    <li>A complete e-commerce growth engine, live</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+      <div className="max-w-5xl mx-auto w-full">
+        {/* back link */}
+        <div className="flex items-center mb-10">
+          <Link
+            href="/case-studies"
+            className="text-gray-400 hover:text-white flex items-center gap-2 transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>Back to Case Studies</span>
+          </Link>
         </div>
-    );
+
+        {/* title */}
+        <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+          <div className="relative w-40 h-40 flex-shrink-0">
+            <Image
+              src="/case-studies/craft.png"
+              alt="Craft Delights logo"
+              fill
+              className="object-contain rounded-full"
+            />
+          </div>
+          <div>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              Craft Delights Case Study
+            </h1>
+            <p className="text-gray-300 text-lg md:text-xl">
+              From Instagram-Only to 40 Purchases in 7 Days
+            </p>
+          </div>
+        </div>
+
+        {/* hero */}
+        <div className="mb-12 relative w-full h-64 md:h-96 overflow-hidden rounded-2xl">
+          <Image
+            src="/case-studies/craft/hero-craft.png"
+            alt="Craft Delights products"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="bg-gray-900/40 rounded-3xl p-8 mb-16 space-y-12">
+          {/* what we had */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">What We Had</h2>
+            <ul className="text-gray-300 list-disc pl-6 space-y-2">
+              <li>A home decor and garden brand operating only via Instagram DMs</li>
+              <li>No website, no checkout system, no analytics or purchase tracking</li>
+              <li>No listings on marketplaces like Amazon or search visibility on Google</li>
+              <li>Entirely dependent on organic engagement and manual fulfillment</li>
+              <li>No advertising history or customer retargeting setup</li>
+            </ul>
+            <p className="text-gray-300 mt-4">
+              Craft Delights had a beautifully curated product range but lacked the systems and
+              structure to scale. We stepped in to build a complete digital growth engine from the
+              ground up.
+            </p>
+          </section>
+
+          {/* what we did */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">What We Did</h2>
+            <ol className="text-gray-300 space-y-6">
+              <li>
+                <h3 className="text-xl font-bold text-white">1. Built the Digital Foundation</h3>
+                <ul className="list-disc pl-6">
+                  <li>Designed and launched a conversion-focused Shopify website</li>
+                  <li>Structured collections for indoor pots, birdhouses, vases, and seasonal decor</li>
+                  <li>Enabled full event tracking using Google Analytics 4 and Meta Pixel</li>
+                  <li>Implemented backend automation and conversion APIs for accurate attribution</li>
+                </ul>
+              </li>
+              <li>
+                <h3 className="text-xl font-bold text-white">2. Full-Funnel Meta Ads Strategy</h3>
+                <ul className="list-disc pl-6">
+                  <li>Created engaging Meta ads using lifestyle visuals and first-time offer hooks</li>
+                  <li>Launched Top-of-Funnel prospecting campaigns and Mid-Funnel retargeting flows</li>
+                  <li>Optimized audience targeting based on product categories and lookalikes</li>
+                </ul>
+                <p className="mt-2">Ad Spend: ₹230,633 | Revenue: ₹6,47,450 | ROAS: 3.88</p>
+              </li>
+              <li>
+                <h3 className="text-xl font-bold text-white">3. Platform &amp; SEO Expansion</h3>
+                <ul className="list-disc pl-6">
+                  <li>Listed products on Amazon and ran Sponsored Ads for relevant decor categories</li>
+                  <li>Optimized product titles, descriptions, and metadata for organic visibility</li>
+                  <li>
+                    Secured category-specific placements on Indian decor directories and discovery
+                    platforms
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3 className="text-xl font-bold text-white">4. Search Optimization</h3>
+                <ul className="list-disc pl-6">
+                  <li>Developed SEO-focused collection and product page content</li>
+                  <li>Structured schema, alt tags, and internal linking for indexation</li>
+                  <li>Submitted site to Google Search Console and business listings</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          {/* results */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-white mb-6">Results</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-gradient-to-br from-green-900/40 to-green-700/20 p-6 rounded-xl border border-green-800">
+                <div className="text-5xl font-bold text-green-400 mb-2">6,47,450</div>
+                <p className="text-white">Revenue Generated</p>
+                <p className="text-gray-300 text-sm">Generated ₹6,47,450 revenue.</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-900/40 to-blue-700/20 p-6 rounded-xl border border-blue-800">
+                <div className="text-5xl font-bold text-blue-400 mb-2">502</div>
+                <p className="text-white">Purchases</p>
+                <p className="text-gray-300 text-sm">from ₹230,633 ad spend</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-900/40 to-yellow-700/20 p-6 rounded-xl border border-yellow-800">
+                <div className="text-5xl font-bold text-yellow-400 mb-2">12.86%</div>
+                <p className="text-white">Returning customers</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-900/40 to-purple-700/20 p-6 rounded-xl border border-purple-800">
+                <div className="text-5xl font-bold text-purple-300 mb-2">3.4%</div>
+                <p className="text-white">Conversion rate (last 2 months)</p>
+              </div>
+            </div>
+          </section>
+
+          {/* outcome table */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">What Was the Outcome</h2>
+            <table className="min-w-full text-left text-sm text-gray-300 border border-gray-700 mb-6">
+              <thead className="bg-gray-800 text-white uppercase text-xs">
+                <tr>
+                  <th className="px-6 py-3 border-b border-gray-700">Metric</th>
+                  <th className="px-6 py-3 border-b border-gray-700">Result</th>
+                  <th className="px-6 py-3 border-b border-gray-700">Growth</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-gray-900">
+                  <td className="px-6 py-4 border-b border-gray-700">Total Users</td>
+                  <td className="px-6 py-4 border-b border-gray-700">19,000</td>
+                  <td className="px-6 py-4 border-b border-gray-700">+98,963.2%</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="px-6 py-4 border-b border-gray-700">New Users</td>
+                  <td className="px-6 py-4 border-b border-gray-700">19,000</td>
+                  <td className="px-6 py-4 border-b border-gray-700">+98,778.9%</td>
+                </tr>
+                <tr className="bg-gray-900">
+                  <td className="px-6 py-4 border-b border-gray-700">Add to Carts</td>
+                  <td className="px-6 py-4 border-b border-gray-700">2,200</td>
+                  <td className="px-6 py-4 border-b border-gray-700">+224,700.0%</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="px-6 py-4 border-b border-gray-700">Purchases</td>
+                  <td className="px-6 py-4 border-b border-gray-700">502</td>
+                  <td className="px-6 py-4 border-b border-gray-700">+16,333.3%</td>
+                </tr>
+              </tbody>
+            </table>
+
+            {/* analytics image */}
+            <div className="mb-12 relative w-full h-64 rounded-xl overflow-hidden">
+              <Image
+                src="/case-studies/craft/chart.png"
+                alt="Analytics screenshot"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </section>
+
+          {/* visibility */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">Digital Visibility Transformation</h2>
+            <ul className="text-gray-300 list-disc pl-6 space-y-2">
+              <li>Indexed on Google for relevant keywords and brand queries</li>
+              <li>Active Amazon product listings with visibility through paid placements</li>
+              <li>
+                Traffic now coming from a combination of Meta Ads, organic search, and marketplace
+                exposure
+              </li>
+            </ul>
+          </section>
+
+          {/* ad showcase */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-white mb-6">Ad Campaign Showcase</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                <Image
+                  src="/case-studies/craft/product.png"
+                  alt="Craft ad creative 1"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                <Image
+                  src="/case-studies/craft/diy.png"
+                  alt="Craft ad creative 2"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* summary */}
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">Summary</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-black/40 p-6 rounded-xl border border-gray-800">
+                <h3 className="text-xl font-bold text-white mb-2">Before</h3>
+                <ul className="text-gray-300 list-disc pl-6">
+                  <li>No website</li>
+                  <li>No data, automation, or digital infrastructure</li>
+                  <li>Manual sales via Instagram DMs</li>
+                  <li>No discoverability outside social media</li>
+                </ul>
+              </div>
+              <div className="bg-black/40 p-6 rounded-xl border border-gray-800">
+                <h3 className="text-xl font-bold text-white mb-2">After</h3>
+                <ul className="text-gray-300 list-disc pl-6">
+                  <li>19K users in 2 months</li>
+                  <li>2.2K add-to-carts</li>
+                  <li>502 purchases from ₹2,30,633 ad spend</li>
+                  <li>₹6,47,450 in revenue</li>
+                  <li>Amazon organic optimization + paid campaign generated ₹1,07,338</li>
+                  <li>A complete e-commerce growth engine, live</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
 }
