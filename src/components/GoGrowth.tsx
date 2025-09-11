@@ -98,14 +98,14 @@ const GoGrowthSection: React.FC = () => {
 					{/* <span>Scaled a home décor brand</span> */}
 					<span className="text-green-400 font-bold">CraftsDlight</span>
 					<span>from</span>
-					<span className="text-green-400 font-bold">Instagram-Only to 40 Purchases in 7 Days</span>
+					<span className="text-green-400 font-bold">Consistent 4–5X ROAS on Meta over the last 2 months</span>
 				</div>
 			),
 			results: (
 				<div className="flex flex-wrap items-baseline gap-1">
 					<span>Achieved</span>
-					<span className="font-bold text-green-400">40 Purchases</span>
-					<span>in 7 Days</span>
+					<span className="font-bold text-green-400">550 Purchases</span>
+					<span>in  2 Months</span>
 				</div>
 			),
 			duration: "3 Months",
@@ -267,3 +267,4 @@ const GoGrowthSection: React.FC = () => {
 };
 
 export default GoGrowthSection;
+
