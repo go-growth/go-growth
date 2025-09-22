@@ -31,13 +31,14 @@ export default function CardCarousel() {
         logo: "/case-studies/limitless-boxing.jpg",
         title: "Limitless Boxing",
         subtitle: "Local Gym",
+url: "#",
       
       },
       {
         logo: "/case-studies/aevy-tv.webp",
         title: "Aevy TV",
         subtitle: "Ed-Tech",
-        
+        url: "#",
       },
       {
         logo: "/case-studies/logo_sthalam.avif",
@@ -286,3 +287,4 @@ export default function CardCarousel() {
     </section>
   );
 }
+
