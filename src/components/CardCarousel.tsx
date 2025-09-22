@@ -40,6 +40,24 @@ url: "#",
         subtitle: "Ed-Tech",
         url: "#",
       },
+ {
+        logo: "/case-studies/11.png",
+        title: "Anything Vegan",
+        subtitle: "E-commerce",
+        url: "https://anythingvegan.ae/",
+      },
+ {
+        logo: "/case-studies/13.png",
+        title: "SwingSaga",
+        subtitle: "E-commerce",
+        url: "https://swingsaga.com/",
+      },
+ {
+        logo: "/case-studies/14.png",
+        title: "SkinVest",
+        subtitle: "E-commerce",
+        url: "https://skinvest.care/",
+      },
       {
         logo: "/case-studies/logo_sthalam.avif",
         title: "Sthalam",
@@ -287,4 +305,5 @@ url: "#",
     </section>
   );
 }
+
 
