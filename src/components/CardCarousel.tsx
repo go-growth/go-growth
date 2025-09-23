@@ -20,7 +20,7 @@ export default function CardCarousel() {
       { logo: "/case-studies/aevy-tv.webp", title: "Aevy TV", subtitle: "Ed-Tech", url: "#" },
       { logo: "/case-studies/11.png", title: "Anything Vegan", subtitle: "E-commerce", url: "https://anythingvegan.ae/" },
       { logo: "/case-studies/13.png", title: "SwingSaga", subtitle: "E-commerce", url: "https://swingsaga.com/" },
-      { logo: "/case-studies/14.png", title: "SkinVest", subtitle: "E-commerce", url: "https://skinvest.care/" },
+      { logo: "/case-studies/14.png", title: "Skinvest", subtitle: "E-commerce", url: "https://skinvest.care/" },
       { logo: "/case-studies/logo_sthalam.avif", title: "Sthalam", subtitle: "E-commerce", url: "https://sthalam.in" },
       { logo: "/case-studies/logo_astro.avif", title: "AstroVetro", subtitle: "E-commerce", url: "https://astrovetro.com" },
       { logo: "/case-studies/craft.png", title: "Craft Delights", subtitle: "E-commerce", url: "https://craftdelights.in" },
@@ -244,3 +244,4 @@ export default function CardCarousel() {
     </section>
   );
 }
+
