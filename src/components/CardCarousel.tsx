@@ -17,7 +17,7 @@ export default function CardCarousel() {
       { logo: "/case-studies/breezyla-logo.webp", title: "Breezy LA", subtitle: "E-commerce", url: "https://breezyla.com" },
       { logo: "/case-studies/10k-designers.png", title: "10K Designers", subtitle: "Ed-Tech", url: "https://www.10kdesigners.com" },
       { logo: "/case-studies/limitless-boxing.jpg", title: "Limitless Boxing", subtitle: "Local Gym", url: "#" },
-      { logo: "/case-studies/aevy-tv.webp", title: "Aevy TV", subtitle: "Ed-Tech", url: "#" },
+      { logo: "/case-studies/aevy-tv.webp", title: "Aevy TV", subtitle: "Ed-Tech", url: "https://www.aevytv.com/" },
       { logo: "/case-studies/11.png", title: "Anything Vegan", subtitle: "E-commerce", url: "https://anythingvegan.ae/" },
       { logo: "/case-studies/13.png", title: "SwingSaga", subtitle: "E-commerce", url: "https://swingsaga.com/" },
       { logo: "/case-studies/14.png", title: "Skinvest", subtitle: "E-commerce", url: "https://skinvest.care/" },
@@ -244,4 +244,5 @@ export default function CardCarousel() {
     </section>
   );
 }
+
 
