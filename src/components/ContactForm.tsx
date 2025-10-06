@@ -124,6 +124,14 @@ interface FormData {
 		setSubmitError("");
 
 		try {
+
+			    if (typeof window !== "undefined" && (window as any).fbq) {
+					(window as any).fbq('trackCustom', 'ContactFormSubmitted', {
+				form_name: 'Contact Us',
+				intent: 'Business Inquiry'
+				});
+		}
+
 			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
@@ -588,6 +596,7 @@ interface FormData {
 					<div className="flex items-center justify-center mt-6">
 						<button
 							type="submit"
+							id="contactSubmit"
 							disabled={isSubmitting}
 							className={`border-2 border-white/50 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors ${
 								isSubmitting ? "opacity-50 cursor-not-allowed" : ""
