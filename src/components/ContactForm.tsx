@@ -3,6 +3,14 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+
+declare global {
+  interface Window {
+    fbq?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+
 export default function ContactPage() {
 	const form = useRef<HTMLFormElement>(null);
 const [formData, setFormData] = useState({
@@ -29,6 +37,7 @@ const [formData, setFormData] = useState({
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitSuccess, setSubmitSuccess] = useState(false);
 	const [submitError, setSubmitError] = useState("");
+
 
 	const handleChange = (
 		e: React.ChangeEvent<
@@ -125,12 +134,12 @@ interface FormData {
 
 		try {
 
-			    if (typeof window !== "undefined" && (window as any).fbq) {
-					(window as any).fbq('trackCustom', 'ContactFormSubmitted', {
-				form_name: 'Contact Us',
-				intent: 'Business Inquiry'
-				});
-		}
+if (typeof window !== "undefined" && window.fbq) {
+  window.fbq('trackCustom', 'ContactFormSubmitted', {
+    form_name: 'Contact Us',
+    intent: 'Business Inquiry',
+  });
+}
 
 			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
