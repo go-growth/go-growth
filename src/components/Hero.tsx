@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import ContactForm from "@/components/ContactForm";
-import Link from "next/link";
+// import Link from "next/link";
 
 const Hero: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
