@@ -118,10 +118,10 @@ const Hero: React.FC = () => {
 					>
 						Contact Us
 					</button>
-					<Link href="/consult" className="border-2 border-white/50 mt-4 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors"
+					{/* <Link href="/consult" className="border-2 border-white/50 mt-4 rounded-full px-10 p-4 text-lg uppercase font-semibold flex items-center justify-center text-center hover:bg-white/10 transition-colors"
 					>
 						Consultation
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 
