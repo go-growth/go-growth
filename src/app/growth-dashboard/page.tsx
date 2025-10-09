@@ -443,11 +443,7 @@ export default function GrowthDashboardPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="w-full border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          <Testimonials />
-        </div>
-      </section>
+     
 
       {/* FAQ */}
       <section className="w-full border-t border-white/10">
