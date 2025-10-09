@@ -8,7 +8,7 @@ export default function Navbar() {
 			<div className="flex w-full md:w-auto justify-between items-center">
 				<Link href="/">
 					<div className="text-3xl md:text-4xl font-semibold text-[#F5E5D0]">
-						Go Growth
+						GoGrowth
 					</div>
 				</Link>
 				<Link
