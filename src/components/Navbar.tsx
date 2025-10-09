@@ -26,7 +26,15 @@ export default function Navbar() {
 				>
 					Case Studies
 				</Link>
+				<Link
+  href="/growth-dashboard"
+  className="border border-white/30 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full px-8 py-3 text-lg uppercase font-semibold text-white transition-all duration-300 hover:shadow-lg"
+>
+  Growth Dashboard
+</Link>
+
 			</div>
+			
 		</div>
 	);
 }
