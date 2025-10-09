@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import Link from "next/link";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import { AccentHalo, GridDots, IconAudit, IconSEO, IconContent, IconPlan } from "@/components/SiteSvgs";
 

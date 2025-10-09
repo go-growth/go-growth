@@ -26,7 +26,7 @@ export default function Navbar() {
 				>
 					Case Studies
 				</Link>
-
+	
 			</div>
 			
 		</div>
