@@ -98,48 +98,42 @@ export function ResultsScroller() {
       </div>
 
       {/* Timeline — centered below text, same column width as heading */}
-      <div className="mt-10 mb-8 max-w-3xl mx-auto">
-        <div className="flex items-start justify-between">
+      {/* timeline dots */}
+      <div className="mt-8 mb-6 relative max-w-4xl mx-auto px-4">
+        {/* connecting line */}
+        <div 
+          className="absolute top-[6px] left-0 right-0 h-[1px]"
+          style={{
+            background: "rgba(255,255,255,.15)",
+            marginLeft: "calc(50% / " + MILESTONES.length + " + 20px)",
+            marginRight: "calc(50% / " + MILESTONES.length + " + 20px)",
+          }}
+        />
+        
+        <div className="flex justify-between items-center relative">
           {MILESTONES.map((m, i) => {
             const isActive = i === active;
-            const isLast = i === MILESTONES.length - 1;
-
             return (
-              <div key={m.label} className="flex items-start flex-1">
-                <button
-                  onClick={() => scrollTo(i)}
-                  className="flex flex-col items-center text-center"
-                  aria-current={isActive ? "true" : "false"}
+              <button
+                key={m.label}
+                onClick={() => scrollTo(i)}
+                className="flex flex-col items-center text-center flex-1 relative z-10"
+                aria-current={isActive ? "true" : "false"}
+              >
+                <span
+                  className="inline-block h-3 w-3 rounded-full transition-all"
+                  style={{
+                    background: isActive ? ACCENT : "rgba(255,255,255,.28)",
+                    transform: isActive ? "scale(1.3)" : "scale(1)",
+                  }}
+                />
+                <span
+                  className="mt-2 text-[11px] md:text-xs uppercase tracking-wider"
+                  style={{ color: isActive ? "rgba(255,255,255,.95)" : "rgba(255,255,255,.6)" }}
                 >
-                  <span
-                    className="inline-block h-3 w-3 rounded-full transition-transform"
-                    style={{
-                      background: isActive ? ACCENT : "rgba(255,255,255,.28)",
-                      transform: isActive ? "scale(1.15)" : "scale(1)",
-                    }}
-                  />
-                  <span
-                    className="mt-2 text-[11px] md:text-xs uppercase tracking-wider"
-                    style={{
-                      color: isActive ? "rgba(255,255,255,.95)" : "rgba(255,255,255,.6)",
-                    }}
-                  >
-                    {m.label}
-                  </span>
-                </button>
-
-                {/* connector line */}
-                {!isLast && (
-                  <div className="flex-1 mx-2 md:mx-3">
-                    {/* circle is 12px tall, so margin-top 6px centers the 2px line */}
-                    <div
-                      className="h-[2px] mt-[6px]"
-                      style={{ background: "rgba(255,255,255,.28)" }}
-                      aria-hidden="true"
-                    />
-                  </div>
-                )}
-              </div>
+                  {m.label}
+                </span>
+              </button>
             );
           })}
         </div>
