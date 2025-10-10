@@ -25,3 +25,6 @@ body {
 		text-wrap: balance;
 	}
 }
+/* Hide scrollbars cross-browser */
+.no-scrollbar::-webkit-scrollbar { display: none; }  /* Chrome/Safari */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; } /* IE/Edge, Firefox */
