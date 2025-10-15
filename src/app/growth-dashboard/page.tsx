@@ -261,29 +261,46 @@ export default function GrowthDashboardPage() {
         </div>
       </section>
 
-      {/* RESULTS */}
-      <section className="w-full">
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          {/* RESULTS (scrollable timeline) */}
-          <section className="w-full">
-            <ResultsScroller />
-          </section>
+ {/* RESULTS */}
+ <section className="w-full">
+      <div
+        className="
+          mx-auto max-w-6xl
+          px-4 sm:px-5
+          py-6 md:py-8 lg:py-10
+          min-h-[92dvh] md:min-h-[88dvh] lg:min-h-[86dvh]
+          flex flex-col
+        "
+        style={{ minHeight: "calc(var(--vh, 1vh) * 92)" }} // fallback for dvh
+      >
+        {/* RESULTS (scrollable timeline) */}
+        <section className="w-full flex-1">
+          <ResultsScroller />
+        </section>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { k: "ROAS (Return on Ad Spend)", v: "+15% to +40%" },
-              { k: "Organic Traffic (90 days)", v: "+25% to +100%" },
-              { k: "Cost Per Lead", v: "↓ 10% to 30%" },
-              { k: "Time Saved / Month", v: "10–15 hours" },
-            ].map(({ k, v }) => (
-              <div key={k} className="rounded-2xl border border-white/15 p-5 text-center bg-transparent">
-                <div className="text-sm opacity-80">{k}</div>
-                <div className="mt-1 text-2xl font-extrabold" style={{ color: ACCENT }}>{v}</div>
+        {/* Metrics grid (tight gap, responsive columns) */}
+        <div className="mt-3 sm:mt-4 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { k: "ROAS (Return on Ad Spend)", v: "+15% to +40%" },
+            { k: "Organic Traffic (90 days)", v: "+25% to +100%" },
+            { k: "Cost Per Lead", v: "↓ 10% to 30%" },
+            { k: "Time Saved / Month", v: "10–15 hours" },
+          ].map(({ k, v }) => (
+            <div
+              key={k}
+              className="rounded-2xl border border-white/15 p-4 sm:p-5 text-center bg-transparent"
+            >
+              <div className="text-xs sm:text-sm opacity-80">{k}</div>
+              <div className="mt-1 text-xl sm:text-2xl font-extrabold" style={{ color: ACCENT }}>
+                {v}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+
+
 
       {/* CTA */}
       <section className="w-full">

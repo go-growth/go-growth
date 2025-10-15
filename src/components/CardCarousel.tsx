@@ -4,11 +4,12 @@ import Image from "next/image";
 
 /**
  * Infinite, steerable, drag-enabled logo carousel (transform-based)
- * - Continuous auto-scroll driven by a virtual `pos` (px) + translate3d()
- * - Infinite loop via modulo wrapping against a measured segment width
- * - Slows on hover; mouse position steers direction/speed
- * - Click-and-drag to scroll; links suppressed if user actually dragged
- * - Robust against image loads/resizes via ResizeObserver re-measure
+ * - Auto-scroll via virtual `pos` + translate3d()
+ * - Infinite loop with modulo wrapping
+ * - Slows on hover; mouse X steers speed/direction
+ * - Drag only after threshold; links click normally otherwise
+ * - Uses pointer capture ONLY after threshold so anchor clicks work
+ * - ResizeObserver keeps widths in sync
  */
 export default function CardCarousel() {
   // -------- Brand data --------
@@ -16,7 +17,7 @@ export default function CardCarousel() {
     [
       { logo: "/case-studies/breezyla-logo.webp", title: "Breezy LA", subtitle: "E-commerce", url: "https://breezyla.com" },
       { logo: "/case-studies/10k-designers.png", title: "10K Designers", subtitle: "Ed-Tech", url: "https://www.10kdesigners.com" },
-      { logo: "/case-studies/limitless-boxing.jpg", title: "Limitless Boxing", subtitle: "Local Gym", url: "#" },
+      { logo: "/case-studies/limitless-boxing.jpg", title: "Limitless Boxing", subtitle: "Local Gym", url: "https://example.com/limitless-boxing" }, // replace with real URL
       { logo: "/case-studies/aevy-tv.webp", title: "Aevy TV", subtitle: "Ed-Tech", url: "https://www.aevytv.com/" },
       { logo: "/case-studies/11.png", title: "Anything Vegan", subtitle: "E-commerce", url: "https://anythingvegan.ae/" },
       { logo: "/case-studies/13.png", title: "SwingSaga", subtitle: "E-commerce", url: "https://swingsaga.com/" },
@@ -35,25 +36,28 @@ export default function CardCarousel() {
   const displayCards = Array.from({ length: REPEATS }, () => cards).flat();
 
   // -------- Refs & state --------
-  const viewportRef = useRef<HTMLDivElement | null>(null); // clipper
-  const trackRef = useRef<HTMLDivElement | null>(null);     // moving strip
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const lastTsRef = useRef<number | null>(null);
-  const posRef = useRef(0);            // virtual x position (px)
-  const startPosRef = useRef(0);       // pos at drag start
-  const [segmentWidth, setSegmentWidth] = useState(0); // width of 1× cards
+  const posRef = useRef(0);
+  const startPosRef = useRef(0);
+  const [segmentWidth, setSegmentWidth] = useState(0);
 
   // Motion tuning
-  const BASE_SPEED = 60;       // px/s when idle
-  const HOVER_BASE_SPEED = 18; // px/s when hovering
-  const MAX_STEER = 140;       // px/s extra based on mouse x
+  const BASE_SPEED = 60;        // px/s when idle
+  const HOVER_BASE_SPEED = 18;  // px/s when hovering
+  const MAX_STEER = 140;        // px/s extra based on mouse x
+  const DRAG_THRESHOLD = 8;     // px before we consider it a drag
 
   // Interaction state
   const [isHovering, setIsHovering] = useState(false);
-  const [hoverVelocity, setHoverVelocity] = useState(0); // px/s (±)
+  const [hoverVelocity, setHoverVelocity] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const isPointerDown = useRef(false);
+  const capturedPointerId = useRef<number | null>(null);
   const dragStartX = useRef(0);
-  const draggedDistance = useRef(0);
+  const moved = useRef(0);
 
   // -------- Measurement & wrapping --------
   const applyTransform = () => {
@@ -63,11 +67,9 @@ export default function CardCarousel() {
 
   const wrap = () => {
     if (!segmentWidth) return;
-    // Keep pos within [0, segmentWidth)
     if (posRef.current >= segmentWidth) {
       posRef.current = posRef.current % segmentWidth;
     } else if (posRef.current < 0) {
-      // proper modulo for negatives
       posRef.current = ((posRef.current % segmentWidth) + segmentWidth) % segmentWidth;
     }
   };
@@ -75,12 +77,10 @@ export default function CardCarousel() {
   const measure = () => {
     const el = trackRef.current;
     if (!el) return;
-    // Since we rendered 3×, 1 segment = total width / 3
     const total = el.scrollWidth;
     const seg = Math.floor(total / REPEATS);
     setSegmentWidth(seg || 1);
-    // optional: start somewhere in the middle
-    posRef.current = seg; // middle segment
+    posRef.current = seg; // start at middle segment
     applyTransform();
   };
 
@@ -90,11 +90,9 @@ export default function CardCarousel() {
     const track = trackRef.current;
     if (!track) return;
 
-    // Re-measure when content/layout changes
     const ro = new ResizeObserver(() => {
       const prevSeg = segmentWidth;
       measure();
-      // keep motion continuous by proportionally mapping old pos if seg changed
       if (prevSeg && segmentWidth && prevSeg !== segmentWidth) {
         posRef.current = (posRef.current / prevSeg) * segmentWidth;
         wrap();
@@ -119,44 +117,62 @@ export default function CardCarousel() {
     const rect = viewportRef.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const norm = Math.max(-1, Math.min(1, (e.clientX - centerX) / (rect.width / 2)));
-    setHoverVelocity(-norm * MAX_STEER); // right pointer => faster leftward motion
+    setHoverVelocity(-norm * MAX_STEER);
   };
 
-  // -------- Dragging --------
+  // -------- Dragging with delayed pointer capture --------
   const onPointerDown: React.PointerEventHandler<HTMLDivElement> = (e) => {
-    const target = e.currentTarget as HTMLDivElement;
-    target.setPointerCapture(e.pointerId);
-    setIsDragging(true);
+    isPointerDown.current = true;
+    setIsDragging(false); // not dragging yet
+    moved.current = 0;
     dragStartX.current = e.clientX;
     startPosRef.current = posRef.current;
-    draggedDistance.current = 0;
-    // Cursor feedback
-    target.style.cursor = "grabbing";
+    // IMPORTANT: do NOT setPointerCapture here
+    (e.currentTarget as HTMLDivElement).style.cursor = "grabbing";
   };
 
   const onPointerMove: React.PointerEventHandler<HTMLDivElement> = (e) => {
-    if (!isDragging) return;
-    const dx = e.clientX - dragStartX.current; // dragging right => positive dx
-    draggedDistance.current = Math.max(draggedDistance.current, Math.abs(dx));
-    posRef.current = startPosRef.current - dx; // natural drag
-    wrap();
-    applyTransform();
+    if (!isPointerDown.current) return;
+    const dx = e.clientX - dragStartX.current;
+    moved.current = Math.max(moved.current, Math.abs(dx));
+
+    // Crossed threshold? Start dragging and capture then.
+    if (!isDragging && Math.abs(dx) > DRAG_THRESHOLD) {
+      setIsDragging(true);
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+        capturedPointerId.current = e.pointerId;
+      } catch {
+        // some browsers might throw if capture not possible; safe to ignore
+      }
+    }
+
+    if (isDragging) {
+      posRef.current = startPosRef.current - dx;
+      wrap();
+      applyTransform();
+    }
+  };
+
+  const endInteraction = (target: HTMLDivElement, pointerId: number) => {
+    // Release capture only if we actually captured
+    if (capturedPointerId.current === pointerId && target.hasPointerCapture(pointerId)) {
+      target.releasePointerCapture(pointerId);
+    }
+    capturedPointerId.current = null;
+    isPointerDown.current = false;
+    setIsDragging(false);
+    target.style.cursor = "grab";
+    // If the user dragged, the browser will not dispatch a click on the anchor anyway.
+    // If the user didn't drag past threshold, a normal click will fire on the <a>.
   };
 
   const onPointerUp: React.PointerEventHandler<HTMLDivElement> = (e) => {
-    const target = e.currentTarget as HTMLDivElement;
-    if (target.hasPointerCapture(e.pointerId)) target.releasePointerCapture(e.pointerId);
-    setIsDragging(false);
-    target.style.cursor = "grab";
-    // No inertia; auto-scroll loop continues to advance posRef
+    endInteraction(e.currentTarget as HTMLDivElement, e.pointerId);
   };
 
-  const preventClickIfDragged = (e: React.MouseEvent) => {
-    if (draggedDistance.current > 5) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    draggedDistance.current = 0;
+  const onPointerCancel: React.PointerEventHandler<HTMLDivElement> = (e) => {
+    endInteraction(e.currentTarget as HTMLDivElement, e.pointerId);
   };
 
   // -------- Animation loop (never stops) --------
@@ -168,7 +184,7 @@ export default function CardCarousel() {
 
       if (!isDragging) {
         const base = isHovering ? HOVER_BASE_SPEED : BASE_SPEED;
-        const v = base + hoverVelocity; // px/s (can be negative)
+        const v = base + hoverVelocity;
         posRef.current += v * dt;
         wrap();
         applyTransform();
@@ -192,18 +208,20 @@ export default function CardCarousel() {
       </h1>
 
       <div className="flex items-center justify-center w-full p-8">
-        {/* Viewport (no native scrollbars; we drive via transform) */}
+        {/* Viewport */}
         <div
           ref={viewportRef}
-          className="w-full overflow-hidden relative select-none"
+          className="w-full overflow-hidden relative select-none touch-none"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => { setIsHovering(false); setHoverVelocity(0); }}
           onMouseMove={onMouseMove}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
+          onPointerCancel={onPointerCancel}
+          onPointerLeave={onPointerCancel}
           style={{ cursor: isDragging ? "grabbing" : "grab" }}
+          aria-roledescription="carousel"
         >
           {/* Moving track */}
           <div
@@ -220,7 +238,6 @@ export default function CardCarousel() {
                 aria-label={`${card.title} website (opens in a new tab)`}
                 title={card.title}
                 className="flex flex-col items-center flex-shrink-0 w-36 group"
-                onClick={preventClickIfDragged}
               >
                 <div className="w-32 h-32 rounded-full overflow-hidden border border-gray-700/60 mb-3 flex items-center justify-center bg-white/5">
                   <Image
@@ -244,5 +261,3 @@ export default function CardCarousel() {
     </section>
   );
 }
-
-

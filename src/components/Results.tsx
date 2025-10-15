@@ -1,15 +1,11 @@
+/* RESULTS SECTION + SCROLLER (fully responsive) */
 "use client";
 import { useEffect, useRef, useState } from "react";
 
 const ACCENT = "#e0a695";
 const MUTED = "rgba(255,255,255,.75)";
 
-type Milestone = {
-  label: string;
-  title: string;
-  bullets?: string[];
-  paragraph?: string;
-};
+type Milestone = { label: string; title: string; bullets?: string[]; paragraph?: string };
 
 const MILESTONES: Milestone[] = [
   {
@@ -57,10 +53,24 @@ export function ResultsScroller() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  // Mobile 100vh fix (sets --vh CSS var)
+  useEffect(() => {
+    const setVH = () => {
+      const vh = (window.visualViewport?.height ?? window.innerHeight) * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setVH();
+    window.addEventListener("resize", setVH);
+    window.visualViewport?.addEventListener("resize", setVH as any);
+    return () => {
+      window.removeEventListener("resize", setVH);
+      window.visualViewport?.removeEventListener("resize", setVH as any);
+    };
+  }, []);
+
   useEffect(() => {
     const root = containerRef.current;
     if (!root) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         const top = entries
@@ -70,46 +80,37 @@ export function ResultsScroller() {
         const idx = Number((top.target as HTMLElement).dataset.index || "0");
         setActive(idx);
       },
-      {
-        root,
-        rootMargin: "-45% 0px -45% 0px",
-        threshold: [0.01, 0.5, 0.99],
-      }
+      { root, rootMargin: "-45% 0px -45% 0px", threshold: [0.01, 0.5, 0.99] }
     );
-
     cardRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
-  const scrollTo = (i: number) => {
+  const scrollTo = (i: number) =>
     cardRefs.current[i]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  };
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-16">
+    <div className="mx-auto max-w-6xl px-4 sm:px-0 py-6 md:py-8">
       {/* Heading */}
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-white text-3xl md:text-4xl font-bold">
+        <h2 className="text-white font-bold text-[22px] sm:text-[26px] md:text-[32px]">
           What Results Can You Expect?
         </h2>
-        <p className="mt-4" style={{ color: MUTED }}>
+        <p className="mt-2 text-[13px] sm:text-sm md:text-base" style={{ color: MUTED }}>
           This isn’t theory. These are typical outcomes teams achieve using the Growth Dashboard system.
         </p>
       </div>
 
-      {/* Timeline — centered below text, same column width as heading */}
-      {/* timeline dots */}
-      <div className="mt-8 mb-6 relative max-w-4xl mx-auto px-4">
-        {/* connecting line */}
-        <div 
+      {/* Timeline */}
+      <div className="mt-5 sm:mt-6 mb-5 sm:mb-7 relative max-w-4xl mx-auto px-4">
+        <div
           className="absolute top-[6px] left-0 right-0 h-[1px]"
           style={{
             background: "rgba(255,255,255,.15)",
-            marginLeft: "calc(50% / " + MILESTONES.length + " + 20px)",
-            marginRight: "calc(50% / " + MILESTONES.length + " + 20px)",
+            marginLeft: `calc(50% / ${MILESTONES.length} + 20px)`,
+            marginRight: `calc(50% / ${MILESTONES.length} + 20px)`,
           }}
         />
-        
         <div className="flex justify-between items-center relative">
           {MILESTONES.map((m, i) => {
             const isActive = i === active;
@@ -121,15 +122,17 @@ export function ResultsScroller() {
                 aria-current={isActive ? "true" : "false"}
               >
                 <span
-                  className="inline-block h-3 w-3 rounded-full transition-all"
+                  className="inline-block rounded-full transition-all h-2.5 w-2.5 sm:h-3 sm:w-3"
                   style={{
                     background: isActive ? ACCENT : "rgba(255,255,255,.28)",
-                    transform: isActive ? "scale(1.3)" : "scale(1)",
+                    transform: isActive ? "scale(1.25)" : "scale(1)",
                   }}
                 />
                 <span
-                  className="mt-2 text-[11px] md:text-xs uppercase tracking-wider"
-                  style={{ color: isActive ? "rgba(255,255,255,.95)" : "rgba(255,255,255,.6)" }}
+                  className="mt-1 text-[10px] sm:text-[11px] uppercase tracking-wider"
+                  style={{
+                    color: isActive ? "rgba(255,255,255,.95)" : "rgba(255,255,255,.6)",
+                  }}
                 >
                   {m.label}
                 </span>
@@ -139,23 +142,25 @@ export function ResultsScroller() {
         </div>
       </div>
 
-      {/* Scroll rail: one-at-a-time with visible gap between cards */}
+      {/* Scroll rail — responsive heights */}
       <div
         ref={containerRef}
         className="
-          relative mt-6
-          h-[70vh] md:h-[70vh]
+          relative
+          mt-2 md:mt-3
+          h-[56dvh] sm:h-[48dvh] md:h-[42vh] lg:h-[40vh]
           overflow-y-auto pr-1 no-scrollbar
           snap-y snap-mandatory
         "
         style={{
-          scrollBehavior: "smooth",
-          scrollPaddingTop: "35vh",
-          scrollPaddingBottom: "35vh",
+          // fallback for dvh on older browsers
+          height: "calc(var(--vh, 1vh) * 56)",
+          scrollPaddingTop: "18vh",
+          scrollPaddingBottom: "12vh",
         }}
         aria-label="Results timeline"
       >
-        <div className="space-y-8 pb-10">
+        <div className="space-y-4 sm:space-y-5 pb-2 sm:pb-4">
           {MILESTONES.map((m, i) => (
             <div
               key={m.label}
@@ -164,28 +169,25 @@ export function ResultsScroller() {
                 cardRefs.current[i] = el;
               }}
               className="
-                [scroll-snap-stop:always]
-                snap-center snap-always
-                mx-auto
-                w-[92%] max-w-[440px]
-                h-[52vh] flex-none
-                rounded-lg
-                border border-white/15
-                bg-white/6 backdrop-blur
+                [scroll-snap-stop:always] snap-center snap-always
+                mx-auto w-[92%] max-w-[480px]
+                h-auto min-h-[30dvh] sm:min-h-[28dvh] md:h-[26vh] lg:h-[24vh]
+                rounded-lg border border-white/15
+                bg-white/5 backdrop-blur
                 ring-1 ring-black/5
                 shadow-[0_1px_0_rgba(255,255,255,.05)_inset,0_10px_30px_rgba(0,0,0,.35)]
-                p-5 md:p-6
-                text-center
-                flex flex-col justify-center
+                p-4 sm:p-5
+                text-center flex flex-col justify-center
               "
+              style={{ minHeight: "calc(var(--vh, 1vh) * 30)" }}
             >
-              <h3 className="text-white text-lg md:text-xl font-semibold mb-3">
+              <h3 className="text-white font-semibold mb-2 text-[14px] sm:text-[15px] md:text-lg">
                 {m.title}
               </h3>
 
               {m.bullets ? (
                 <ul
-                  className="space-y-2 text-[13px] md:text-[14px] leading-6"
+                  className="space-y-1.5 text-[12px] sm:text-[12.5px] md:text-[13px] leading-5"
                   style={{ color: MUTED }}
                 >
                   {m.bullets.map((b) => (
@@ -193,7 +195,10 @@ export function ResultsScroller() {
                   ))}
                 </ul>
               ) : (
-                <p className="text-[13px] md:text-[14px] leading-6" style={{ color: MUTED }}>
+                <p
+                  className="text-[12px] sm:text-[12.5px] md:text-[13px] leading-5"
+                  style={{ color: MUTED }}
+                >
                   {m.paragraph}
                 </p>
               )}
