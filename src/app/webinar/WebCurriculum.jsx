@@ -1,13 +1,9 @@
 "use client";
-
-import { Brain } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
-import mainbrain from "../../assets/Main brain.png";
-import halfbrain from "../../assets/halfbrain.png";
+import { Brain } from "lucide-react"
+import { useEffect, useState, useRef } from "react"
+import mainbrain from "../../assets/Main brain.png"
+import halfbrain from "../../assets/halfbrain.png"
 import dot from "../../assets/Dot Background.svg";
-
-// ...rest of the component
-
 
 
 export default function Component() {
@@ -323,8 +319,7 @@ export default function Component() {
           <div className="sm:w-1/2 w-full pl-0 sm:pl-8">
             <div className="w-[260px] sm:w-auto bg-black/20 border-2 border-[#2a2a2a] backdrop-blur-md p-6 rounded-lg">
               <p className="font-semibold mb-2"></p>
-              <h2 className="font-bold !text-[#e0a695
-              ] !text-[14px] sm:!text-[28px] mb-4">Scaling Beyond You (20 min)</h2>
+              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Scaling Beyond You (20 min)</h2>
               <p className="mb-4">THE FUTURE</p>
 
               <ul className="space-y-2 text-sm">

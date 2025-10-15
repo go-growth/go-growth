@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import dot from "../../assets/Dot Background.svg";
 
 import GradientButton from "../../components/ui/GradientButton";

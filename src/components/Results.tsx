@@ -1,11 +1,15 @@
-/* RESULTS SECTION + SCROLLER (fully responsive) */
 "use client";
 import { useEffect, useRef, useState } from "react";
 
 const ACCENT = "#e0a695";
 const MUTED = "rgba(255,255,255,.75)";
 
-type Milestone = { label: string; title: string; bullets?: string[]; paragraph?: string };
+type Milestone = {
+  label: string;
+  title: string;
+  bullets?: string[];
+  paragraph?: string;
+};
 
 const MILESTONES: Milestone[] = [
   {
@@ -53,41 +57,55 @@ export function ResultsScroller() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Mobile 100vh fix (sets --vh CSS var)
+  // ✅ Safe and typed viewport height fix
   useEffect(() => {
     const setVH = () => {
       const vh = (window.visualViewport?.height ?? window.innerHeight) * 0.01;
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     };
+
     setVH();
+
     window.addEventListener("resize", setVH);
-    window.visualViewport?.addEventListener("resize", setVH as any);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", setVH);
+    }
+
     return () => {
       window.removeEventListener("resize", setVH);
-      window.visualViewport?.removeEventListener("resize", setVH as any);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", setVH);
+      }
     };
   }, []);
 
+  // ✅ Intersection observer to track visible card
   useEffect(() => {
     const root = containerRef.current;
     if (!root) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const top = entries
+        const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!top) return;
-        const idx = Number((top.target as HTMLElement).dataset.index || "0");
-        setActive(idx);
+
+        if (visible) {
+          const idx = Number((visible.target as HTMLElement).dataset.index || "0");
+          setActive(idx);
+        }
       },
       { root, rootMargin: "-45% 0px -45% 0px", threshold: [0.01, 0.5, 0.99] }
     );
+
     cardRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
-  const scrollTo = (i: number) =>
+  // ✅ Scroll to a card smoothly
+  const scrollTo = (i: number) => {
     cardRefs.current[i]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  };
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-0 py-6 md:py-8">
@@ -142,23 +160,20 @@ export function ResultsScroller() {
         </div>
       </div>
 
-      {/* Scroll rail — responsive heights */}
+      {/* Scrollable Cards */}
       <div
         ref={containerRef}
         className="
-          relative
-          mt-2 md:mt-3
+          relative mt-2 md:mt-3
           h-[56dvh] sm:h-[48dvh] md:h-[42vh] lg:h-[40vh]
           overflow-y-auto pr-1 no-scrollbar
           snap-y snap-mandatory
         "
         style={{
-          // fallback for dvh on older browsers
           height: "calc(var(--vh, 1vh) * 56)",
           scrollPaddingTop: "18vh",
           scrollPaddingBottom: "12vh",
         }}
-        aria-label="Results timeline"
       >
         <div className="space-y-4 sm:space-y-5 pb-2 sm:pb-4">
           {MILESTONES.map((m, i) => (
