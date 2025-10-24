@@ -52,7 +52,7 @@ export default function WebHero() {
           className="bg-[#e0a695] hover:bg-[#d49684] text-black font-semibold px-6 py-3 mt-6 rounded-lg transition-colors duration-200"
           onClick={() => {
             window.open(
-              "https://pages.razorpay.com/pl_RJ7BNosGN9dF4e/view",
+              "https://rzp.io/rzp/ecommerce-masterclass",
               "_blank"
             );
           }}
