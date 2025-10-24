@@ -30,7 +30,7 @@ export default function WebHero() {
       {/* Content */}
       <div className="max-w-6xl text-center z-10">
         <h1 className="leading-tight mb-6 text-4xl sm:text-5xl font-bold">
-          Unlock the Proven System Behind High-Performance Agencies
+          Unlock real ecommerce profits 
         </h1>
 
         <p className="px-2 sm:py-0 max-w-3xl mx-auto text-gray-300">
