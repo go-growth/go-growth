@@ -41,7 +41,7 @@ export default function WebHero() {
         </p>
 
         <p className="text-sm text-gray-400 font-semibold my-4">
-          28 Sep 2025 | 02:00 PM IST
+          8 Nov 2025 | 02:00 PM IST
         </p>
         <p className="text-sm text-gray-400 font-semibold mt-2">
           Paid Live Webinar | Limited Seats
@@ -49,7 +49,7 @@ export default function WebHero() {
 
         {/* CTA Button */}
         <GradientButton
-          className="bg-[#e0a695] hover:bg-[#d49684] text-black font-semibold px-6 py-3 mt-6 rounded-lg transition-colors duration-200"
+          className="border-[#e0a695] hover:bg-[#d49684] text-black font-semibold px-6 py-3 mt-6 rounded-full transition-colors duration-200"
           onClick={() => {
             window.open(
               "https://rzp.io/rzp/ecommerce-masterclass",
