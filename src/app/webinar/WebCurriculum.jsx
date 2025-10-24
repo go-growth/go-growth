@@ -136,10 +136,10 @@ export default function Component() {
 
       {/* Header */}
       <div className="text-center mb-10 sm:mb-20 flex flex-col items-center justify-center relative z-10">
-        <h2 className="max-w-6xl text-3xl font-bold mb-4">Master the Core Systems of a High-Performance Agency in Just 90 Minutes</h2>
+        <h2 className="max-w-6xl text-3xl font-bold mb-4">Master the Core Systems of a High-Performance Ecommerce Brand in Just 90 Minutes</h2>
 
         <div className="max-w-2xl mx-auto">
-          <p className="text-xl font-semibold mb-4">Discover the strategies, systems, and shortcuts that separate struggling agencies from high-performing ones — no fluff, just proven methods.</p>
+          <p className="text-xl font-semibold mb-4">Learn the strategies, systems, and shortcuts to scale your store — from SEO and ads to website optimization. No fluff, just proven methods that increase sales.</p>
           {/* <p className="text-gray-300 text-sm leading-relaxed">
             We recommend setting aside
             <span className="!text-[15px] sm:!text-[22px] !text-[#e0a695]"> 90 minutes </span>
@@ -177,26 +177,26 @@ export default function Component() {
           <div className=" sm:w-1/2 w-full pr-0 sm:pr-8">
             <div className="w-[260px] sm:w-auto bg-black/20 border-2 border-[#2a2a2a] backdrop-blur-md p-6 rounded-lg border border-white/10">
               <p className="!font-semibold mb-2"></p>
-              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Agency Foundations (20 min)</h2>
-              <p className="text-gray-400 text-sm mb-4">THE ESSENTIALS</p>
+              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Traffic & Visibility (20 min)</h2>
+              <p className="text-gray-400 text-sm mb-4">THE FOUNDATION</p>
 
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className=" mr-2">•</span>
-                  <span>Lead Generation - 40+ brands a month wanting to work with you.</span>
+                  <span>SEO Blueprint – Ranking your store for high-intent keywords that drive sales.</span>
                 </li>
                 <li className="flex items-start">
                   <span className=" mr-2">•</span>
-                  <span>Client Onboarding Flow – A step-by-step system that sets expectations and reduces friction.</span>
+                  <span>Paid Ads That Convert – Running Google & Meta ads profitably.</span>
                 </li>
                 <li className="flex items-start">
                   <span className=" mr-2">•</span>
-                  <span>Positioning Framework – How to stand out in a crowded market and attract the right clients.</span>
+                  <span>Content Strategy – How to create content that attracts and converts shoppers.</span>
                 </li>
-                <li className="flex items-start">
+                {/* <li className="flex items-start">
                   <span className=" mr-2">•</span>
                   <span>Pricing Models That Scale – Retainer, performance-based, and hybrid approaches that maximize profitability.</span>
-                </li>
+                </li> */}
                 {/* <li className="flex items-start">
                   <span className=" mr-2">•</span>
                   <span>Verbal Aikido: Stay composed in pressure, interruptions, or conflict</span>
@@ -227,21 +227,21 @@ export default function Component() {
           <div className="sm:w-1/2 w-full pl-0 sm:pl-8">
             <div className="w-[260px] sm:w-auto bg-black/20 border-2 border-[#2a2a2a] backdrop-blur-md p-6 rounded-lg">
               <p className="font-semibold mb-2"></p>
-              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">High-Performance Delivery (25 min)</h2>
-              <p className="mb-4">THE SYSTEM</p>
+              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Website Optimization (25 min)</h2>
+              <p className="mb-4">THE EXPERIENCE</p>
 
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Building SOPs – How to make your agency run without bottlenecks.</span>
+                  <span>Conversion Design – Turning clicks into checkouts with proven CRO principles.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Accountability Loops – Structures to keep teams and freelancers aligned.</span>
+                  <span>Speed & UX Fixes – Reducing bounce rates with fast, seamless experiences.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Quality Control – Ensuring consistent client results without founder burnout.</span>
+                  <span>Funnel Optimization – Building flows that maximize AOV and repeat orders.</span>
                 </li>
                 {/* <li className="flex items-start">
                   <span className="mr-2">•</span>
@@ -269,21 +269,21 @@ export default function Component() {
           <div className="sm:w-1/2 w-full pr-0 sm:pr-8">
             <div className="w-[260px] sm:w-auto bg-black/20 border-2 border-[#2a2a2a] backdrop-blur-md p-6 rounded-lg">
               <p className="font-semibold mb-2"></p>
-              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4"> Retention & Growth Engine (25 min)</h2>
+              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Retention & Scaling Systems (25 min)</h2>
               <p className="mb-4">THE GROWTH</p>
 
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Client Communication Rhythm – Reporting and meetings that build trust and reduce churn.</span>
+                  <span>Email & SMS Playbook – Driving 20–30% of revenue from owned channels.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Upsell Playbook – Turning one-time projects into long-term accounts.</span>
+                  <span>Upsell & Cross-Sell Systems – Increasing order value without more ad spend.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Growth Loops – Simple referral and case study systems to keep new clients coming in.</span>
+                  <span>Analytics & Tracking – Knowing exactly what drives profit (and what doesn’t).</span>
                 </li>
                 {/* <li className="flex items-start">
                   <span className="mr-2">•</span>
@@ -319,21 +319,21 @@ export default function Component() {
           <div className="sm:w-1/2 w-full pl-0 sm:pl-8">
             <div className="w-[260px] sm:w-auto bg-black/20 border-2 border-[#2a2a2a] backdrop-blur-md p-6 rounded-lg">
               <p className="font-semibold mb-2"></p>
-              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Scaling Beyond You (20 min)</h2>
+              <h2 className="font-bold !text-[#e0a695] !text-[14px] sm:!text-[28px] mb-4">Beyond 6 Figures (20 min)</h2>
               <p className="mb-4">THE FUTURE</p>
 
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Hiring Your First A-Players – Who to bring in first and how to train them.</span>
+                  <span>Scaling Ads Without Wasting Spend – Frameworks for profitable scaling.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Automation & Tools – Leveraging tech to save hours each week.</span>
+                  <span>Hiring & Outsourcing – Bringing in the right people to grow faster.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Founder Freedom – Creating an agency that grows even when you step away.</span>
+                  <span>Tools & Automation – Systems that save hours and compound growth.</span>
                 </li>
                 {/* <li className="flex items-start">
                   <span className="mr-2">•</span>
@@ -358,7 +358,7 @@ export default function Component() {
       <div className="relative z-1 max-w-3xl mx-auto mt-20">
         <div className="flex justify-center mb-10">
           <h2 className="text-[#e0a695] flex items-center gap-2 text-center">
-            Your Agency Doesn’t Need More Hustle. It Needs a System.
+            Your Store Doesn’t Need More Discounts. It Needs a System.
           </h2>
         </div>
 
@@ -369,7 +369,7 @@ export default function Component() {
             </div> */}
             <div>
               {/* <h4 className="!font-semibold text-lg text-white">Live 1:1 Feedback</h4> */}
-              <p className="!text-gray-400 text- text-center">In just 90 minutes, you’ll see the exact frameworks high-performing agencies use to win clients, deliver consistently, and scale without burning out.</p>
+              <p className="!text-gray-400 text- text-center">In just 90 minutes, you’ll learn the exact frameworks top ecommerce brands use to grow traffic, boost sales, and scale revenue consistently.</p>
             </div>
           </div>
 
@@ -379,7 +379,7 @@ export default function Component() {
             </div> */}
             <div>
               {/* <h4 className="!font-semibold text-lg text-white">High-Stake Projects</h4> */}
-              <p className="!text-gray-400 text-sm text-center">This isn’t another free webinar — it’s a paid, limited-seat session designed for founders who are serious about growth.</p>
+              <p className="!text-gray-400 text-sm text-center">This isn’t another free session — it’s a paid, limited-seat masterclass designed for founders serious about growth.</p>
             </div>
           </div>
 
@@ -396,7 +396,7 @@ export default function Component() {
 
         <div className="flex justify-center mt-10">
           <p className="!font-semibold text-lg text-white flex items-center gap-2">
-            Your Agency Doesn’t Need More Hustle. It Needs a System.
+            become the go-to brand in your industry | become the go-to brand in your industry | become the go-to brand in your industry |
           </p>
         </div>
 
