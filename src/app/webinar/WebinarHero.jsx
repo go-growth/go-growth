@@ -34,17 +34,16 @@ export default function WebHero() {
         </h1>
 
         <p className="px-2 sm:py-0 max-w-3xl mx-auto text-gray-300">
-          Gurmeet has taken years of running, testing, and scaling ecommerce brands and built a framework that shows exactly how to grow revenue in today’s competitive market. In this live session, you’ll see the step-by-step process that actually works.
+          Gurmeet has taken years of building <span class="bg-[#e0a695]">ecommerce</span> brands and created a framework that shows exactly how to grow revenue today. In this live session, you’ll see the step-by-step process that actually works.        
         </p>
-
         <p className="text-sm text-gray-400 font-semibold my-4">
           8 Nov 2025 | 02:00 PM IST
         </p>
 
 
         {/* CTA Button */}
-        <GradientButton
-          className="border-[#e0a695] hover:bg-[#d49684] text-black font-semibold px-6 py-3 mt-6 rounded-full transition-colors duration-200"
+        <button
+          className="border-[#e0a695] hover:bg-[#d49684] text-white font-semibold px-4 py-3 mt-6 rounded-full transition-colors duration-200"
           onClick={() => {
             window.open(
               "https://rzp.io/rzp/ecommerce-masterclass",
@@ -53,9 +52,9 @@ export default function WebHero() {
           }}
         >
           RESERVE MY SEAT
-        </GradientButton>
+        </button>
 
-                <p className="text-sm text-gray-400 font-semibold mt-2">
+        <p className="text-sm text-gray-400 font-semibold mt-2">
           Paid Live Webinar | Limited Seats
         </p>
       </div>
