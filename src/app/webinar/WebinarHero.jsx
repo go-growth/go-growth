@@ -36,14 +36,14 @@ export default function WebHero() {
         <p className="px-2 sm:py-0 max-w-3xl mx-auto text-gray-300">
           Gurmeet has taken years of building <span class="text-[#e0a695]">ecommerce</span> brands and created a framework that shows exactly how to grow revenue today. In this live session, you’ll see the step-by-step process that actually works.        
         </p>
-        <p className="text-sm text-gray-400 font-semibold my-4">
+        <p className="text-sm text-gray-400 font-semibold my-4 mb-2">
           8 Nov 2025 | 02:00 PM IST
         </p>
 
 
         {/* CTA Button */}
         <button
-          className="border-[#e0a695] hover:bg-[#d49684] text-white font-semibold px-4 py-3 mt-6 rounded-full transition-colors duration-200"
+          className="border-white hover:bg-[#d49684] text-white font-semibold px-4 py-3 mt-2 rounded-full transition-colors duration-200"
           onClick={() => {
             window.open(
               "https://rzp.io/rzp/ecommerce-masterclass",
@@ -54,7 +54,7 @@ export default function WebHero() {
           RESERVE MY SEAT
         </button>
 
-        <p className="text-sm text-gray-400 font-semibold mt-2 text-[#e0a695]">
+        <p className="text-sm font-semibold mt-2 text-[#e0a695]">
           Paid Live Webinar | Limited Seats
         </p>
       </div>
