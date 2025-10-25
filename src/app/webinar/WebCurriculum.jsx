@@ -394,11 +394,11 @@ export default function Component() {
           </div> */}
         </div>
 
-        <div className="flex justify-center mt-10">
-          <p className="!font-semibold text-lg text-white flex items-center gap-2">
+        {/* <div className="flex justify-center mt-10">
+          <p className="!font-semibold text-lg text-white flex items-center gap-2 text-center">
             become the go-to brand in your industry | become the go-to brand in your industry | become the go-to brand in your industry |
           </p>
-        </div>
+        </div> */}
 
       </div>
 
