@@ -1,7 +1,7 @@
 "use client";
 import dot from "../../assets/Dot Background.svg";
 
-import GradientButton from "../../components/ui/GradientButton";
+// import GradientButton from "../../components/ui/GradientButton";
 
 export default function WebHero() {
   // useEffect(() => {
@@ -29,7 +29,7 @@ export default function WebHero() {
 
       {/* Content */}
       <div className="max-w-6xl text-center z-10">
-        <h1 className="leading-tight mb-6 text-4xl sm:text-5xl font-bold">
+        <h1 className="leading-tight mb-6 text-5xl sm:text-7xl font-bold">
           Unlock real ecommerce profits 
         </h1>
 
@@ -54,7 +54,7 @@ export default function WebHero() {
           RESERVE MY SEAT
         </button>
 
-        <p className="text-sm text-gray-400 font-semibold mt-2">
+        <p className="text-sm text-gray-400 font-semibold mt-2 bg-[#e0a695]">
           Paid Live Webinar | Limited Seats
         </p>
       </div>
