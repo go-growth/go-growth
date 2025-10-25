@@ -34,7 +34,7 @@ export default function WebHero() {
         </h1>
 
         <p className="px-2 sm:py-0 max-w-3xl mx-auto text-gray-300">
-          Gurmeet has taken years of building <span class="bg-[#e0a695]">ecommerce</span> brands and created a framework that shows exactly how to grow revenue today. In this live session, you’ll see the step-by-step process that actually works.        
+          Gurmeet has taken years of building <span class="text-[#e0a695]">ecommerce</span> brands and created a framework that shows exactly how to grow revenue today. In this live session, you’ll see the step-by-step process that actually works.        
         </p>
         <p className="text-sm text-gray-400 font-semibold my-4">
           8 Nov 2025 | 02:00 PM IST
@@ -54,7 +54,7 @@ export default function WebHero() {
           RESERVE MY SEAT
         </button>
 
-        <p className="text-sm text-gray-400 font-semibold mt-2 bg-[#e0a695]">
+        <p className="text-sm text-gray-400 font-semibold mt-2 text-[#e0a695]">
           Paid Live Webinar | Limited Seats
         </p>
       </div>
