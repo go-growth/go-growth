@@ -43,7 +43,7 @@ export default function WebHero() {
 
         {/* CTA Button */}
         <button
-          className="border-white hover:bg-[#d49684] text-white font-semibold px-4 py-3 mt-2 rounded-full transition-colors duration-200"
+          className="border-2 border-white/50 hover:bg-[#e0a695] text-white text-lg px-10 py-4 mx-2 rounded-full transition-colors duration-200"
           onClick={() => {
             window.open(
               "https://rzp.io/rzp/ecommerce-masterclass",
