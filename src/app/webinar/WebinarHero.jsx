@@ -37,7 +37,7 @@ export default function WebHero() {
           Gurmeet has taken years of building <span class="text-[#e0a695]">ecommerce</span> brands and created a framework that shows exactly how to grow revenue today. In this live session, you’ll see the step-by-step process that actually works.        
         </p>
         <p className="text-sm text-gray-400 font-semibold my-4 mb-2">
-          8 Nov 2025 | 02:00 PM IST
+          9 Nov 2025 | 02:00 PM IST
         </p>
 
 
