@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
 	}, [isModalOpen]);
 
 	return (
-		<div className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden">
+		<div className="relative w-full min-h-[80vh] md:min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden">
 			{/* Decorative elements */}
 			<div className="absolute top-32 right-10 text-white opacity-40">
 				<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -157,3 +157,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
