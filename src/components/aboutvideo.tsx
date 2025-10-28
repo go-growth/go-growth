@@ -22,7 +22,7 @@ export default function Aboutvideo() {
     const currentTestimonial = about[0];
 
     return (
-        <div className="min-h-[90vh] flex items-center justify-center w-full p-4 lg:pb-20 pb-10">
+        <div className="min-h-[60vh] md:min-h-[90vh] flex items-center justify-center w-full p-4 pb-6 md:pb-20">
             <div className="max-w-6xl w-full">
                 <h2 className="max-w-7xl mx-auto text-center text-4xl font-semibold mb-16">Our Founder</h2>
 
