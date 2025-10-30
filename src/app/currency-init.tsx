@@ -20,7 +20,15 @@ export default function CurrencyInit() {
     }
 
     // 2) If cookie already exists, do nothing
-    if (document.cookie.includes(`${COOKIE}=`)) return;
+    const existingMatch = document.cookie.match(/gg_currency=(USD|INR)/);
+if (existingMatch) {
+  const existing = existingMatch[1];
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  if (tz.includes("Kolkata") && existing === "USD") {
+    setCurrency("INR");
+  }
+  return;
+}
 
     // 3) First-visit guess (client-side)
     const lang = (navigator.language || '').toLowerCase();
