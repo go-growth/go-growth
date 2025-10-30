@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
 
-export default nextConfig;
+  // ✅ Ensure middleware and edge runtime work properly
+  experimental: {
+    serverActions: true,
+  },
+};
+
+module.exports = nextConfig;
